@@ -1,3 +1,0 @@
-{
-  "/(site)/cities/[state]/[city]/page": "app/(site)/cities/[state]/[city]/page.js"
-}

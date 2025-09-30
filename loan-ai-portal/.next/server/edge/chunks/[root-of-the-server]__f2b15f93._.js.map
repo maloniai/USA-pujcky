@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 16, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/middleware.ts"],"sourcesContent":["import { NextResponse, type NextRequest } from \"next/server\";\n\nexport function middleware(request: NextRequest) {\n  const response = NextResponse.next();\n  const geo = (request as NextRequest & { geo?: { country?: string; region?: string } }).geo;\n\n  if (geo?.country === \"US\" && geo.region) {\n    response.headers.set(\"x-geo-state\", geo.region);\n  } else {\n    response.headers.set(\"x-geo-state\", \"\");\n  }\n\n  return response;\n}\n\nexport const config = {\n  matcher: [\"/:path*\"],\n};\n"],"names":[],"mappings":";;;;;;AAAA;AAAA;;AAEO,SAAS,WAAW,OAAoB;IAC7C,MAAM,WAAW,gMAAY,CAAC,IAAI;IAClC,MAAM,MAAM,AAAC,QAA0E,GAAG;IAE1F,IAAI,KAAK,YAAY,QAAQ,IAAI,MAAM,EAAE;QACvC,SAAS,OAAO,CAAC,GAAG,CAAC,eAAe,IAAI,MAAM;IAChD,OAAO;QACL,SAAS,OAAO,CAAC,GAAG,CAAC,eAAe;IACtC;IAEA,OAAO;AACT;AAEO,MAAM,SAAS;IACpB,SAAS;QAAC;KAAU;AACtB"}}]
-}

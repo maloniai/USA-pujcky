@@ -1,6 +1,0 @@
-{
-  "/(site)/compare/page": "app/(site)/compare/page.js",
-  "/(site)/page": "app/(site)/page.js",
-  "/(site)/states/page": "app/(site)/states/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
-}

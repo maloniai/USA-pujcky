@@ -1,3 +1,0 @@
-module.exports=[93695,(a,b,c)=>{b.exports=a.x("next/dist/shared/lib/no-fallback-error.external.js",()=>require("next/dist/shared/lib/no-fallback-error.external.js"))},62212,a=>{a.n(a.i(66114))},80096,a=>{a.n(a.i(13199))},76803,(a,b,c)=>{},79051,a=>{"use strict";a.s(["default",()=>d,"metadata",()=>c]);var b=a.i(7997);let c={title:"Contacto"};function d(){return(0,b.jsxs)("div",{className:"mx-auto max-w-3xl space-y-6 px-4 py-16 lg:px-8",children:[(0,b.jsx)("h1",{className:"text-4xl font-semibold text-slate-900",children:"Contacto"}),(0,b.jsx)("p",{className:"text-sm text-slate-600",children:"Escríbenos a soporte@loanaiportal.com o compliance@loanaiportal.com. Responderemos en un día hábil."})]})}}];
-
-//# sourceMappingURL=%5Broot-of-the-server%5D__6c810339._.js.map
