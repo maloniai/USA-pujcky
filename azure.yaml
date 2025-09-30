@@ -1,0 +1,8 @@
+name: loan-ai-portal
+metadata:
+  template: loan-ai-portal@0.0.1-beta
+services:
+  loan-ai-portal:
+    project: ./loan-ai-portal
+    language: js
+    host: staticwebapp
