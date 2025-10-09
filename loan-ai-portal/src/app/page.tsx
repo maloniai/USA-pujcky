@@ -1,67 +1,46 @@
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
+import Navigation from '@/components/navigation'
+import Footer from '@/components/footer'
+import HowToApplySchema from '@/components/howto-schema'
+import GeoDetectionNotice from '@/components/geo/geo-detection-notice'
+import CountrySelector from '@/components/geo/country-selector'
+import { featuredCountries } from '@/data/countries'
+import { generatePageMetadata, homeSEO } from '@/lib/seo'
+
+export const metadata = generatePageMetadata(homeSEO)
 
 export default function HomePage() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <header className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Welcome to Loan AI Portal
-        </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Fast, secure, and intelligent loan services powered by AI. 
-          Get instant pre-approvals and find the best loan options for your needs.
-        </p>
-      </header>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-        <Card>
-          <CardHeader>
-            <CardTitle>Quick Application</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-gray-600 mb-4">
-              Apply for a loan in minutes with our streamlined process.
-            </p>
-            <Button className="w-full">Apply Now</Button>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>AI-Powered Matching</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-gray-600 mb-4">
-              Our AI finds the best loan options tailored to your profile.
-            </p>
-            <Button variant="outline" className="w-full">Learn More</Button>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>State-Specific Information</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-gray-600 mb-4">
-              Get loan information specific to your state and city.
-            </p>
-            <Link href="/states">
-              <Button variant="outline" className="w-full">Browse States</Button>
-            </Link>
-          </CardContent>
-        </Card>
-      </div>
-
-      <div className="text-center">
-        <h2 className="text-2xl font-semibold mb-4">Available in Multiple Languages</h2>
-        <div className="space-x-4">
-          <Link href="/" className="text-blue-600 hover:underline">English</Link>
-          <Link href="/es" className="text-blue-600 hover:underline">Español</Link>
+    <>
+      <HowToApplySchema />
+      <Navigation />
+      <main className="flex-1">
+        <div className="container mx-auto px-4 py-16">
+          <section
+            id="global-coverage"
+            className="space-y-8 text-center"
+            aria-labelledby="global-coverage-heading"
+          >
+            <div className="space-y-4">
+              <p className="text-sm font-semibold uppercase tracking-wide text-blue-700">
+                Global loan intelligence
+              </p>
+              <h1
+                id="global-coverage-heading"
+                className="text-3xl font-bold text-blue-900 md:text-4xl"
+              >
+                Choose your country to compare regulated loan offers
+              </h1>
+              <p className="text-base text-gray-700 md:text-lg max-w-2xl mx-auto">
+                We currently provide compliant loan comparisons in the United States and Czech Republic.
+                Select your destination to explore localized guides, lender coverage, and application support.
+              </p>
+            </div>
+            <GeoDetectionNotice countries={featuredCountries} />
+            <CountrySelector countries={featuredCountries} className="mx-auto max-w-4xl" />
+          </section>
         </div>
-      </div>
-    </div>
+      </main>
+      <Footer />
+    </>
   )
 }
