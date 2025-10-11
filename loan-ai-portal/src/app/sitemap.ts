@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 import { blogPostsEN } from '@/data/blog-posts'
 import { usStates } from '@/data/states'
 import { cities } from '@/data/cities'
+import { czRegions } from '@/data/cz-regions'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://loan-platform.com'
@@ -41,6 +42,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const cityUrls = cities.map((city) => ({
     url: `${baseUrl}/cities/${city.state.toLowerCase().replace(/\s+/g, '-')}/${city.slug}`,
     lastModified: twoWeeksAgo, // City pages updated less frequently
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  // Generate US-specific state URLs (under /us path)
+  const usStateUrls = usStates.map((state) => ({
+    url: `${baseUrl}/us/states/${state.slug}`,
+    lastModified: oneWeekAgo,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  // Generate US-specific city URLs (under /us path)
+  const usCityUrls = cities.map((city) => ({
+    url: `${baseUrl}/us/cities/${city.state.toLowerCase().replace(/\s+/g, '-')}/${city.slug}`,
+    lastModified: twoWeeksAgo,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  // Generate Czech Republic regional URLs
+  const czRegionUrls = czRegions.map((region) => ({
+    url: `${baseUrl}/cz/regions/${region.code}`,
+    lastModified: oneWeekAgo,
     changeFrequency: 'weekly' as const,
     priority: 0.7,
   }))
@@ -159,6 +184,46 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.4,
     },
     
+    // Global and country hub pages
+    {
+      url: `${baseUrl}/global`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/us`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/cz`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ca`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.6, // Lower priority as it's coming soon
+    },
+    
+    // US hub index pages
+    {
+      url: `${baseUrl}/us/states`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/us/cities`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    
     // Cities index pages
     {
       url: `${baseUrl}/cities`,
@@ -181,14 +246,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     
-  // All state pages (English)
+  // All state pages (English - root level)
   ...stateUrls,
 
   // Spanish localized state detail pages
   ...stateUrlsEs,
     
-  // All city pages (English)
+  // All city pages (English - root level)
   ...cityUrls,
+
+  // All US state pages (under /us path)
+  ...usStateUrls,
+
+  // All US city pages (under /us path)
+  ...usCityUrls,
+
+  // Czech Republic regional pages
+  ...czRegionUrls,
     
     // All blog posts
     ...blogPostsENUrls,
