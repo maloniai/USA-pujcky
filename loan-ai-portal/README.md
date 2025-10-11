@@ -1,17 +1,21 @@
 # Loan AI Portal
 
-A Next.js application for AI-powered personal loan matching serving customers across all 50 US states.
+A Next.js application for AI-powered personal loan matching serving customers globally including the USA, Czech Republic, and Vietnam.
 
 ## 🎯 Features
 
 - 🤖 **AI-Powered Loan Matching** - 200+ data point analysis for best rates
-- 🇺🇸 **USA Market Focus** - Serving all 50 states
-- 🏛️ **State-Specific Information** - Local lending regulations and rates
+- 🌍 **Global Coverage** - USA (50 states), Czech Republic (14 regions), Vietnam (5 regions)
+- 🇺🇸 **USA Market** - Serving all 50 states with state-specific information
+- 🇨🇿 **Czech Republic** - 14 regions with local lending regulations
+- 🇻🇳 **Vietnam Hub** - 5 regions, 15+ cities with Vietnamese language support
+- 🏛️ **Region-Specific Information** - Local lending regulations and rates
 - 📱 **Responsive Design** - Mobile-first approach
 - ⚡ **Fast Performance** - Static export, WebP images, lazy loading
-- 🔒 **Secure & Compliant** - Bank-level security, GLBA/TILA compliant
+- 🔒 **Secure & Compliant** - Bank-level security, regulatory compliant
 - 🔍 **SEO Optimized** - #1 Google ranking keywords, AI search ready
 - 🖼️ **Image Optimization** - WebP format, lazy loading, SEO alt tags
+- 🌐 **Multi-Language** - English, Spanish, Czech, Vietnamese
 
 ## 🛠️ Technology Stack
 
@@ -30,28 +34,46 @@ loan-ai-portal/
 ├── src/
 │   ├── app/
 │   │   ├── layout.tsx               # Root layout with OrganizationSchema
-│   │   ├── page.tsx                 # Homepage with HowTo schema
+│   │   ├── page.tsx                 # Global homepage
+│   │   ├── us/                      # USA hub (50 states, 1200+ cities)
+│   │   │   ├── page.tsx             # USA landing page
+│   │   │   ├── states/              # All 50 US states
+│   │   │   └── cities/              # 1200+ US cities
+│   │   ├── cz/                      # Czech Republic hub (14 regions)
+│   │   │   ├── page.tsx             # CZ landing page
+│   │   │   └── regions/             # 14 Czech regions
+│   │   ├── vn/                      # Vietnam hub (5 regions, 15+ cities)
+│   │   │   ├── page.tsx             # Vietnam landing page (Vietnamese)
+│   │   │   ├── layout.tsx           # Vietnamese language layout
+│   │   │   ├── regions/             # 5 Vietnam regions
+│   │   │   ├── cities/              # 15+ Vietnam cities
+│   │   │   └── apply/               # Application page with affiliate script
 │   │   ├── about/                   # About Us (2M+ borrowers)
 │   │   ├── ai-loan-matching/        # AI matching explanation
 │   │   ├── faq/                     # 40 FAQ with schema markup
 │   │   ├── contact/                 # Contact page
-│   │   ├── states/                  # All 50 US states
 │   │   └── (legal pages)            # Privacy, Terms, Disclaimer, Licenses
 │   ├── components/
 │   │   ├── ui/                      # Reusable UI components
+│   │   ├── sticky-apply-button.tsx  # Sticky CTA button
 │   │   ├── optimized-image.tsx      # SEO-optimized image component
 │   │   ├── faq-schema.tsx           # FAQPage structured data
 │   │   ├── howto-schema.tsx         # HowTo structured data
 │   │   └── organization-schema.tsx  # Organization structured data
 │   ├── lib/
-│   │   ├── seo.ts                   # SEO configuration (USA focus)
+│   │   ├── seo.ts                   # SEO configuration
+│   │   ├── i18n.ts                  # Multi-language support (en, es, cs, vi)
 │   │   ├── page-metadata.ts         # #1 Google ranking keywords
-│   │   ├── image-seo.ts             # Image SEO helpers
-│   │   └── image-examples.tsx       # Image usage examples
+│   │   └── image-seo.ts             # Image SEO helpers
 │   └── data/
+│       ├── countries.ts             # Global country coverage
 │       ├── states.ts                # All 50 US states data
+│       ├── cities.ts                # 1200+ US cities data
+│       ├── cz-regions.ts            # 14 Czech regions
+│       ├── vietnam-regions.ts       # 5 Vietnam regions
+│       ├── vietnam-cities.ts        # 15+ Vietnam cities
 │       ├── faqs.ts                  # 40 FAQ questions
-│       └── translations.ts          # Multi-language support
+│       └── translations.ts          # Multi-language translations
 ├── public/
 │   └── images/                      # Optimized images (WebP)
 │       ├── hero/                    # Homepage banners
@@ -193,16 +215,42 @@ All 15+ pages have complete metadata with #1 Google ranking keywords:
 
 ## 🌍 Geographic Coverage
 
-Serving customers in all 50 US states:
-- Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware
-- Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky
-- Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi
-- Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico
-- New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania
-- Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont
-- Virginia, Washington, West Virginia, Wisconsin, Wyoming
+### United States 🇺🇸
+Serving customers in all 50 US states with comprehensive state and city coverage:
+- 50 states with detailed regulatory information
+- 1,200+ cities with local lending data
+- English and Spanish language support
 
-Each state has dedicated page with local lending information.
+### Czech Republic 🇨🇿
+Complete coverage of Czech lending market:
+- 14 regions (Prague, Central Bohemia, South Bohemia, Plzeň, etc.)
+- 600+ cities
+- Czech language support
+- ČNB regulatory compliance
+
+### Vietnam 🇻🇳
+**NEW: Vietnam Hub** - Comprehensive Vietnamese market coverage:
+- **5 Major Regions**: Hanoi, Ho Chi Minh City, Da Nang, Hai Phong, Can Tho
+- **15+ Cities**: Including Ba Dinh, Hoan Kiem, District 1, District 3, Hai Chau, etc.
+- **Vietnamese Language**: Full Vietnamese translation and localization
+- **Local Regulations**: SBV (State Bank of Vietnam) compliance
+- **Unique Content**: SEO-optimized, legally compliant content for each region and city
+- **Affiliate Integration**: DoAff script integration on apply page
+- **Internal Linking**: Cross-linking between regions and cities
+- **Schema Markup**: FinancialService, FAQPage, BreadcrumbList, OfferCatalog
+- **Sticky Apply Button**: Mobile-optimized CTA on all pages
+
+#### Vietnam Page Structure
+Each Vietnam page includes:
+- **Title**: ≤60 chars, optimized for local search
+- **Meta Description**: 120-155 chars with Vietnamese localization
+- **H1 Heading**: Region/City specific
+- **Introduction**: 80-120 words unique content
+- **Local Regulations**: 5-8 bullet points on borrower protections
+- **FAQ Section**: 3-5 city/country-specific Q&A
+- **Internal Links**: Navigation to parent region and nearby cities
+- **Disclosure Block**: Affiliate disclosure and representative examples
+- **Apply CTA**: Sticky button linking to /vn/apply page
 
 ## 📚 Documentation
 
