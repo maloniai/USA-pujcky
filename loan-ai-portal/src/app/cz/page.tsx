@@ -2,11 +2,6 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 
-export const metadata = {
-  title: 'Půjčky AI Portal - Rychlé a Bezpečné Půjčky',
-  description: 'Získejte okamžité schválení půjčky s naší platformou podporovanou AI. Podpora více jazyků, informace specifické pro kraj a bezpečné zpracování.',
-}
-
 export default function CzechHomePage() {
   return (
     <div className="container mx-auto px-4 py-8">
