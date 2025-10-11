@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Půjčky Bystřice nad Pernštejnem, Kraj Vysočina – Srovnání 2025',
+  title: 'Půjčky Bystřice n. P., Kraj Vysočina – Srovnání 2025',
   description: 'Hledáte půjčku v Bystřice nad Pernštejnem? Porovnejte nejlepší nabídky online půjček od licencovaných poskytovatelů. Rychlé schválení, výhodné podmínky.',
 }
 

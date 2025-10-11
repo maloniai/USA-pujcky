@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Půjčky Jaroměřice nad Rokytnou, Kraj Vysočina – Srovnání 2025',
+  title: 'Půjčky Jaroměřice n. R., Kraj Vysočina – Srovnání 2025',
   description: 'Hledáte půjčku v Jaroměřice nad Rokytnou? Porovnejte nejlepší nabídky online půjček od licencovaných poskytovatelů. Rychlé schválení, výhodné podmínky.',
 }
 
