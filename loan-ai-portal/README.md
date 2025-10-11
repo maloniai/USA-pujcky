@@ -229,9 +229,13 @@ Complete coverage of Czech lending market:
 - ČNB regulatory compliance
 
 ### Vietnam 🇻🇳
-**NEW: Vietnam Hub** - Comprehensive Vietnamese market coverage:
+Complete coverage of Vietnamese lending market:
+- 5 regions (Hanoi, Ho Chi Minh City, Da Nang, Hai Phong, Can Tho)
+- 26 cities across all major metropolitan areas
+- Vietnamese language support
+- SBV regulatory compliance
 - **5 Major Regions**: Hanoi, Ho Chi Minh City, Da Nang, Hai Phong, Can Tho
-- **15+ Cities**: Including Ba Dinh, Hoan Kiem, District 1, District 3, Hai Chau, etc.
+- **26 Cities**: Including multiple districts in Hanoi (Ba Dinh, Hoan Kiem, Cau Giay, Dong Da, Hai Ba Trung), Ho Chi Minh City (District 1, District 3, Binh Thanh, Tan Binh, Phu Nhuan, Go Vap, Thu Duc), Da Nang (Hai Chau, Thanh Khe, Son Tra, Ngu Hanh Son), Hai Phong (Hong Bang, Le Chan, Ngo Quyen, Kien An), and Can Tho (Ninh Kieu, Cai Rang, Binh Thuy, O Mon)
 - **Vietnamese Language**: Full Vietnamese translation and localization
 - **Local Regulations**: SBV (State Bank of Vietnam) compliance
 - **Unique Content**: SEO-optimized, legally compliant content for each region and city
