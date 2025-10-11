@@ -75,7 +75,7 @@ const faq = [
   },
 ]
 
-const publishedRegionSlugs = new Set(['mazowieckie'])
+const publishedRegionSlugs = new Set(['mazowieckie', 'slaskie'])
 
 export default function PolandHubPage() {
   return (
