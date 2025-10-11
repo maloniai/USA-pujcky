@@ -82,6 +82,18 @@ const navigationTranslations: Record<Locale, NavigationLabels> = {
 		languageSwitch: 'English',
 		languageSwitchAria: 'Přepnout do angličtiny',
 	},
+	pl: {
+		brand: 'Loan AI Portal',
+		home: 'Strona główna',
+		countries: 'Kraje',
+		aiMatching: 'Dopasowanie AI',
+		usaHub: 'Pożyczki USA',
+		czHub: 'Czechy',
+		blog: 'Blog',
+		apply: 'Złóż wniosek',
+		languageSwitch: 'English',
+		languageSwitchAria: 'Przełącz na angielski',
+	},
 }
 
 const footerTranslations: Record<Locale, FooterLabels> = {
@@ -262,6 +274,66 @@ const footerTranslations: Record<Locale, FooterLabels> = {
 		],
 		legal: '© 2025 Loan AI Portál. Všechna práva vyhrazena.',
 	},
+	pl: {
+		description:
+			'Szybkie i bezpieczne pożyczki osobiste z dopasowaniem AI. Porównaj oferty licencjonowanych pożyczkodawców i uzyskaj niezobowiązującą ocenę w 2 minuty.',
+		sections: [
+			{
+				heading: 'Firma',
+				links: [
+					{ label: 'O nas', href: '/about' },
+					{ label: 'Kontakt', href: '/contact' },
+					{ label: 'Polityka prywatności', href: '/privacy' },
+					{ label: 'Regulamin', href: '/terms' },
+				],
+			},
+			{
+				heading: 'Zasięg globalny',
+				links: [
+					{ label: 'Strona główna', href: '/#global-coverage' },
+					{ label: 'Stany Zjednoczone (USA)', href: '/us' },
+					{ label: 'Czechy', href: '/cz' },
+					{ label: 'Polska', href: '/pl' },
+				],
+			},
+			{
+				heading: 'Polska – Województwa',
+				links: [
+					{ label: 'Mazowieckie', href: '/pl/regions/mazowieckie' },
+					{ label: 'Śląskie', href: '/pl/regions/slaskie' },
+					{ label: 'Wielkopolskie', href: '/pl/regions/wielkopolskie' },
+					{ label: 'Małopolskie', href: '/pl/regions/malopolskie' },
+				],
+			},
+			{
+				heading: 'Polska – Miasta',
+				links: [
+					{ label: 'Warszawa', href: '/pl/regions/mazowieckie/warszawa' },
+					{ label: 'Kraków', href: '/pl/regions/malopolskie/krakow' },
+					{ label: 'Poznań', href: '/pl/regions/wielkopolskie/poznan' },
+					{ label: 'Wrocław', href: '/pl/regions/dolnoslaskie/wroclaw' },
+				],
+			},
+			{
+				heading: 'Zasoby',
+				links: [
+					{ label: 'Blog', href: '/blog' },
+					{ label: 'Województwa', href: '/pl/regions' },
+					{ label: 'Miasta', href: '/pl/cities' },
+					{ label: 'FAQ', href: '/faq' },
+					{ label: 'Zastrzeżenia prawne', href: '/disclaimer' },
+					{ label: 'Licencje', href: '/licenses' },
+				],
+			},
+		],
+		disclosures: [
+			'Loan AI Portal jest generatorem leadów. Nie jesteśmy pożyczkodawcą i nie podejmujemy decyzji kredytowych. Twoje dane przekazujemy wyłącznie licencjonowanym partnerom w celu rozpatrzenia wniosku.',
+			'Nie wszyscy pożyczkodawcy oferują maksymalną kwotę pożyczki. Rzeczywiste warunki zależą od zdolności kredytowej wnioskodawcy i wewnętrznych zasad pożyczkodawcy. Wypłata środków może wymagać dodatkowej dokumentacji.',
+			'Każdy pożyczkodawca ma własne warunki umowy i politykę przedłużenia. Przed podpisaniem umowy dokładnie zapoznaj się z warunkami. Opóźnienia w spłacie mogą prowadzić do sankcji lub działań windykacyjnych.',
+			'Korzystając z tej strony internetowej potwierdzasz, że masz co najmniej 18 lat i rozumiesz obowiązki wynikające z ustawy o kredycie konsumenckim.',
+		],
+		legal: '© 2025 Loan AI Portal. Wszelkie prawa zastrzeżone.',
+	},
 }
 
 const commonTranslations: Record<Locale, CommonLabels> = {
@@ -327,6 +399,27 @@ const commonTranslations: Record<Locale, CommonLabels> = {
 		applyCta: 'Požádat o úvěr',
 		leadGenDisclosure:
 			'Jsme lead generátor, nikoli přímý poskytovatel. Vaše údaje bezpečně sdílíme s licencovanými partnery.',
+	},
+	pl: {
+		home: 'Strona główna',
+		states: 'Województwa',
+		cities: 'Miasta',
+		blog: 'Blog',
+		faq: 'FAQ',
+		contact: 'Kontakt',
+		searchPlaceholder: 'Szukaj według województwa lub miasta…',
+		regionFilterLabel: 'Filtruj według regionu',
+		allRegionsOption: 'Wszystkie regiony',
+		regionOptions: {
+			Northeast: 'Północ',
+			Southeast: 'Południe',
+			Midwest: 'Centrum',
+			Southwest: 'Południowy-zachód',
+			West: 'Zachód',
+		},
+		applyCta: 'Złóż wniosek',
+		leadGenDisclosure:
+			'Jesteśmy generatorem leadów, a nie bezpośrednim pożyczkodawcą. Bezpiecznie udostępniamy Twoje dane licencjonowanym partnerom.',
 	},
 }
 
