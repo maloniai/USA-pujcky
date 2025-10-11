@@ -51,7 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   // Generate CZ region URLs
-  const publishedCzRegions = ['praha', 'stredocesky', 'jihocesky', 'plzensky']
+  const publishedCzRegions = [
+    'praha', 'stredocesky', 'jihocesky', 'plzensky',
+    'karlovarsky', 'ustecky', 'liberecky', 'kralovehradecky',
+    'pardubicky', 'vysocina', 'jihomoravsky', 'olomoucky',
+    'zlinsky', 'moravskoslezsky'
+  ]
   const czRegionUrls = czRegions
     .filter(region => publishedCzRegions.includes(region.code))
     .map((region) => ({

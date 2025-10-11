@@ -62,7 +62,12 @@ const breadcrumbItems = [
   { name: 'Půjčky Česko', url: '/cz', position: 2 },
 ]
 
-const publishedRegionSlugs = new Set(['praha', 'stredocesky', 'jihocesky', 'plzensky'])
+const publishedRegionSlugs = new Set([
+  'praha', 'stredocesky', 'jihocesky', 'plzensky',
+  'karlovarsky', 'ustecky', 'liberecky', 'kralovehradecky',
+  'pardubicky', 'vysocina', 'jihomoravsky', 'olomoucky',
+  'zlinsky', 'moravskoslezsky'
+])
 
 export default function CzechRepublicHubPage() {
   return (
