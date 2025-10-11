@@ -6,6 +6,9 @@ const nextConfig = {
     unoptimized: true
   },
   
+  // Disable font optimization for static export
+  optimizeFonts: false,
+  
   // Bundle Size Optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? {
