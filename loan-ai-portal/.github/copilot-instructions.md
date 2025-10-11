@@ -13,6 +13,22 @@
 - Footer: `src/components/global-footer.tsx` displays company contact, legal links, and country hub navigation—no locale switcher or loan CTAs.
 - **Scaling Pattern**: When launching a new country, add entry to appropriate array in `countries.ts`, create localized hub route (e.g., `/mx`), and update global page will auto-reflect the new hub.
 
+## Blog & Content Strategy
+- **Publishing Schedule**: Blog updates **2x per week** with worldwide financial insights applicable across all country markets.
+- **SEO-Driven Translation**: Each blog post is translated and localized for every active country hub, ensuring cultural relevance and local terminology (e.g., "personal loan" vs "půjčka" vs "prêt personnel").
+- **Route Structure**: Blog posts follow locale-specific routes:
+  - English (US): `/blog/[slug]` or `/learn/[slug]`
+  - Spanish: `/es/blog/[slug]` or `/es/learn/[slug]`
+  - Czech: `/cz/blog/[slug]` or `/cz/learn/[slug]`
+  - Canada EN: `/ca/blog/[slug]`, Canada FR: `/ca/fr/blog/[slug]`
+- **Content Topics**: Focus on universal financial education (credit building, debt management, budgeting, loan comparison tips, regulatory changes) that transcends borders but adapts to local context.
+- **Localization Best Practices**:
+  - Translate currency references (USD → CZK → CAD → EUR)
+  - Adjust regulatory references (CFPB → ČNB → FCAC)
+  - Adapt examples to local scenarios (US credit scores vs Czech registry checks)
+  - Maintain consistent tone while respecting cultural communication norms
+- **Implementation**: Blog data lives in `src/data/blog.ts` or similar; use `generateStaticParams()` for static generation; include `<FAQSchema>` and `<BlogPostingSchema>` for rich snippets; cross-link to relevant country-specific loan pages for conversion funnels.
+
 ## Czech Region Pattern
 - Region datasets (`src/data/cz-{region}.ts`) export `{region}RegionContent`, `{region}CitySlugs`, `get{Region}City`, `resolve{Region}Metadata`; always run names through `slugify()` for diacritics.
 - City seeds hold meta templates (`{{year}}` placeholder), intro copy, disclosures, FAQ, regulations, nearby slugs, and Volsor offer config—keep descriptions under 155 chars.
