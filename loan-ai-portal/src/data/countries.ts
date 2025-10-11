@@ -73,7 +73,7 @@ export const liveCountries: CountryHub[] = [
     flag: '🇨🇴',
     description:
       'Préstamos personales y consolidación de deudas para residentes en Colombia. Compare ofertas de prestamistas licenciados.',
-    coverage: '12 regiones • 140+ ciudades',
+    coverage: '20 regiones • 240+ ciudades',
     population: '51M',
     languages: ['Spanish'],
     regulator: 'Superintendencia Financiera de Colombia',
