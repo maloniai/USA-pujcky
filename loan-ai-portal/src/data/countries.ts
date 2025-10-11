@@ -52,6 +52,21 @@ export const liveCountries: CountryHub[] = [
     status: 'live',
     launchDate: '2024-09',
   },
+  {
+    code: 'ro',
+    name: 'Romania',
+    flag: '🇷🇴',
+    description:
+      'Împrumuturi personale și consolidarea datoriilor pentru rezidenții din România. Compară ofertele de la creditori licențiați BNR.',
+    coverage: '8 regiuni • 40+ orașe',
+    population: '19M',
+    languages: ['Romanian'],
+    regulator: 'Banca Națională a României (BNR)',
+    href: '/ro',
+    ctaLabel: 'Explorează creditele din România',
+    status: 'live',
+    launchDate: '2025-01',
+  },
 ]
 
 // Country hubs in active development
@@ -93,17 +108,6 @@ export const comingSoonCountries: CountryHub[] = [
     population: '47M',
     languages: ['Spanish'],
     href: '/es',
-    ctaLabel: 'Coming soon',
-    status: 'coming-soon',
-  },
-  {
-    code: 'ro',
-    name: 'Romania',
-    flag: '🇷🇴',
-    description: 'Împrumuturi personale și consolidarea datoriilor pentru rezidenții din România.',
-    population: '19M',
-    languages: ['Romanian'],
-    href: '/ro',
     ctaLabel: 'Coming soon',
     status: 'coming-soon',
   },
