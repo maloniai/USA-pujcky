@@ -2,6 +2,10 @@ import { MetadataRoute } from 'next'
 import { blogPostsEN } from '@/data/blog-posts'
 import { usStates } from '@/data/states'
 import { cities } from '@/data/cities'
+import { czRegions } from '@/data/cz-regions'
+import { jihoceskyCityContent } from '@/data/cz-jihocesky'
+import { stredoceskyCityContent } from '@/data/cz-stredocesky'
+import { plzenskyCityContent } from '@/data/cz-plzensky'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://loan-platform.com'
@@ -44,6 +48,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'weekly' as const,
     priority: 0.7,
   }))
+
+  // Generate CZ region URLs
+  const publishedCzRegions = ['praha', 'stredocesky', 'jihocesky', 'plzensky']
+  const czRegionUrls = czRegions
+    .filter(region => publishedCzRegions.includes(region.code))
+    .map((region) => ({
+      url: `${baseUrl}/cz/regions/${region.code}`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    }))
+
+  // Generate CZ city URLs
+  const czCityUrls = [
+    ...jihoceskyCityContent.map(city => ({
+      url: `${baseUrl}/cz/regions/jihocesky/${city.slug}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+    ...stredoceskyCityContent.map(city => ({
+      url: `${baseUrl}/cz/regions/stredocesky/${city.slug}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+    ...plzenskyCityContent.map(city => ({
+      url: `${baseUrl}/cz/regions/plzensky/${city.slug}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+  ]
   
   return [
     // Homepage - Highest priority (English)
@@ -60,6 +97,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily',
       priority: 1,
     },
+    // Czech homepage
+    {
+      url: `${baseUrl}/cz`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
     
     // Primary conversion pages
     {
@@ -70,6 +114,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/es/apply`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/cz/zadost`,
       lastModified: oneWeekAgo,
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -186,6 +236,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Spanish localized state detail pages
   ...stateUrlsEs,
+
+  // Czech region pages
+  ...czRegionUrls,
+
+  // Czech city pages  
+  ...czCityUrls,
     
   // All city pages (English)
   ...cityUrls,
