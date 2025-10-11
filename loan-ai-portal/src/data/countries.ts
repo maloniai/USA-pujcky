@@ -38,6 +38,21 @@ export const liveCountries: CountryHub[] = [
     launchDate: '2024-03',
   },
   {
+    code: 'ca',
+    name: 'Canada',
+    flag: '🇨🇦',
+    description:
+      'Personal loans across all Canadian provinces. Compare rates from 100+ licensed lenders. Service available in English and French.',
+    coverage: '10 provinces • 15+ major cities',
+    population: '39M',
+    languages: ['English', 'French'],
+    regulator: 'FCAC & provincial regulators',
+    href: '/canada',
+    ctaLabel: 'Explore Canada loans',
+    status: 'live',
+    launchDate: '2025-01',
+  },
+  {
     code: 'cz',
     name: 'Czech Republic',
     flag: '🇨🇿',
@@ -55,22 +70,7 @@ export const liveCountries: CountryHub[] = [
 ]
 
 // Country hubs in active development
-export const inProgressCountries: CountryHub[] = [
-  {
-    code: 'ca',
-    name: 'Canada',
-    flag: '🇨🇦',
-    description:
-      'Personal loans, mortgages, and debt consolidation for Canadian residents. Launching with English and French support.',
-    population: '39M',
-    languages: ['English', 'French'],
-    regulator: 'FCAC & provincial regulators',
-    href: '/ca',
-    ctaLabel: 'Coming Q1 2025',
-    status: 'in-progress',
-    launchDate: '2025-Q1',
-  },
-]
+export const inProgressCountries: CountryHub[] = []
 
 // Planned country expansions
 export const comingSoonCountries: CountryHub[] = [
