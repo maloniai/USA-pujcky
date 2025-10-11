@@ -1,0 +1,56 @@
+
+> loan-ai-portal@0.1.0 build
+> next build
+
+   ▲ Next.js 14.0.0
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/408) ...
+   Generating static pages (102/408) 
+   Generating static pages (204/408) 
+   Generating static pages (306/408) 
+ ✓ Generating static pages (408/408) 
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                              Size     First Load JS
+┌ ○ /                                                    1.59 kB        96.3 kB
+├ ○ /_not-found                                          875 B          88.6 kB
+├ ○ /about                                               7.08 kB         102 kB
+├ ○ /ai-loan-matching                                    7.34 kB         102 kB
+├ ○ /apply                                               1.59 kB        96.3 kB
+├ ○ /blog                                                185 B          94.9 kB
+├ ● /blog/[slug]                                         186 B          97.3 kB
+├   ├ /blog/how-to-get-approved-personal-loan-2025
+├   ├ /blog/personal-loan-vs-credit-card-which-better
+├   ├ /blog/debt-consolidation-complete-guide
+├   └ /blog/improve-credit-score-fast-proven-strategies
+├ ○ /cities                                              2.29 kB          97 kB
+├ ● /cities/[state]/[city]                               2.29 kB          97 kB
+├   ├ /cities/california/los-angeles
+├   ├ /cities/texas/houston
+├   ├ /cities/texas/san-antonio
+├   └ [+382 more paths]
+├ ○ /contact                                             3.07 kB        97.8 kB
+├ ○ /disclaimer                                          185 B          94.9 kB
+├ ○ /disclosures                                         6.97 kB         102 kB
+├ ○ /faq                                                 9.19 kB         104 kB
+├ ○ /licenses                                            185 B          94.9 kB
+├ ○ /privacy                                             185 B          94.9 kB
+├ ○ /robots.txt                                          0 B                0 B
+├ ○ /sitemap.xml                                         0 B                0 B
+├ ○ /states                                              10.8 kB         106 kB
+└ ○ /terms                                               185 B          94.9 kB
++ First Load JS shared by all                            87.7 kB
+  ├ chunks/472-55466a583dd1a590.js                       32.5 kB
+  ├ chunks/fd9d1056-456948113883b121.js                  53.3 kB
+  ├ chunks/main-app-a85c89a84258e835.js                  230 B
+  └ chunks/webpack-dd4c509ae89e0c27.js                   1.73 kB
+
+
+○  (Static)  prerendered as static HTML
+●  (SSG)     prerendered as static HTML (uses getStaticProps)
+

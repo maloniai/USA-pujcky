@@ -31,3 +31,55 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Custom FAQ heading styles for maximum visibility */
+.faq-heading {
+  color: #1e3a8a !important;
+  font-weight: 700 !important;
+  font-size: 1.875rem !important;
+  text-align: center !important;
+  margin-bottom: 2rem !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.025em !important;
+}
+
+/* Loan Application Form Styles - Simplified for instant loading */
+.loan-application-form {
+  min-height: 400px;
+  width: 100%;
+}
+
+#rsForm {
+  min-height: 400px;
+  width: 100% !important;
+}
+
+#rsForm iframe {
+  width: 100% !important;
+  min-height: 600px !important;
+  border: none;
+}
+
+#rsForm form {
+  width: 100% !important;
+  padding: 1rem;
+}
+
+#rsForm input, 
+#rsForm select, 
+#rsForm button {
+  font-size: 16px !important;
+  padding: 0.5rem !important;
+  margin: 0.25rem 0 !important;
+}
+
+#rsForm button {
+  background-color: #2563eb !important;
+  color: white !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+}
+
+#rsForm button:hover {
+  background-color: #1d4ed8 !important;
+}
