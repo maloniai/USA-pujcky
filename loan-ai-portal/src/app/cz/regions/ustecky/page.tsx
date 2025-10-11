@@ -7,6 +7,7 @@ import { VolsorLoanForm } from '@/components/cz/volsor-loan-form'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema'
 import { czRegions } from '@/data/cz-regions'
+import { usteckyRegionContent, usteckyCityContent } from '@/data/cz-ustecky'
 
 const currentYear = new Date().getFullYear()
 const regionCode = 'ustecky'
@@ -104,6 +105,32 @@ export default function UsteckyRegionPage() {
 
         <section className="bg-white py-16">
           <div className="mx-auto max-w-6xl px-4">
+        <section className="bg-white py-16">
+          <div className="mx-auto max-w-6xl px-4">
+            <h2 className="text-3xl font-semibold text-blue-900">Města v {regionData.name}</h2>
+            <p className="mt-3 max-w-3xl text-sm text-blue-900/80">
+              Detailní půjčkové průvodce pro jednotlivá města v regionu.
+            </p>
+            <div className="mt-8 grid gap-5 md:grid-cols-3">
+              {usteckyCityContent.map((city) => (
+                <Card key={city.slug} className="border-blue-100 shadow-sm">
+                  <CardHeader>
+                    <CardTitle className="text-xl text-blue-900">{city.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <Link
+                      href={`${canonicalPath}/${city.slug}`}
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:underline"
+                    >
+                      Otevřít průvodce <span aria-hidden>→</span>
+                    </Link>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
             <h2 className="text-3xl font-semibold text-blue-900">Prioritní města v {regionData.name}</h2>
             <p className="mt-3 max-w-3xl text-sm text-blue-900/80">
               Regionální průvodce pokrývá města s největší nabídkou licencovaných poskytovatelů a poboček.
@@ -116,7 +143,7 @@ export default function UsteckyRegionPage() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-blue-900/80">
-                      Průvodce půjčkami pro město {city} je ve výstavbě. Použijte formulář výše pro žádost o úvěr.
+                      Použijte formulář výše pro žádost o úvěr.
                     </p>
                   </CardContent>
                 </Card>
