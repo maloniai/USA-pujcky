@@ -60,6 +60,7 @@ export default function SpanishHomePage() {
         <div className="space-x-4">
           <Link href="/" className="text-blue-600 hover:underline">English</Link>
           <Link href="/es" className="text-blue-600 hover:underline">Español</Link>
+          <Link href="/cz" className="text-blue-600 hover:underline">Česky</Link>
         </div>
       </div>
     </div>

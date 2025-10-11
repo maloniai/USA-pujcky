@@ -2,61 +2,61 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 
-export default function HomePage() {
+export default function CzechHomePage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <header className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Welcome to Loan AI Portal
+          Vítejte v Portálu Půjček
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Fast, secure, and intelligent loan services powered by AI. 
-          Get instant pre-approvals and find the best loan options for your needs.
+          Rychlé, bezpečné a inteligentní půjčkové služby. 
+          Získejte okamžité předběžné schválení a najděte nejlepší možnosti půjček pro vaše potřeby.
         </p>
       </header>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         <Card>
           <CardHeader>
-            <CardTitle>Quick Application</CardTitle>
+            <CardTitle>Rychlá Žádost</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-gray-600 mb-4">
-              Apply for a loan in minutes with our streamlined process.
+              Požádejte o půjčku během několika minut s naším zjednodušeným procesem.
             </p>
-            <Button className="w-full">Apply Now</Button>
+            <Button className="w-full">Požádat Nyní</Button>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle>AI-Powered Matching</CardTitle>
+            <CardTitle>AI Vyhledávání</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-gray-600 mb-4">
-              Our AI finds the best loan options tailored to your profile.
+              Naše AI najde nejlepší možnosti půjček přizpůsobené vašemu profilu.
             </p>
-            <Button variant="outline" className="w-full">Learn More</Button>
+            <Button variant="outline" className="w-full">Více Informací</Button>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle>State-Specific Information</CardTitle>
+            <CardTitle>Informace Podle Krajů</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-gray-600 mb-4">
-              Get loan information specific to your state and city.
+              Získejte informace o půjčkách specifické pro váš kraj a město.
             </p>
-            <Link href="/states">
-              <Button variant="outline" className="w-full">Browse States</Button>
+            <Link href="/cz/kraje">
+              <Button variant="outline" className="w-full">Procházet Kraje</Button>
             </Link>
           </CardContent>
         </Card>
       </div>
 
       <div className="text-center">
-        <h2 className="text-2xl font-semibold mb-4">Available in Multiple Languages</h2>
+        <h2 className="text-2xl font-semibold mb-4">Dostupné ve Více Jazycích</h2>
         <div className="space-x-4">
           <Link href="/" className="text-blue-600 hover:underline">English</Link>
           <Link href="/es" className="text-blue-600 hover:underline">Español</Link>
