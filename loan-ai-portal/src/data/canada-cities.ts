@@ -1,0 +1,368 @@
+// Canadian Cities data for loan information
+
+export interface CanadianCityInfo {
+  name: string
+  nameFr: string
+  slug: string
+  province: string
+  provinceFr: string
+  provinceAbbr: string
+  provinceSlug: string
+  population: string
+  medianIncome: string
+  medianHomePrice: string
+  averageLoanAmount: string
+  nearbyLenders: number
+  avgCreditScore: string
+  coordinates: {
+    lat: number
+    lng: number
+  }
+  localEconomy: string
+  localEconomyFr: string
+  keyIndustries: string[]
+  keyIndustriesFr: string[]
+  popularLoanTypes: string[]
+  popularLoanTypesFr: string[]
+}
+
+export const canadianCities: CanadianCityInfo[] = [
+  // Ontario Cities
+  {
+    name: 'Toronto',
+    nameFr: 'Toronto',
+    slug: 'toronto',
+    province: 'Ontario',
+    provinceFr: 'Ontario',
+    provinceAbbr: 'ON',
+    provinceSlug: 'ontario',
+    population: '2.93M',
+    medianIncome: '$65,829',
+    medianHomePrice: '$1,195,000',
+    averageLoanAmount: '$15,500',
+    nearbyLenders: 150,
+    avgCreditScore: '725',
+    coordinates: { lat: 43.6532, lng: -79.3832 },
+    localEconomy: 'Toronto is Canada\'s financial capital with a diverse economy spanning finance, technology, real estate, and professional services. The city\'s robust job market and high cost of living create steady demand for personal loans ranging from debt consolidation to home improvements.',
+    localEconomyFr: 'Toronto est la capitale financière du Canada avec une économie diversifiée couvrant la finance, la technologie, l\'immobilier et les services professionnels. Le marché du travail robuste et le coût de la vie élevé créent une demande constante de prêts personnels allant de la consolidation de dettes aux rénovations domiciliaires.',
+    keyIndustries: ['Financial Services', 'Technology', 'Real Estate', 'Healthcare', 'Professional Services'],
+    keyIndustriesFr: ['Services financiers', 'Technologie', 'Immobilier', 'Santé', 'Services professionnels'],
+    popularLoanTypes: ['Debt Consolidation', 'Home Improvement', 'Emergency Loans'],
+    popularLoanTypesFr: ['Consolidation de dettes', 'Rénovation domiciliaire', 'Prêts d\'urgence'],
+  },
+  {
+    name: 'Ottawa',
+    nameFr: 'Ottawa',
+    slug: 'ottawa',
+    province: 'Ontario',
+    provinceFr: 'Ontario',
+    provinceAbbr: 'ON',
+    provinceSlug: 'ontario',
+    population: '1.02M',
+    medianIncome: '$85,510',
+    medianHomePrice: '$625,000',
+    averageLoanAmount: '$13,000',
+    nearbyLenders: 85,
+    avgCreditScore: '735',
+    coordinates: { lat: 45.4215, lng: -75.6972 },
+    localEconomy: 'As Canada\'s capital, Ottawa\'s economy is heavily influenced by federal government employment, technology sector growth, and tourism. The stable job market and educated workforce support a healthy personal lending environment with competitive rates.',
+    localEconomyFr: 'En tant que capitale du Canada, l\'économie d\'Ottawa est fortement influencée par l\'emploi du gouvernement fédéral, la croissance du secteur technologique et le tourisme. Le marché du travail stable et la main-d\'œuvre éduquée soutiennent un environnement de prêt personnel sain avec des taux compétitifs.',
+    keyIndustries: ['Government', 'Technology', 'Healthcare', 'Education', 'Tourism'],
+    keyIndustriesFr: ['Gouvernement', 'Technologie', 'Santé', 'Éducation', 'Tourisme'],
+    popularLoanTypes: ['Debt Consolidation', 'Vehicle Loans', 'Home Improvement'],
+    popularLoanTypesFr: ['Consolidation de dettes', 'Prêts automobiles', 'Rénovation domiciliaire'],
+  },
+  {
+    name: 'Mississauga',
+    nameFr: 'Mississauga',
+    slug: 'mississauga',
+    province: 'Ontario',
+    provinceFr: 'Ontario',
+    provinceAbbr: 'ON',
+    provinceSlug: 'ontario',
+    population: '721K',
+    medianIncome: '$72,720',
+    medianHomePrice: '$985,000',
+    averageLoanAmount: '$14,500',
+    nearbyLenders: 120,
+    avgCreditScore: '720',
+    coordinates: { lat: 43.5890, lng: -79.6441 },
+    localEconomy: 'Mississauga is a major business hub with strong manufacturing, logistics, and corporate headquarters presence. The diverse economy and proximity to Toronto create substantial borrowing needs for both business and personal purposes.',
+    localEconomyFr: 'Mississauga est un important centre d\'affaires avec une forte présence de fabrication, de logistique et de sièges sociaux. L\'économie diversifiée et la proximité de Toronto créent des besoins d\'emprunt substantiels tant pour les entreprises que pour les particuliers.',
+    keyIndustries: ['Manufacturing', 'Logistics', 'Retail', 'Business Services', 'Aviation'],
+    keyIndustriesFr: ['Fabrication', 'Logistique', 'Commerce de détail', 'Services aux entreprises', 'Aviation'],
+    popularLoanTypes: ['Debt Consolidation', 'Home Improvement', 'Medical Expenses'],
+    popularLoanTypesFr: ['Consolidation de dettes', 'Rénovation domiciliaire', 'Frais médicaux'],
+  },
+  
+  // Quebec Cities
+  {
+    name: 'Montreal',
+    nameFr: 'Montréal',
+    slug: 'montreal',
+    province: 'Quebec',
+    provinceFr: 'Québec',
+    provinceAbbr: 'QC',
+    provinceSlug: 'quebec',
+    population: '1.78M',
+    medianIncome: '$53,910',
+    medianHomePrice: '$535,000',
+    averageLoanAmount: '$11,500',
+    nearbyLenders: 130,
+    avgCreditScore: '710',
+    coordinates: { lat: 45.5017, lng: -73.5673 },
+    localEconomy: 'Montreal is Quebec\'s economic powerhouse with thriving aerospace, technology, gaming, and cultural sectors. The bilingual city offers a lower cost of living than Toronto while maintaining robust lending markets for both anglophone and francophone residents.',
+    localEconomyFr: 'Montréal est le moteur économique du Québec avec des secteurs florissants de l\'aérospatiale, de la technologie, du jeu vidéo et de la culture. La ville bilingue offre un coût de la vie inférieur à Toronto tout en maintenant des marchés de prêts robustes pour les résidents anglophones et francophones.',
+    keyIndustries: ['Aerospace', 'Technology', 'Gaming', 'Finance', 'Entertainment'],
+    keyIndustriesFr: ['Aérospatiale', 'Technologie', 'Jeux vidéo', 'Finance', 'Divertissement'],
+    popularLoanTypes: ['Debt Consolidation', 'Education', 'Home Renovation'],
+    popularLoanTypesFr: ['Consolidation de dettes', 'Éducation', 'Rénovation résidentielle'],
+  },
+  {
+    name: 'Quebec City',
+    nameFr: 'Ville de Québec',
+    slug: 'quebec-city',
+    province: 'Quebec',
+    provinceFr: 'Québec',
+    provinceAbbr: 'QC',
+    provinceSlug: 'quebec',
+    population: '549K',
+    medianIncome: '$58,410',
+    medianHomePrice: '$385,000',
+    averageLoanAmount: '$10,000',
+    nearbyLenders: 70,
+    avgCreditScore: '715',
+    coordinates: { lat: 46.8139, lng: -71.2080 },
+    localEconomy: 'Quebec City\'s economy centers on provincial government, tourism, and technology. The predominantly francophone city offers competitive lending rates with strong consumer protections under Quebec law.',
+    localEconomyFr: 'L\'économie de Ville de Québec est centrée sur le gouvernement provincial, le tourisme et la technologie. La ville majoritairement francophone offre des taux de prêt compétitifs avec de solides protections des consommateurs en vertu du droit québécois.',
+    keyIndustries: ['Government', 'Tourism', 'Technology', 'Insurance', 'Education'],
+    keyIndustriesFr: ['Gouvernement', 'Tourisme', 'Technologie', 'Assurance', 'Éducation'],
+    popularLoanTypes: ['Debt Consolidation', 'Home Improvement', 'Vehicle Loans'],
+    popularLoanTypesFr: ['Consolidation de dettes', 'Rénovation domiciliaire', 'Prêts automobiles'],
+  },
+  
+  // British Columbia Cities
+  {
+    name: 'Vancouver',
+    nameFr: 'Vancouver',
+    slug: 'vancouver',
+    province: 'British Columbia',
+    provinceFr: 'Colombie-Britannique',
+    provinceAbbr: 'BC',
+    provinceSlug: 'british-columbia',
+    population: '662K',
+    medianIncome: '$72,662',
+    medianHomePrice: '$1,255,000',
+    averageLoanAmount: '$16,000',
+    nearbyLenders: 140,
+    avgCreditScore: '728',
+    coordinates: { lat: 49.2827, lng: -123.1207 },
+    localEconomy: 'Vancouver is a major Pacific gateway with a diverse economy including technology, film production, tourism, and natural resources. The city\'s extremely high housing costs drive significant demand for personal loans and debt consolidation services.',
+    localEconomyFr: 'Vancouver est une importante porte d\'entrée du Pacifique avec une économie diversifiée incluant la technologie, la production cinématographique, le tourisme et les ressources naturelles. Les coûts de logement extrêmement élevés de la ville génèrent une demande importante de prêts personnels et de services de consolidation de dettes.',
+    keyIndustries: ['Technology', 'Film & Television', 'Tourism', 'Trade', 'Natural Resources'],
+    keyIndustriesFr: ['Technologie', 'Cinéma et télévision', 'Tourisme', 'Commerce', 'Ressources naturelles'],
+    popularLoanTypes: ['Debt Consolidation', 'Home Improvement', 'Emergency Loans'],
+    popularLoanTypesFr: ['Consolidation de dettes', 'Rénovation domiciliaire', 'Prêts d\'urgence'],
+  },
+  {
+    name: 'Surrey',
+    nameFr: 'Surrey',
+    slug: 'surrey',
+    province: 'British Columbia',
+    provinceFr: 'Colombie-Britannique',
+    provinceAbbr: 'BC',
+    provinceSlug: 'british-columbia',
+    population: '568K',
+    medianIncome: '$69,870',
+    medianHomePrice: '$1,025,000',
+    averageLoanAmount: '$14,500',
+    nearbyLenders: 95,
+    avgCreditScore: '715',
+    coordinates: { lat: 49.1913, lng: -122.8490 },
+    localEconomy: 'Surrey is BC\'s fastest-growing city with expanding retail, healthcare, and education sectors. The diverse, multicultural population creates varied lending needs from small business to personal finance.',
+    localEconomyFr: 'Surrey est la ville à la croissance la plus rapide de la C.-B. avec des secteurs du commerce de détail, de la santé et de l\'éducation en expansion. La population diversifiée et multiculturelle crée des besoins de prêt variés allant des petites entreprises aux finances personnelles.',
+    keyIndustries: ['Retail', 'Healthcare', 'Education', 'Manufacturing', 'Construction'],
+    keyIndustriesFr: ['Commerce de détail', 'Santé', 'Éducation', 'Fabrication', 'Construction'],
+    popularLoanTypes: ['Debt Consolidation', 'Vehicle Loans', 'Home Improvement'],
+    popularLoanTypesFr: ['Consolidation de dettes', 'Prêts automobiles', 'Rénovation domiciliaire'],
+  },
+  
+  // Alberta Cities
+  {
+    name: 'Calgary',
+    nameFr: 'Calgary',
+    slug: 'calgary',
+    province: 'Alberta',
+    provinceFr: 'Alberta',
+    provinceAbbr: 'AB',
+    provinceSlug: 'alberta',
+    population: '1.31M',
+    medianIncome: '$98,980',
+    medianHomePrice: '$565,000',
+    averageLoanAmount: '$16,500',
+    nearbyLenders: 110,
+    avgCreditScore: '730',
+    coordinates: { lat: 51.0447, lng: -114.0719 },
+    localEconomy: 'Calgary is Canada\'s energy capital with a strong presence in oil, gas, and renewable energy sectors. High incomes and entrepreneurial culture support robust personal and business lending markets with competitive rates.',
+    localEconomyFr: 'Calgary est la capitale énergétique du Canada avec une forte présence dans les secteurs du pétrole, du gaz et des énergies renouvelables. Les revenus élevés et la culture entrepreneuriale soutiennent des marchés de prêts personnels et commerciaux robustes avec des taux compétitifs.',
+    keyIndustries: ['Energy', 'Finance', 'Technology', 'Agriculture', 'Tourism'],
+    keyIndustriesFr: ['Énergie', 'Finance', 'Technologie', 'Agriculture', 'Tourisme'],
+    popularLoanTypes: ['Debt Consolidation', 'Business Loans', 'Home Improvement'],
+    popularLoanTypesFr: ['Consolidation de dettes', 'Prêts commerciaux', 'Rénovation domiciliaire'],
+  },
+  {
+    name: 'Edmonton',
+    nameFr: 'Edmonton',
+    slug: 'edmonton',
+    province: 'Alberta',
+    provinceFr: 'Alberta',
+    provinceAbbr: 'AB',
+    provinceSlug: 'alberta',
+    population: '1.01M',
+    medianIncome: '$92,500',
+    medianHomePrice: '$405,000',
+    averageLoanAmount: '$14,000',
+    nearbyLenders: 90,
+    avgCreditScore: '725',
+    coordinates: { lat: 53.5461, lng: -113.4938 },
+    localEconomy: 'Edmonton serves as Alberta\'s capital and a major hub for energy, government, and education. The stable economy and relatively affordable housing create balanced lending demand across all credit tiers.',
+    localEconomyFr: 'Edmonton sert de capitale de l\'Alberta et de plaque tournante majeure pour l\'énergie, le gouvernement et l\'éducation. L\'économie stable et le logement relativement abordable créent une demande de prêt équilibrée dans tous les niveaux de crédit.',
+    keyIndustries: ['Energy', 'Government', 'Education', 'Healthcare', 'Retail'],
+    keyIndustriesFr: ['Énergie', 'Gouvernement', 'Éducation', 'Santé', 'Commerce de détail'],
+    popularLoanTypes: ['Debt Consolidation', 'Vehicle Loans', 'Education'],
+    popularLoanTypesFr: ['Consolidation de dettes', 'Prêts automobiles', 'Éducation'],
+  },
+  
+  // Manitoba Cities
+  {
+    name: 'Winnipeg',
+    nameFr: 'Winnipeg',
+    slug: 'winnipeg',
+    province: 'Manitoba',
+    provinceFr: 'Manitoba',
+    provinceAbbr: 'MB',
+    provinceSlug: 'manitoba',
+    population: '749K',
+    medianIncome: '$71,580',
+    medianHomePrice: '$365,000',
+    averageLoanAmount: '$11,500',
+    nearbyLenders: 75,
+    avgCreditScore: '710',
+    coordinates: { lat: 49.8951, lng: -97.1384 },
+    localEconomy: 'Winnipeg is Manitoba\'s economic center with diverse industries including manufacturing, transportation, and finance. Affordable housing and stable employment create consistent demand for personal loans across all purposes.',
+    localEconomyFr: 'Winnipeg est le centre économique du Manitoba avec des industries diversifiées incluant la fabrication, le transport et la finance. Le logement abordable et l\'emploi stable créent une demande constante de prêts personnels pour tous les besoins.',
+    keyIndustries: ['Manufacturing', 'Transportation', 'Finance', 'Agriculture', 'Healthcare'],
+    keyIndustriesFr: ['Fabrication', 'Transport', 'Finance', 'Agriculture', 'Santé'],
+    popularLoanTypes: ['Debt Consolidation', 'Home Improvement', 'Medical Expenses'],
+    popularLoanTypesFr: ['Consolidation de dettes', 'Rénovation domiciliaire', 'Frais médicaux'],
+  },
+  
+  // Saskatchewan Cities
+  {
+    name: 'Saskatoon',
+    nameFr: 'Saskatoon',
+    slug: 'saskatoon',
+    province: 'Saskatchewan',
+    provinceFr: 'Saskatchewan',
+    provinceAbbr: 'SK',
+    provinceSlug: 'saskatchewan',
+    population: '273K',
+    medianIncome: '$82,650',
+    medianHomePrice: '$345,000',
+    averageLoanAmount: '$11,000',
+    nearbyLenders: 55,
+    avgCreditScore: '715',
+    coordinates: { lat: 52.1332, lng: -106.6700 },
+    localEconomy: 'Saskatoon is Saskatchewan\'s largest city with a strong agriculture, mining, and technology base. The stable economy and affordable cost of living support healthy personal lending with competitive rates.',
+    localEconomyFr: 'Saskatoon est la plus grande ville de la Saskatchewan avec une solide base agricole, minière et technologique. L\'économie stable et le coût de la vie abordable soutiennent des prêts personnels sains avec des taux compétitifs.',
+    keyIndustries: ['Agriculture', 'Mining', 'Technology', 'Education', 'Healthcare'],
+    keyIndustriesFr: ['Agriculture', 'Mines', 'Technologie', 'Éducation', 'Santé'],
+    popularLoanTypes: ['Debt Consolidation', 'Vehicle Loans', 'Home Improvement'],
+    popularLoanTypesFr: ['Consolidation de dettes', 'Prêts automobiles', 'Rénovation domiciliaire'],
+  },
+  {
+    name: 'Regina',
+    nameFr: 'Regina',
+    slug: 'regina',
+    province: 'Saskatchewan',
+    provinceFr: 'Saskatchewan',
+    provinceAbbr: 'SK',
+    provinceSlug: 'saskatchewan',
+    population: '229K',
+    medianIncome: '$85,210',
+    medianHomePrice: '$325,000',
+    averageLoanAmount: '$10,500',
+    nearbyLenders: 50,
+    avgCreditScore: '720',
+    coordinates: { lat: 50.4452, lng: -104.6189 },
+    localEconomy: 'As Saskatchewan\'s capital, Regina\'s economy is anchored by government, oil and gas, and agriculture. The stable employment base and prairie affordability create steady lending demand.',
+    localEconomyFr: 'En tant que capitale de la Saskatchewan, l\'économie de Regina est ancrée dans le gouvernement, le pétrole et le gaz, et l\'agriculture. La base d\'emploi stable et l\'abordabilité des Prairies créent une demande de prêt constante.',
+    keyIndustries: ['Government', 'Oil & Gas', 'Agriculture', 'Technology', 'Finance'],
+    keyIndustriesFr: ['Gouvernement', 'Pétrole et gaz', 'Agriculture', 'Technologie', 'Finance'],
+    popularLoanTypes: ['Debt Consolidation', 'Home Improvement', 'Vehicle Loans'],
+    popularLoanTypesFr: ['Consolidation de dettes', 'Rénovation domiciliaire', 'Prêts automobiles'],
+  },
+  
+  // Nova Scotia Cities
+  {
+    name: 'Halifax',
+    nameFr: 'Halifax',
+    slug: 'halifax',
+    province: 'Nova Scotia',
+    provinceFr: 'Nouvelle-Écosse',
+    provinceAbbr: 'NS',
+    provinceSlug: 'nova-scotia',
+    population: '439K',
+    medianIncome: '$68,990',
+    medianHomePrice: '$465,000',
+    averageLoanAmount: '$10,000',
+    nearbyLenders: 65,
+    avgCreditScore: '705',
+    coordinates: { lat: 44.6488, lng: -63.5752 },
+    localEconomy: 'Halifax is Atlantic Canada\'s largest city with a diverse economy spanning defense, education, healthcare, and maritime industries. The region\'s growing tech sector and university presence support varied lending needs.',
+    localEconomyFr: 'Halifax est la plus grande ville du Canada atlantique avec une économie diversifiée couvrant la défense, l\'éducation, la santé et les industries maritimes. Le secteur technologique en croissance et la présence universitaire soutiennent des besoins de prêt variés.',
+    keyIndustries: ['Defense', 'Education', 'Healthcare', 'Maritime', 'Technology'],
+    keyIndustriesFr: ['Défense', 'Éducation', 'Santé', 'Maritime', 'Technologie'],
+    popularLoanTypes: ['Debt Consolidation', 'Education', 'Home Improvement'],
+    popularLoanTypesFr: ['Consolidation de dettes', 'Éducation', 'Rénovation domiciliaire'],
+  },
+  
+  // New Brunswick Cities
+  {
+    name: 'Moncton',
+    nameFr: 'Moncton',
+    slug: 'moncton',
+    province: 'New Brunswick',
+    provinceFr: 'Nouveau-Brunswick',
+    provinceAbbr: 'NB',
+    provinceSlug: 'new-brunswick',
+    population: '79K',
+    medianIncome: '$61,350',
+    medianHomePrice: '$285,000',
+    averageLoanAmount: '$9,500',
+    nearbyLenders: 45,
+    avgCreditScore: '700',
+    coordinates: { lat: 46.0878, lng: -64.7782 },
+    localEconomy: 'Moncton is New Brunswick\'s fastest-growing city with bilingual services, transportation hubs, and emerging technology sectors. The affordable cost of living and balanced economy create steady personal lending demand.',
+    localEconomyFr: 'Moncton est la ville à la croissance la plus rapide du Nouveau-Brunswick avec des services bilingues, des centres de transport et des secteurs technologiques émergents. Le coût de la vie abordable et l\'économie équilibrée créent une demande constante de prêts personnels.',
+    keyIndustries: ['Transportation', 'Call Centers', 'Technology', 'Retail', 'Healthcare'],
+    keyIndustriesFr: ['Transport', 'Centres d\'appels', 'Technologie', 'Commerce de détail', 'Santé'],
+    popularLoanTypes: ['Debt Consolidation', 'Vehicle Loans', 'Home Improvement'],
+    popularLoanTypesFr: ['Consolidation de dettes', 'Prêts automobiles', 'Rénovation domiciliaire'],
+  },
+]
+
+export function getCityBySlug(slug: string): CanadianCityInfo | undefined {
+  return canadianCities.find(c => c.slug === slug)
+}
+
+export function getCitiesByProvince(provinceSlug: string): CanadianCityInfo[] {
+  return canadianCities.filter(c => c.provinceSlug === provinceSlug)
+}
+
+export function getAllCitySlugs(): { province: string; city: string }[] {
+  return canadianCities.map(city => ({
+    province: city.provinceSlug,
+    city: city.slug,
+  }))
+}
