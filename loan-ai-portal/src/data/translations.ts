@@ -82,6 +82,18 @@ const navigationTranslations: Record<Locale, NavigationLabels> = {
 		languageSwitch: 'English',
 		languageSwitchAria: 'Přepnout do angličtiny',
 	},
+	vi: {
+		brand: 'Loan AI Portal',
+		home: 'Trang chủ toàn cầu',
+		countries: 'Quốc gia',
+		aiMatching: 'Ghép đôi AI',
+		usaHub: 'Vay Hoa Kỳ',
+		czHub: 'Cộng hòa Séc',
+		blog: 'Blog',
+		apply: 'Đăng ký ngay',
+		languageSwitch: 'English',
+		languageSwitchAria: 'Chuyển sang tiếng Anh',
+	},
 }
 
 const footerTranslations: Record<Locale, FooterLabels> = {
@@ -262,6 +274,65 @@ const footerTranslations: Record<Locale, FooterLabels> = {
 		],
 		legal: '© 2025 Loan AI Portál. Všechna práva vyhrazena.',
 	},
+	vi: {
+		description:
+			'Vay tiêu dùng nhanh chóng và bảo mật với ghép đôi AI. So sánh lãi suất từ các tổ chức cho vay được cấp phép và nhận thẩm định trong 2 phút.',
+		sections: [
+			{
+				heading: 'Công ty',
+				links: [
+					{ label: 'Về chúng tôi', href: '/about' },
+					{ label: 'Liên hệ', href: '/contact' },
+					{ label: 'Chính sách bảo mật', href: '/privacy' },
+					{ label: 'Điều khoản dịch vụ', href: '/terms' },
+				],
+			},
+			{
+				heading: 'Phạm vi toàn cầu',
+				links: [
+					{ label: 'Trang chủ toàn cầu', href: '/#global-coverage' },
+					{ label: 'Hoa Kỳ (USA)', href: '/us' },
+					{ label: 'Cộng hòa Séc (Česko)', href: '/cz' },
+					{ label: 'Việt Nam', href: '/vn' },
+				],
+			},
+			{
+				heading: 'Vùng Việt Nam',
+				links: [
+					{ label: 'Hà Nội', href: '/vn/regions/hanoi' },
+					{ label: 'TP. Hồ Chí Minh', href: '/vn/regions/ho-chi-minh-city' },
+					{ label: 'Đà Nẵng', href: '/vn/regions/da-nang' },
+					{ label: 'Hải Phòng', href: '/vn/regions/hai-phong' },
+				],
+			},
+			{
+				heading: 'Thành phố Việt Nam',
+				links: [
+					{ label: 'Quận Ba Đình, HN', href: '/vn/cities/hanoi/ba-dinh' },
+					{ label: 'Quận 1, HCM', href: '/vn/cities/ho-chi-minh-city/district-1' },
+					{ label: 'Quận 3, HCM', href: '/vn/cities/ho-chi-minh-city/district-3' },
+					{ label: 'Quận Hải Châu, ĐN', href: '/vn/cities/da-nang/hai-chau' },
+				],
+			},
+			{
+				heading: 'Tài nguyên',
+				links: [
+					{ label: 'Blog', href: '/blog' },
+					{ label: 'Danh sách vùng', href: '/vn/regions' },
+					{ label: 'Danh sách thành phố', href: '/vn/cities' },
+					{ label: 'FAQ', href: '/faq' },
+					{ label: 'Giấy phép', href: '/licenses' },
+				],
+			},
+		],
+		disclosures: [
+			'Thông báo quan trọng: Trang web này không phải là đề xuất hay lời chào mời cho vay. Người vận hành trang web này KHÔNG PHẢI LÀ TỔ CHỨC CHO VAY, không đưa ra quyết định cho vay hoặc tín dụng, và không môi giới khoản vay. Chúng tôi là dịch vụ kết nối khách hàng. Mục đích của trang web này là cung cấp thông tin về người vay tiềm năng cho các tổ chức cho vay. Chúng tôi nhận được khoản bồi thường từ các tổ chức cho vay cho dịch vụ này.',
+			'Thông tin về khoản vay: Không phải tất cả các tổ chức cho vay đều có thể cung cấp số tiền vay lên đến số tiền tối đa được quảng cáo. Số tiền tối đa bạn có thể vay được xác định bởi tổ chức cho vay dựa trên chính sách riêng của họ và khả năng tín dụng của bạn. Thời gian nhận tiền vay khác nhau giữa các tổ chức cho vay. Gửi thông tin trực tuyến không đảm bảo bạn sẽ được chấp thuận khoản vay.',
+			'Mỗi tổ chức cho vay có điều khoản và điều kiện cũng như chính sách gia hạn riêng, có thể khác nhau giữa các tổ chức. Bạn nên xem xét điều khoản và chính sách gia hạn của tổ chức cho vay trước khi ký hợp đồng vay. Thanh toán trễ có thể dẫn đến phí bổ sung hoặc hoạt động thu nợ.',
+			'Bằng cách sử dụng trang web hoặc dịch vụ này, bạn tuyên bố và đảm bảo rằng bạn ít nhất 18 tuổi, là cư dân Việt Nam, và không cư trú tại bất kỳ tỉnh/thành phố nào mà khoản vay bạn đang đăng ký là bất hợp pháp.',
+		],
+		legal: '© 2025 Loan AI Portal. Bảo lưu mọi quyền.',
+	},
 }
 
 const commonTranslations: Record<Locale, CommonLabels> = {
@@ -327,6 +398,25 @@ const commonTranslations: Record<Locale, CommonLabels> = {
 		applyCta: 'Požádat o úvěr',
 		leadGenDisclosure:
 			'Jsme lead generátor, nikoli přímý poskytovatel. Vaše údaje bezpečně sdílíme s licencovanými partnery.',
+	},
+	vi: {
+		home: 'Trang chủ',
+		states: 'Vùng',
+		cities: 'Thành phố',
+		blog: 'Blog',
+		faq: 'Câu hỏi thường gặp',
+		contact: 'Liên hệ',
+		searchPlaceholder: 'Tìm theo vùng hoặc thành phố…',
+		regionFilterLabel: 'Lọc theo vùng',
+		allRegionsOption: 'Tất cả vùng',
+		regionOptions: {
+			North: 'Miền Bắc',
+			Central: 'Miền Trung',
+			South: 'Miền Nam',
+		},
+		applyCta: 'Đăng ký ngay',
+		leadGenDisclosure:
+			'Chúng tôi là dịch vụ kết nối, không phải tổ chức cho vay. Chúng tôi chia sẻ dữ liệu của bạn với các tổ chức cho vay được cấp phép.',
 	},
 }
 

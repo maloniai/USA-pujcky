@@ -1,6 +1,6 @@
-export type Locale = 'en' | 'es' | 'cs'
+export type Locale = 'en' | 'es' | 'cs' | 'vi'
 
-export const SUPPORTED_LOCALES: Locale[] = ['en', 'es', 'cs']
+export const SUPPORTED_LOCALES: Locale[] = ['en', 'es', 'cs', 'vi']
 export const DEFAULT_LOCALE: Locale = 'en'
 export const LANGUAGE_STORAGE_KEY = 'loan-ai-locale'
 export const LANGUAGE_COOKIE_KEY = 'loan_ai_locale'
@@ -24,6 +24,10 @@ export function normalizeLocale(value?: string | null): Locale {
 
   if (lower.startsWith('cs') || lower.startsWith('cz')) {
     return 'cs'
+  }
+
+  if (lower.startsWith('vi') || lower.startsWith('vn')) {
+    return 'vi'
   }
 
   return DEFAULT_LOCALE
