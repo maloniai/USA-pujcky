@@ -6,6 +6,7 @@ import { czRegions } from '@/data/cz-regions'
 import { jihoceskyCityContent } from '@/data/cz-jihocesky'
 import { stredoceskyCityContent } from '@/data/cz-stredocesky'
 import { plzenskyCityContent } from '@/data/cz-plzensky'
+import { pragueCityContent } from '@/data/cz-prague'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://loan-platform.com'
@@ -62,6 +63,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Generate CZ city URLs
   const czCityUrls = [
+    ...pragueCityContent.map(city => ({
+      url: `${baseUrl}/cz/regions/praha/${city.slug}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
     ...jihoceskyCityContent.map(city => ({
       url: `${baseUrl}/cz/regions/jihocesky/${city.slug}`,
       lastModified: twoWeeksAgo,
