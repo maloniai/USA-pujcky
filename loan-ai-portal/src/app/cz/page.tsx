@@ -6,6 +6,8 @@ import LeadGenDisclosure from '@/components/compliance/lead-gen-disclosure'
 import { VolsorLoanForm } from '@/components/cz/volsor-loan-form'
 import { czRegions, totalCzechCities } from '@/data/cz-regions'
 import { generatePageMetadata, czHubSEO } from '@/lib/seo'
+import FAQSchema from '@/components/faq-schema'
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema'
 
 export const metadata = generatePageMetadata(czHubSEO, '/cz')
 
@@ -54,11 +56,18 @@ const faq = [
   },
 ]
 
-const publishedRegionSlugs = new Set(['praha', 'stredocesky', 'jihocesky'])
+const breadcrumbItems = [
+  { name: 'Domů', url: '/', position: 1 },
+  { name: 'Půjčky Česko', url: '/cz', position: 2 },
+]
+
+const publishedRegionSlugs = new Set(['praha', 'stredocesky', 'jihocesky', 'plzensky'])
 
 export default function CzechRepublicHubPage() {
   return (
     <>
+      <FAQSchema faqs={faq.map(f => ({ q: f.question, a: f.answer }))} />
+      <BreadcrumbSchema items={breadcrumbItems} />
       <Navigation locale="cs" />
       <main className="flex-1 bg-slate-50">
         <header className="border-b border-blue-100 bg-gradient-to-br from-blue-50 via-white to-blue-100">
