@@ -31,7 +31,7 @@ export default function HomePage() {
                 Choose your country to compare regulated loan offers
               </h1>
               <p className="text-base text-gray-700 md:text-lg max-w-2xl mx-auto">
-                We currently provide compliant loan comparisons in the United States and Czech Republic.
+                We currently provide compliant loan comparisons in the United States, Canada, and Czech Republic.
                 Select your destination to explore localized guides, lender coverage, and application support.
               </p>
             </div>

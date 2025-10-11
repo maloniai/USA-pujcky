@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next'
 import { blogPostsEN } from '@/data/blog-posts'
 import { usStates } from '@/data/states'
 import { cities } from '@/data/cities'
+import { canadianProvinces } from '@/data/canada-provinces'
+import { canadianCities } from '@/data/canada-cities'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://loan-platform.com'
@@ -41,6 +43,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const cityUrls = cities.map((city) => ({
     url: `${baseUrl}/cities/${city.state.toLowerCase().replace(/\s+/g, '-')}/${city.slug}`,
     lastModified: twoWeeksAgo, // City pages updated less frequently
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+  
+  // Generate Canadian province URLs
+  const canadianProvinceUrls = canadianProvinces.map((province) => ({
+    url: `${baseUrl}/canada/provinces/${province.slug}`,
+    lastModified: oneWeekAgo,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+  
+  // Generate Canadian city URLs
+  const canadianCityUrls = canadianCities.map((city) => ({
+    url: `${baseUrl}/canada/${city.provinceSlug}/${city.slug}/loans`,
+    lastModified: twoWeeksAgo,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+  
+  // Generate French Canadian province URLs
+  const canadianProvinceUrlsFr = canadianProvinces.map((province) => ({
+    url: `${baseUrl}/fr/canada/provinces/${province.slug}`,
+    lastModified: oneWeekAgo,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+  
+  // Generate French Canadian city URLs
+  const canadianCityUrlsFr = canadianCities.map((city) => ({
+    url: `${baseUrl}/fr/canada/${city.provinceSlug}/${city.slug}/loans`,
+    lastModified: twoWeeksAgo,
     changeFrequency: 'weekly' as const,
     priority: 0.7,
   }))
@@ -167,6 +201,46 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     
+    // Canada Hub
+    {
+      url: `${baseUrl}/canada`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/canada/provinces`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/canada/apply`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    
+    // Canada Hub (French)
+    {
+      url: `${baseUrl}/fr/canada`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/fr/canada/provinces`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/fr/canada/apply`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    
     // API endpoints for AI crawlers
     {
       url: `${baseUrl}/api/manifest.json`,
@@ -189,6 +263,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     
   // All city pages (English)
   ...cityUrls,
+  
+  // All Canadian province pages
+  ...canadianProvinceUrls,
+  
+  // All Canadian city pages
+  ...canadianCityUrls,
+  
+  // All French Canadian province pages
+  ...canadianProvinceUrlsFr,
+  
+  // All French Canadian city pages
+  ...canadianCityUrlsFr,
     
     // All blog posts
     ...blogPostsENUrls,

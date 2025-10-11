@@ -27,6 +27,7 @@ export default function Navigation({ locale = 'en' }: NavigationProps) {
   const languageSwitchHref = applyLocaleToPath(basePath, alternateLocale)
   const globalCoverageHref = `${homeHref}#global-coverage`
   const usaHubHref = '/us'
+  const canadaHubHref = '/canada'
   const czechHubHref = '/cz'
 
   const handleLanguageToggle = () => {
@@ -102,6 +103,13 @@ export default function Navigation({ locale = 'en' }: NavigationProps) {
                   className="text-gray-600 transition-colors hover:text-blue-600"
                 >
                   {labels.usaHub}
+                </Link>
+                <Link
+                  href={canadaHubHref}
+                  className="text-gray-600 transition-colors hover:text-blue-600"
+                  title="Canada Hub - Personal Loans"
+                >
+                  🍁 Canada
                 </Link>
                 <Link
                   href={czechHubHref}
