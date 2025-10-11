@@ -2,16 +2,16 @@
 
 ## Project Snapshot
 - Next.js 14 App Router site exported statically for Azure Static Web Apps—avoid server components or runtime `fetch`.
-- **Global Strategy**: Main English directory at `/global` lists all live and coming-soon country hubs; individual country hubs operate as localized sub-portals (US, CZ, CA, etc.) with geo-targeted SEO and lead capture.
-- Routes live under `src/app`: Global directory at `/global`, English hub in `(site)`, Spanish in `/es`, Czech hub in `/cz`.
+- **Global Strategy**: Main landing page at `/` (root) displays the global directory showcasing all live and coming-soon country hubs; individual country hubs operate as localized sub-portals (US at `/us`, CZ at `/cz`, CA at `/ca`, etc.) with geo-targeted SEO and lead capture.
+- Routes live under `src/app`: Global directory at `/` (root page), Spanish hub in `/es`, Czech hub in `/cz`.
 - Tailwind + shadcn-lite primitives (`src/components/ui`) drive styling; share utilities via `cn()` in `src/lib/utils`.
 
 ## Global Hub Architecture
-- `/global` page (`src/app/global/page.tsx`) renders an English-only directory showcasing live country hubs (US, CZ), in-progress markets (Canada Q1 2025), and 11 coming-soon countries.
-- **No Lead Forms**: Global page is purely informational—no lead capture, just company overview and hub links.
+- **Root page** (`src/app/page.tsx`) renders the global directory with English-only content showcasing live country hubs (US, CZ), in-progress markets (Canada Q1 2025), and 11 coming-soon countries.
+- **No Lead Forms on Root**: Global directory is purely informational—no lead capture, just company overview and hub links to drive traffic to country-specific portals.
 - Data source: `src/data/countries.ts` exports `liveCountries`, `inProgressCountries`, `comingSoonCountries` arrays with each hub's `code`, `name`, `flag`, `description`, `population`, `coverage`, `languages`, `href`, and `status`.
 - Footer: `src/components/global-footer.tsx` displays company contact, legal links, and country hub navigation—no locale switcher or loan CTAs.
-- **Scaling Pattern**: When launching a new country, add entry to appropriate array in `countries.ts`, create localized hub route (e.g., `/mx`), and update global page will auto-reflect the new hub.
+- **Scaling Pattern**: When launching a new country, add entry to appropriate array in `countries.ts`, create localized hub route (e.g., `/mx`), and the root page will auto-reflect the new hub.
 
 ## Blog & Content Strategy
 - **Publishing Schedule**: Blog updates **2x per week** with worldwide financial insights applicable across all country markets.
