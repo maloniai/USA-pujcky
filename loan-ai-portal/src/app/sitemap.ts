@@ -71,6 +71,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
   
+  // Generate French Canadian city URLs
+  const canadianCityUrlsFr = canadianCities.map((city) => ({
+    url: `${baseUrl}/fr/canada/${city.provinceSlug}/${city.slug}/loans`,
+    lastModified: twoWeeksAgo,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+  
   return [
     // Homepage - Highest priority (English)
     {
@@ -264,6 +272,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   // All French Canadian province pages
   ...canadianProvinceUrlsFr,
+  
+  // All French Canadian city pages
+  ...canadianCityUrlsFr,
     
     // All blog posts
     ...blogPostsENUrls,
