@@ -57,7 +57,7 @@ export const liveCountries: CountryHub[] = [
     name: 'Vietnam',
     flag: '🇻🇳',
     description: 'Vay tiêu dùng và hợp nhất nợ cho cư dân Việt Nam. So sánh lãi suất từ các tổ chức tài chính được cấp phép.',
-    coverage: '5 regions • 26 cities',
+    coverage: '5 regions • 39 cities',
     population: '98M',
     languages: ['Vietnamese'],
     regulator: 'State Bank of Vietnam (NHNN)',

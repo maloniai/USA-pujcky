@@ -231,11 +231,18 @@ Complete coverage of Czech lending market:
 ### Vietnam 🇻🇳
 Complete coverage of Vietnamese lending market:
 - 5 regions (Hanoi, Ho Chi Minh City, Da Nang, Hai Phong, Can Tho)
-- 26 cities across all major metropolitan areas
+- 39 cities across all major metropolitan and industrial areas
 - Vietnamese language support
 - SBV regulatory compliance
+
+**Detailed Coverage:**
 - **5 Major Regions**: Hanoi, Ho Chi Minh City, Da Nang, Hai Phong, Can Tho
-- **26 Cities**: Including multiple districts in Hanoi (Ba Dinh, Hoan Kiem, Cau Giay, Dong Da, Hai Ba Trung), Ho Chi Minh City (District 1, District 3, Binh Thanh, Tan Binh, Phu Nhuan, Go Vap, Thu Duc), Da Nang (Hai Chau, Thanh Khe, Son Tra, Ngu Hanh Son), Hai Phong (Hong Bang, Le Chan, Ngo Quyen, Kien An), and Can Tho (Ninh Kieu, Cai Rang, Binh Thuy, O Mon)
+- **39 Cities**: Extensive urban and industrial coverage
+  - **Hanoi** (8 cities): Ba Dinh, Hoan Kiem, Cau Giay, Dong Da, Hai Ba Trung, Thanh Xuan, Tay Ho, Long Bien
+  - **Ho Chi Minh City** (12 cities): District 1, 3, 5, 7, 10, 11, Binh Thanh, Tan Binh, Phu Nhuan, Go Vap, Thu Duc, Binh Tan
+  - **Da Nang** (6 cities): Hai Chau, Thanh Khe, Son Tra, Ngu Hanh Son, Cam Le, Lien Chieu
+  - **Hai Phong** (6 cities): Hong Bang, Le Chan, Ngo Quyen, Kien An, Hai An, Duong Kinh
+  - **Can Tho** (6 cities): Ninh Kieu, Cai Rang, Binh Thuy, O Mon, Thot Not, Co Do
 - **Vietnamese Language**: Full Vietnamese translation and localization
 - **Local Regulations**: SBV (State Bank of Vietnam) compliance
 - **Unique Content**: SEO-optimized, legally compliant content for each region and city
