@@ -67,6 +67,21 @@ export const liveCountries: CountryHub[] = [
     status: 'live',
     launchDate: '2025-01',
   },
+  {
+    code: 'co',
+    name: 'Colombia',
+    flag: '🇨🇴',
+    description:
+      'Préstamos personales y consolidación de deudas para residentes en Colombia. Compare ofertas de prestamistas licenciados.',
+    coverage: '5 regiones • 65+ ciudades',
+    population: '51M',
+    languages: ['Spanish'],
+    regulator: 'Superintendencia Financiera de Colombia',
+    href: '/co',
+    ctaLabel: 'Explorar préstamos en Colombia',
+    status: 'live',
+    launchDate: '2025-10',
+  },
 ]
 
 // Country hubs in active development
@@ -130,17 +145,6 @@ export const comingSoonCountries: CountryHub[] = [
     population: '128M',
     languages: ['Spanish'],
     href: '/mx',
-    ctaLabel: 'Coming soon',
-    status: 'coming-soon',
-  },
-  {
-    code: 'co',
-    name: 'Colombia',
-    flag: '🇨🇴',
-    description: 'Préstamos personales y consolidación de deudas para residentes en Colombia.',
-    population: '51M',
-    languages: ['Spanish'],
-    href: '/co',
     ctaLabel: 'Coming soon',
     status: 'coming-soon',
   },
