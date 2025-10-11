@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 
 export const metadata = {
-  title: 'Půjčky v Kynšperk nad Ohří, Karlovarský kraj – Porovnání 2025',
+  title: 'Půjčky Kynšperk nad Ohří, Karlovarský kraj – 2025',
   description: 'Hledáte rychlou půjčku v Kynšperku nad Ohří? Porovnejte nabídky nebankovních půjček s transparentními podmínkami. Schválení online do 24 hodin.',
 }
 

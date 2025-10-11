@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 
 export const metadata = {
-  title: 'Půjčky v Františkovy Lázně, Karlovarský kraj – Porovnání 2025',
+  title: 'Půjčky Františkovy Lázně, Karlovarský kraj – 2025',
   description: 'Hledáte rychlou půjčku v Františkových Lázních? Porovnejte nabídky nebankovních půjček s transparentními podmínkami. Schválení online do 24 hodin.',
 }
 
