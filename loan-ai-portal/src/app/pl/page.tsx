@@ -3,6 +3,7 @@ import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import LeadGenDisclosure from '@/components/compliance/lead-gen-disclosure'
+import StickyApplyButton from '@/components/sticky-apply-button'
 import { plRegions, totalPolishCities } from '@/data/pl-regions'
 import { generatePageMetadata } from '@/lib/seo'
 import type { SEOConfig } from '@/lib/seo'
@@ -80,6 +81,7 @@ export default function PolandHubPage() {
   return (
     <>
       <Navigation locale="pl" />
+      <StickyApplyButton locale="pl" />
       <main className="flex-1 bg-slate-50">
         <header className="border-b border-blue-100 bg-gradient-to-br from-blue-50 via-white to-blue-100">
           <div className="mx-auto max-w-6xl px-4 py-16">
