@@ -210,6 +210,165 @@ export const statesSEO: SEOData = {
   ]
 };
 
+export const globalSEO: SEOData = {
+  title: 'Global Loan Directory - AI-Powered Personal Loans in 40+ Countries | USA, Czech Republic, Canada',
+  description: 'Access AI-powered personal loan matching across 40+ countries worldwide. Currently serving United States (all 50 states), Czech Republic, and launching in Canada Q1 2025. Compare licensed lenders, transparent rates, and local regulations in your market. Expanding to Poland, Spain, Mexico, Vietnam, Australia, and 35+ more countries.',
+  keywords: [
+    // Primary geographic keywords
+    'global personal loans',
+    'international loan comparison',
+    'AI loan matching worldwide',
+    'personal loans USA',
+    'personal loans Czech Republic',
+    'personal loans Canada',
+    'multinational loan platform',
+    
+    // Service area keywords
+    'personal loans 40 countries',
+    'worldwide loan marketplace',
+    'international lending platform',
+    'global financial services',
+    'cross-border loan comparison',
+    
+    // Country-specific keywords
+    'USA personal loans all 50 states',
+    'Czech Republic půjčky',
+    'Canada personal loans bilingual',
+    'Poland loans coming soon',
+    'Spain préstamos personales',
+    'Mexico préstamos en línea',
+    'Vietnam personal loans',
+    'Australia loan comparison',
+    
+    // AI and technology keywords
+    'AI powered loan matching global',
+    'machine learning loan comparison international',
+    'intelligent loan matching worldwide',
+    'automated loan comparison global',
+    
+    // Compliance and trust keywords
+    'licensed lenders worldwide',
+    'regulated loan comparison',
+    'compliant lending platform',
+    'transparent loan rates global',
+    'secure loan marketplace international',
+    
+    // Expansion keywords
+    'global loan expansion',
+    'international loan services',
+    'worldwide lending coverage',
+    'multi-country loan platform'
+  ],
+  canonicalUrl: new URL('/global', SITE_URL).toString(),
+  alternateLanguages: {
+    en: new URL('/global', SITE_URL).toString(),
+    es: new URL('/global', SITE_URL).toString(),
+    cs: new URL('/global', SITE_URL).toString(),
+  },
+  locale: 'en_US',
+  alternateLocales: ['es_US', 'cs_CZ', 'en_CA', 'fr_CA'],
+  siteName: 'Loan AI Portal',
+  structuredData: {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Global Loan Directory - AI-Powered Personal Loans Worldwide',
+    description: 'AI-powered personal loan matching platform serving 40+ countries. Currently live in USA (50 states), Czech Republic. Launching Canada Q1 2025. Expanding globally.',
+    inLanguage: ['en', 'es', 'cs'],
+    about: {
+      '@type': 'FinancialService',
+      name: 'Loan AI Portal - Global Operations',
+      description: 'Global financial technology platform providing AI-powered personal loan matching and comparison services across multiple countries',
+      serviceType: ['Personal Loans', 'Loan Comparison', 'AI Matching', 'Financial Technology'],
+      areaServed: [
+        {
+          '@type': 'Country',
+          name: 'United States',
+          '@id': 'https://www.wikidata.org/wiki/Q30',
+        },
+        {
+          '@type': 'Country',
+          name: 'Czech Republic',
+          '@id': 'https://www.wikidata.org/wiki/Q213',
+        },
+        {
+          '@type': 'Country',
+          name: 'Canada',
+          '@id': 'https://www.wikidata.org/wiki/Q16',
+        }
+      ],
+      provider: {
+        '@type': 'Organization',
+        name: 'Loan AI Portal',
+        description: 'AI-powered global lending marketplace',
+      },
+      audience: {
+        '@type': 'Audience',
+        geographicArea: [
+          {
+            '@type': 'Country',
+            name: 'United States'
+          },
+          {
+            '@type': 'Country',
+            name: 'Czech Republic'
+          },
+          {
+            '@type': 'Country',
+            name: 'Canada'
+          }
+        ]
+      }
+    },
+    mainEntity: {
+      '@type': 'ItemList',
+      name: 'Countries Served',
+      description: 'List of countries where Loan AI Portal provides services',
+      numberOfItems: 3,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'United States',
+          item: {
+            '@type': 'Place',
+            name: 'United States',
+            address: {
+              '@type': 'PostalAddress',
+              addressCountry: 'US'
+            }
+          }
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Czech Republic',
+          item: {
+            '@type': 'Place',
+            name: 'Czech Republic',
+            address: {
+              '@type': 'PostalAddress',
+              addressCountry: 'CZ'
+            }
+          }
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Canada',
+          item: {
+            '@type': 'Place',
+            name: 'Canada',
+            address: {
+              '@type': 'PostalAddress',
+              addressCountry: 'CA'
+            }
+          }
+        }
+      ]
+    }
+  }
+};
+
 export const applySEO: SEOData = {
   title: 'Apply for Personal Loan Online - 2-Minute Pre-Qualification | Loan AI Portal',
   description: 'Check your rate online with a 2-minute pre-qualification and soft credit pull that has no impact on your score. Access up to $100,000 with competitive rates, no hidden fees, and AI-powered matching across all 50 states.',
