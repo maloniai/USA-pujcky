@@ -5,6 +5,9 @@ import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
 import StickyApplyButton from '@/components/sticky-apply-button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import FinancialServiceSchema from '@/components/financial-service-schema'
+import FAQPageSchema from '@/components/colombia/faq-page-schema'
+import BreadcrumbSchema from '@/components/colombia/breadcrumb-schema'
 import { colombiaRegions } from '@/data/colombia-regions'
 import { getColombiaCitiesByRegion } from '@/data/colombia-cities'
 
@@ -69,6 +72,23 @@ export default function ColombiaRegionPage({ params }: PageProps) {
 
   return (
     <>
+      <FinancialServiceSchema
+        name={`Préstamos en ${region.name}`}
+        description={`Compare préstamos personales en ${region.name}, Colombia. ${region.growthFocus}`}
+        areaServed={region.name}
+        provider={{
+          name: 'Loan AI Portal',
+          url: 'https://loan-platform.com',
+        }}
+        url={`https://loan-platform.com/co/regions/${params.region}`}
+      />
+      <FAQPageSchema faqs={regionFAQ} />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Colombia', url: 'https://loan-platform.com/co' },
+          { name: region.name, url: `https://loan-platform.com/co/regions/${params.region}` },
+        ]}
+      />
       <Navigation locale="es" />
       <StickyApplyButton label="Aplicar Ahora" href="/co/apply" />
       <main className="flex-1 bg-slate-50">

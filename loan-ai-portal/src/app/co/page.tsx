@@ -4,6 +4,8 @@ import Footer from '@/components/footer'
 import StickyApplyButton from '@/components/sticky-apply-button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import LeadGenDisclosure from '@/components/compliance/lead-gen-disclosure'
+import FinancialServiceSchema from '@/components/financial-service-schema'
+import FAQPageSchema from '@/components/colombia/faq-page-schema'
 import { colombiaRegions, totalColombiaCities } from '@/data/colombia-regions'
 import { Metadata } from 'next'
 
@@ -77,6 +79,17 @@ const faq = [
 export default function ColombiaHubPage() {
   return (
     <>
+      <FinancialServiceSchema
+        name="Préstamos Personales en Colombia"
+        description="Compare préstamos personales de entidades financieras licenciadas en Colombia. Acceda a tasas competitivas y opciones de financiamiento."
+        areaServed="Colombia"
+        provider={{
+          name: 'Loan AI Portal',
+          url: 'https://loan-platform.com',
+        }}
+        url="https://loan-platform.com/co"
+      />
+      <FAQPageSchema faqs={faq} />
       <Navigation locale="es" />
       <StickyApplyButton label="Aplicar Ahora" href="/co/apply" />
       <main className="flex-1 bg-slate-50">

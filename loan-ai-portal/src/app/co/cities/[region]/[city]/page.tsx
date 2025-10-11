@@ -5,6 +5,9 @@ import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
 import StickyApplyButton from '@/components/sticky-apply-button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import FinancialServiceSchema from '@/components/financial-service-schema'
+import FAQPageSchema from '@/components/colombia/faq-page-schema'
+import BreadcrumbSchema from '@/components/colombia/breadcrumb-schema'
 import { getColombiaCityBySlug, getAllColombiaCitySlugs } from '@/data/colombia-cities'
 import { colombiaRegions } from '@/data/colombia-regions'
 
@@ -72,6 +75,24 @@ export default function ColombiaCityPage({ params }: PageProps) {
 
   return (
     <>
+      <FinancialServiceSchema
+        name={`Préstamos en ${city.name}, ${city.regionName}`}
+        description={`${city.description} Compare ofertas de prestamistas licenciados en ${city.name}.`}
+        areaServed={city.name}
+        provider={{
+          name: 'Loan AI Portal',
+          url: 'https://loan-platform.com',
+        }}
+        url={`https://loan-platform.com/co/cities/${params.region}/${params.city}`}
+      />
+      <FAQPageSchema faqs={cityFAQ} />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Colombia', url: 'https://loan-platform.com/co' },
+          { name: city.regionName, url: `https://loan-platform.com/co/regions/${params.region}` },
+          { name: city.name, url: `https://loan-platform.com/co/cities/${params.region}/${params.city}` },
+        ]}
+      />
       <Navigation locale="es" />
       <StickyApplyButton label="Aplicar Ahora" href="/co/apply" />
       <main className="flex-1 bg-slate-50">
