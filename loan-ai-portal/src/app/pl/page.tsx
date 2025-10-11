@@ -75,7 +75,7 @@ const faq = [
   },
 ]
 
-const publishedRegionSlugs = new Set(['mazowieckie', 'slaskie', 'wielkopolskie', 'malopolskie', 'dolnoslaskie', 'pomorskie', 'lodzkie'])
+const publishedRegionSlugs = new Set(['mazowieckie', 'slaskie', 'wielkopolskie', 'malopolskie', 'dolnoslaskie', 'pomorskie', 'lodzkie', 'lubelskie', 'zachodniopomorskie', 'kujawsko-pomorskie'])
 
 export default function PolandHubPage() {
   return (
