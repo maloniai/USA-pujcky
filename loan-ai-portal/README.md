@@ -1,15 +1,16 @@
 # Loan AI Portal
 
-A Next.js application for AI-powered personal loan matching serving customers across all 50 US states.
+A Next.js application for AI-powered personal loan matching serving customers in multiple countries including USA, Mexico, Czech Republic, and Romania.
 
 ## 🎯 Features
 
 - 🤖 **AI-Powered Loan Matching** - 200+ data point analysis for best rates
-- 🇺🇸 **USA Market Focus** - Serving all 50 states
-- 🏛️ **State-Specific Information** - Local lending regulations and rates
+- 🌎 **Multi-Country Support** - USA (50 states), Mexico (6 states), Czech Republic, Romania
+- 🏛️ **State/Region-Specific Information** - Local lending regulations and rates
+- 🌐 **Multi-Language** - English, Spanish (Mexican), Czech, Romanian
 - 📱 **Responsive Design** - Mobile-first approach
 - ⚡ **Fast Performance** - Static export, WebP images, lazy loading
-- 🔒 **Secure & Compliant** - Bank-level security, GLBA/TILA compliant
+- 🔒 **Secure & Compliant** - Bank-level security, GLBA/TILA/CONDUSEF compliant
 - 🔍 **SEO Optimized** - #1 Google ranking keywords, AI search ready
 - 🖼️ **Image Optimization** - WebP format, lazy loading, SEO alt tags
 
@@ -35,33 +36,48 @@ loan-ai-portal/
 │   │   ├── ai-loan-matching/        # AI matching explanation
 │   │   ├── faq/                     # 40 FAQ with schema markup
 │   │   ├── contact/                 # Contact page
-│   │   ├── states/                  # All 50 US states
+│   │   ├── us/                      # USA hub - all 50 states
+│   │   │   ├── page.tsx             # USA hub page
+│   │   │   ├── states/              # State pages
+│   │   │   └── cities/              # City pages (300+)
+│   │   ├── mx/                      # Mexico hub (NEW)
+│   │   │   ├── page.tsx             # Mexico hub page
+│   │   │   ├── estados/             # State pages (6 major states)
+│   │   │   ├── ciudades/            # City pages (15 major cities)
+│   │   │   ├── solicitar/           # Apply page with affiliate form
+│   │   │   └── preguntas-frecuentes/# FAQ page
+│   │   ├── cz/                      # Czech Republic hub
+│   │   ├── ro/                      # Romania hub
 │   │   └── (legal pages)            # Privacy, Terms, Disclaimer, Licenses
 │   ├── components/
 │   │   ├── ui/                      # Reusable UI components
+│   │   ├── mexico/                  # Mexico-specific components (NEW)
+│   │   │   ├── mexico-navigation.tsx
+│   │   │   ├── mexico-footer.tsx
+│   │   │   └── sticky-apply-button.tsx
 │   │   ├── optimized-image.tsx      # SEO-optimized image component
 │   │   ├── faq-schema.tsx           # FAQPage structured data
 │   │   ├── howto-schema.tsx         # HowTo structured data
 │   │   └── organization-schema.tsx  # Organization structured data
 │   ├── lib/
-│   │   ├── seo.ts                   # SEO configuration (USA focus)
+│   │   ├── seo.ts                   # SEO configuration
 │   │   ├── page-metadata.ts         # #1 Google ranking keywords
 │   │   ├── image-seo.ts             # Image SEO helpers
 │   │   └── image-examples.tsx       # Image usage examples
 │   └── data/
-│       ├── states.ts                # All 50 US states data
-│       ├── faqs.ts                  # 40 FAQ questions
+│       ├── states.ts                # US states data
+│       ├── cities.ts                # US cities data
+│       ├── mexico-regions.ts        # Mexico states data (NEW)
+│       ├── mexico-cities.ts         # Mexico cities data (NEW)
+│       ├── cz-regions.ts            # Czech regions data
+│       ├── romania-regions.ts       # Romania regions data
+│       ├── faqs.ts                  # FAQ questions
 │       └── translations.ts          # Multi-language support
 ├── public/
 │   └── images/                      # Optimized images (WebP)
-│       ├── hero/                    # Homepage banners
-│       ├── process/                 # Application steps
-│       ├── ui/                      # Icons, badges
-│       └── states/                  # State-specific images
 ├── SEO-OPTIMIZATION-REPORT.md       # Complete SEO audit results
 ├── AI-SEARCH-OPTIMIZATION.md        # AI search strategy (ChatGPT, etc)
 ├── IMAGE-OPTIMIZATION-REPORT.md     # Image optimization guide
-├── IMAGE-QUICK-REFERENCE.md         # Developer cheat sheet
 └── next.config.js                   # Static export for Azure
 ```
 
@@ -193,16 +209,33 @@ All 15+ pages have complete metadata with #1 Google ranking keywords:
 
 ## 🌍 Geographic Coverage
 
-Serving customers in all 50 US states:
-- Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware
-- Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky
-- Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi
-- Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico
-- New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania
-- Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont
-- Virginia, Washington, West Virginia, Wisconsin, Wyoming
+### United States
+Serving customers in all 50 US states with state-specific regulations and local lender information.
 
-Each state has dedicated page with local lending information.
+### Mexico (NEW)
+**6 Major States**: Ciudad de México, Estado de México, Jalisco, Nuevo León, Puebla, Guanajuato
+**15 Major Cities**: Including Mexico City, Guadalajara, Monterrey, Puebla, and more
+**Language**: Mexican Spanish (es-MX)
+**Regulation**: CONDUSEF-compliant
+**Features**:
+- Complete state and city pages with local regulations
+- CAT (Costo Anual Total) transparency
+- CONDUSEF borrower protections
+- Affiliate-compliant apply page with form integration
+- Comprehensive FAQ in Mexican Spanish
+
+### Czech Republic
+Serving multiple regions with Czech language support and CNB compliance.
+
+### Romania
+Serving regions with Romanian language support and BNR compliance.
+
+Each state/region has dedicated pages with:
+- Local lending regulations
+- Average rates and loan amounts
+- Borrower protections
+- Licensed lenders list
+- City-specific information
 
 ## 📚 Documentation
 
