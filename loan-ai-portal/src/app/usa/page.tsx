@@ -2,22 +2,28 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 
-export default function HomePage() {
+export const metadata = {
+  title: 'USA Loan Services - Fast & Secure | Loan AI Portal',
+  description: 'Get instant loan approvals across all 50 US states with our AI-powered platform. Fast, secure, and state-specific loan information.',
+}
+
+export default function USAPage() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="text-center mb-8">
-        <Link href="/global" className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-          🌍 View All Countries
+      <div className="mb-4">
+        <Link href="/global" className="text-blue-600 hover:underline text-sm">
+          ← Back to All Countries
         </Link>
       </div>
-
+      
       <header className="text-center mb-12">
+        <div className="text-6xl mb-4">🇺🇸</div>
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Welcome to Loan AI Portal
+          Welcome to USA Loan AI Portal
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
           Fast, secure, and intelligent loan services powered by AI. 
-          Get instant pre-approvals and find the best loan options for your needs.
+          Get instant pre-approvals and find the best loan options for your needs across all 50 states.
         </p>
       </header>
 
@@ -64,7 +70,7 @@ export default function HomePage() {
       <div className="text-center">
         <h2 className="text-2xl font-semibold mb-4">Available in Multiple Languages</h2>
         <div className="space-x-4">
-          <Link href="/" className="text-blue-600 hover:underline">English</Link>
+          <Link href="/usa" className="text-blue-600 hover:underline">English</Link>
           <Link href="/es" className="text-blue-600 hover:underline">Español</Link>
         </div>
       </div>

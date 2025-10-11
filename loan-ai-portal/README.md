@@ -5,11 +5,13 @@ A Next.js application for AI-powered loan services with multi-language support a
 ## Features
 
 - 🤖 AI-powered loan matching
-- 🌍 Multi-language support (English/Spanish)
-- 🏛️ State-specific loan information
+- 🌍 Multi-country support (USA, Canada, Czech Republic, and expanding to 40+ countries)
+- 🗺️ Global landing page for easy country selection
+- 🏛️ State/Province-specific loan information
 - 📱 Responsive design
 - ⚡ Fast, modern UI with Tailwind CSS
 - 🔒 Secure and compliant
+- 🌐 Multi-language support
 
 ## Technology Stack
 
@@ -28,6 +30,14 @@ loan-ai-portal/
 │   │   ├── layout.tsx          # Root layout
 │   │   ├── page.tsx            # English homepage
 │   │   ├── globals.css         # Global styles
+│   │   ├── global/
+│   │   │   └── page.tsx        # Global country selector page
+│   │   ├── usa/
+│   │   │   └── page.tsx        # USA country page
+│   │   ├── ca/
+│   │   │   └── page.tsx        # Canada country page
+│   │   ├── cz/
+│   │   │   └── page.tsx        # Czech Republic country page
 │   │   ├── states/
 │   │   │   └── page.tsx        # States listing
 │   │   └── es/                 # Spanish language routes
@@ -88,13 +98,33 @@ This application is configured for deployment to Azure Static Web Apps with:
    - **Output location**: `out`
    - **Build command**: `npm run build`
 
-## Multi-Language Support
+## Multi-Country & Multi-Language Support
 
-The application supports:
-- **English**: `/` (default)
+### Country Pages
+
+The application supports multiple countries, each with their own dedicated page:
+
+- **Global Page**: `/global` - Main landing page listing all available countries
+- **USA**: `/usa` - United States loan services (all 50 states)
+- **Canada**: `/ca` - Canadian loan services (all provinces and territories)
+- **Czech Republic**: `/cz` - Czech loan services (all regions, in Czech language)
+
+**Expanding to 40+ countries** including UK, Germany, France, Spain, Italy, and more.
+
+### Language Support
+
+- **English**: `/` (default), `/usa`, `/ca`
 - **Spanish**: `/es/*`
+- **Czech**: `/cz`
+- **French**: `/ca/fr` (planned for Canada)
 
 Additional languages can be added by creating new route folders under `src/app/`.
+
+### Navigation
+
+- All country pages include a "Back to All Countries" link to the global page
+- The main homepage includes a prominent "🌍 View All Countries" button
+- Each country page is SEO-optimized with proper metadata
 
 ## License
 
