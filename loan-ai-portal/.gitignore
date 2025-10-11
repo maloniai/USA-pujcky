@@ -3,3 +3,5 @@ release.zip
 
 .next/
 node_modules/
+out/
+
