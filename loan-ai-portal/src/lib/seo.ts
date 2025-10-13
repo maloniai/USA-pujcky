@@ -443,9 +443,43 @@ export function generatePageMetadata(seoData: SEOData, path: string = '') {
         index: true,
         follow: true,
         'max-video-preview': -1,
-        'max-image-preview': 'large',
+        'max-image-preview': 'large' as const,
         'max-snippet': -1,
       },
     },
   };
+}
+
+/**
+ * Generate metadata for Kazakhstan (KZ) pages
+ */
+export function getKZMetadata(options: {
+  title: string;
+  description: string;
+  path?: string;
+  type?: string;
+}) {
+  const { title, description, path = '/kz', type = 'website' } = options;
+  
+  return generatePageMetadata({
+    title,
+    description,
+    keywords: [
+      'жеке несие',
+      'несие салыстыру',
+      'қазақстан несиелері',
+      'микроқаржы ұйымдары',
+      'онлайн несие',
+      'AI несие таңдау',
+      'ҚР Ұлттық Банкі',
+      'банктік несиелер',
+    ],
+    canonicalUrl: new URL(path, SITE_URL).toString(),
+    alternateLanguages: {
+      kk: new URL(path, SITE_URL).toString(),
+    },
+    locale: 'kk_KZ',
+    alternateLocales: ['en_US'],
+    siteName: 'Loan AI Portal',
+  }, path);
 }

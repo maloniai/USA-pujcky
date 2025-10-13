@@ -3,6 +3,7 @@ import Script from 'next/script'
 import RomaniaNavigation from '@/components/romania/romania-navigation'
 import RomaniaFooter from '@/components/romania/romania-footer'
 import RomaniaDisclosure from '@/components/romania/romania-disclosure'
+import AffiliateScript from '@/components/romania/AffiliateScript'
 
 export const metadata: Metadata = {
   title: 'Aplică pentru Credit Personal – România | LoansAI',
@@ -103,13 +104,7 @@ export default function RomaniaApplyPage() {
 
               {/* Affiliate Form Script - doaff.net integration */}
               <div id="loan-application-form" className="min-h-[600px]">
-                <Script
-                  src="https://www.doaff.net/publisherScript.js?c=jjn"
-                  strategy="afterInteractive"
-                  onLoad={() => {
-                    console.log('Affiliate form script loaded successfully')
-                  }}
-                />
+                <AffiliateScript />
                 <noscript>
                   <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 text-center">
                     <p className="text-yellow-800 font-semibold mb-2">

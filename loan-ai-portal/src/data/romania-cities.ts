@@ -18,7 +18,7 @@ export interface RomaniaCityInfo {
   topLoanTypes: string[]
   topLoanTypesRo: string[]
   lenderCount: number
-  nearbyCity: string[]
+  nearbyCities: string[]  // Changed from nearbyCity to nearbyCities
 }
 
 export const romaniaCities: RomaniaCityInfo[] = [

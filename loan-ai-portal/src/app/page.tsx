@@ -229,42 +229,6 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* Popular Cities Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Compare Loan Rates in Top Cities
-          </h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {cities.slice(0, 8).map((city) => (
-              <Link
-                key={city.slug}
-                href={`/cities/${city.stateAbbr.toLowerCase()}/${city.slug}`}
-                className="group block p-6 bg-white rounded-lg border border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all"
-              >
-                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-1">
-                  {city.name}
-                </h3>
-                <p className="text-sm text-gray-600 mb-2">
-                  {city.state}
-                </p>
-                <p className="text-xs text-gray-500">
-                  {city.nearbyLenders} lenders
-                </p>
-                <p className="text-xs text-gray-500">
-                  Avg. loan: {city.averageLoanAmount}
-                </p>
-              </Link>
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <Link href="/cities" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
-              View all cities →
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* About Section */}
       <section className="container mx-auto px-4 py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center">

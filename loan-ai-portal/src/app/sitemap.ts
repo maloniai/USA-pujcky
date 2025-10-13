@@ -4,6 +4,7 @@ import { usStates } from '@/data/states'
 import { cities } from '@/data/cities'
 import { czRegions } from '@/data/cz-regions'
 import { caProvinces } from '@/data/ca-provinces'
+import { kazakhstanRegions, kazakhstanCities } from '@/data/kz-regions'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://loansai.com'
@@ -90,6 +91,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     }))
   )
+
+  // Kazakhstan regions (17 regions)
+  const kzRegionUrls = kazakhstanRegions.map((region) => ({
+    url: `${baseUrl}/kz/regions/${region.slug}`,
+    lastModified: oneWeekAgo,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  // Kazakhstan cities (180+ cities across all regions)
+  const kzCityUrls = kazakhstanCities.map((city) => ({
+    url: `${baseUrl}/kz/cities/${city.region}/${city.slug}`,
+    lastModified: twoWeeksAgo,
+    changeFrequency: 'weekly' as const,
+    priority: 0.6,
+  }))
   
   return [
     // Homepage - Highest priority (English)
@@ -232,6 +249,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
+
+    // Kazakhstan hub pages (Kazakh)
+    {
+      url: `${baseUrl}/kz`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/kz/apply`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/kz/privacy`,
+      lastModified: threeMonthsAgo,
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/kz/terms`,
+      lastModified: threeMonthsAgo,
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/kz/disclaimer`,
+      lastModified: threeMonthsAgo,
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
     
     // Legal pages (English)
     {
@@ -304,6 +353,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Canadian cities
   ...caCityUrls,
+
+  // Kazakhstan regions
+  ...kzRegionUrls,
+
+  // Kazakhstan cities
+  ...kzCityUrls,
     
     // All blog posts
     ...blogPostsENUrls,

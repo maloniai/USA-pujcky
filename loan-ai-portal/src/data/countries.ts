@@ -127,6 +127,21 @@ export const liveCountries: CountryHub[] = [
     status: 'live',
     launchDate: '2025-10',
   },
+  {
+    code: 'vn',
+    name: 'Vietnam',
+    flag: '🇻🇳',
+    description:
+      'Vay tiêu dùng và hợp nhất nợ cho cư dân Việt Nam. So sánh lãi suất từ các tổ chức tín dụng được cấp phép bởi Ngân hàng Nhà nước.',
+    coverage: '3 khu vực • 63 tỉnh thành • 50+ thành phố',
+    population: '98M',
+    languages: ['Vietnamese'],
+    regulator: 'Ngân hàng Nhà nước Việt Nam (State Bank of Vietnam)',
+    href: '/vn',
+    ctaLabel: 'Khám phá vay Việt Nam',
+    status: 'live',
+    launchDate: '2025-10',
+  },
 ]
 // Country hubs in active development
 export const inProgressCountries: CountryHub[] = []
@@ -152,17 +167,6 @@ export const comingSoonCountries: CountryHub[] = [
     population: '47M',
     languages: ['Spanish'],
     href: '/es',
-    ctaLabel: 'Coming soon',
-    status: 'coming-soon',
-  },
-  {
-    code: 'vn',
-    name: 'Vietnam',
-    flag: '🇻🇳',
-    description: 'Vay tiêu dùng và hợp nhất nợ cho cư dân Việt Nam.',
-    population: '98M',
-    languages: ['Vietnamese'],
-    href: '/vn',
     ctaLabel: 'Coming soon',
     status: 'coming-soon',
   },
