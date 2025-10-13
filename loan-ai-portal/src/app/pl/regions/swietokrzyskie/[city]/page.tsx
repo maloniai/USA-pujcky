@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { swietokrzyskieData } from '@/data/swietokrzyskie';
+import { swietokrzyskieData } from '@/data/pl-swietokrzyskie';
 import { StickyApplyButton } from '@/components/sticky-apply-button';
 
 type Props = {

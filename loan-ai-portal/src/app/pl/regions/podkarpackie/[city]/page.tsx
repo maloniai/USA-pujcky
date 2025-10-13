@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { podkarpackieData } from '@/data/podkarpackie';
+import { podkarpackieData } from '@/data/pl-podkarpackie';
 import { StickyApplyButton } from '@/components/sticky-apply-button';
 
 type Props = {

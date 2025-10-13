@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   keywords: 'pożyczki warminsko-mazurskie, kredyty Warmińsko-Mazurskie'
 };
 
-export default function Warmińsko-MazurskieRegionPage() {
+export default function WarminskoMazurskieRegionPage() {
   const { region } = warminskoMazurskieData;
 
   return (

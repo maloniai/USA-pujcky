@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { lubuskieData } from '@/data/lubuskie';
+import { lubuskieData } from '@/data/pl-lubuskie';
 import { StickyApplyButton } from '@/components/sticky-apply-button';
 
 type Props = {

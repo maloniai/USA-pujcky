@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { opolskieData } from '@/data/opolskie';
+import { opolskieData } from '@/data/pl-opolskie';
 import { StickyApplyButton } from '@/components/sticky-apply-button';
 
 type Props = {

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { warminskoMazurskieData } from '@/data/warminsko-mazurskie';
+import { warminskoMazurskieData } from '@/data/pl-warminsko-mazurskie';
 import { StickyApplyButton } from '@/components/sticky-apply-button';
 
 type Props = {

@@ -184,6 +184,12 @@ export default function Navigation({ locale = 'en' }: NavigationProps) {
               >
                 {labels.czHub}
               </Link>
+              <Link
+                href={polandHubHref}
+                className="block text-blue-900 transition-colors hover:text-blue-600"
+              >
+                {labels.plHub || 'Poland'}
+              </Link>
             </div>
           </div>
         </div>
