@@ -98,14 +98,14 @@ export default function CityPage({ params }: CityPageProps) {
       {
         '@type': 'FinancialService',
         '@id': `https://www.usa-pujcky.com/kz/cities/${params.region}/${params.city}#financial-service`,
-        name: `Несие қызметтері ${city.nameKK}`,
-        description: `${city.nameKK} қаласындағы лицензияланған несие берушілер`,
+        name: `Несие қызметтері ${city.nameKk}`,
+        description: `${city.nameKk} қаласындағы лицензияланған несие берушілер`,
         areaServed: {
           '@type': 'City',
-          name: city.nameKK,
+          name: city.nameKk,
           containedIn: {
             '@type': 'State',
-            name: region.nameKK
+            name: region.nameKk
           }
         },
         priceRange: '₸₸',
@@ -128,7 +128,7 @@ export default function CityPage({ params }: CityPageProps) {
             position: 2,
             item: {
               '@id': `https://www.usa-pujcky.com/kz/regions/${params.region}`,
-              name: `${region.nameKK} облысы`
+              name: `${region.nameKk} облысы`
             }
           },
           {
@@ -136,7 +136,7 @@ export default function CityPage({ params }: CityPageProps) {
             position: 3,
             item: {
               '@id': `https://www.usa-pujcky.com/kz/cities/${params.region}/${params.city}`,
-              name: city.nameKK
+              name: city.nameKk
             }
           }
         ]
@@ -147,7 +147,7 @@ export default function CityPage({ params }: CityPageProps) {
         mainEntity: [
           {
             '@type': 'Question',
-            name: `${city.nameKK} қаласында несие алу үшін қандай құжаттар қажет?`,
+            name: `${city.nameKk} қаласында несие алу үшін қандай құжаттар қажет?`,
             acceptedAnswer: {
               '@type': 'Answer',
               text: 'Жеке куәлік (не паспорт), ЖСН, табыс туралы анықтама және тұрғылықты жері туралы құжаттар қажет. Кейбір несие берушілер қосымша құжаттар сұрауы мүмкін.'
@@ -155,7 +155,7 @@ export default function CityPage({ params }: CityPageProps) {
           },
           {
             '@type': 'Question',
-            name: `${city.nameKK} қаласында несие бойынша пайыздық мөлшерлеме қандай?`,
+            name: `${city.nameKk} қаласында несие бойынша пайыздық мөлшерлеме қандай?`,
             acceptedAnswer: {
               '@type': 'Answer',
               text: 'Пайыздық мөлшерлеме несие түріне, мерзіміне және несие берушіге байланысты өзгереді. Банктерде жылдық 12-25%, МФҰ-ларда 30-100% аралығында болуы мүмкін. Нақты шарттарды несие берушіден білу қажет.'
@@ -171,7 +171,7 @@ export default function CityPage({ params }: CityPageProps) {
           },
           {
             '@type': 'Question',
-            name: `${city.nameKK} қаласында онлайн несие алуға бола ма?`,
+            name: `${city.nameKk} қаласында онлайн несие алуға бола ма?`,
             acceptedAnswer: {
               '@type': 'Answer',
               text: 'Иә, көптеген банктер мен МФҰ-лар онлайн несие беруді ұсынады. Өтінімді толтырып, жылдам мақұлдау алуға болады. Кейбір несие берушілер құжаттарды офиске апарусыз несие береді.'
@@ -190,13 +190,13 @@ export default function CityPage({ params }: CityPageProps) {
       {
         '@type': 'OfferCatalog',
         '@id': `https://www.usa-pujcky.com/kz/cities/${params.region}/${params.city}#offers`,
-        name: `Несие ұсыныстары ${city.nameKK}`,
+        name: `Несие ұсыныстары ${city.nameKk}`,
         itemListElement: cityContent.loanTypes.map((type, index) => ({
           '@type': 'Offer',
           itemOffered: {
             '@type': 'LoanOrCredit',
             name: type,
-            description: `${type} ${city.nameKK} қаласында`
+            description: `${type} ${city.nameKk} қаласында`
           }
         }))
       }
@@ -225,11 +225,11 @@ export default function CityPage({ params }: CityPageProps) {
               <li>/</li>
               <li>
                 <Link href={`/kz/regions/${params.region}`} className="hover:text-blue-600 transition-colors">
-                  {region.nameKK}
+                  {region.nameKk}
                 </Link>
               </li>
               <li>/</li>
-              <li className="text-gray-900 font-medium">{city.nameKK}</li>
+              <li className="text-gray-900 font-medium">{city.nameKk}</li>
             </ol>
           </nav>
 
@@ -237,7 +237,7 @@ export default function CityPage({ params }: CityPageProps) {
           <article className="bg-white rounded-2xl shadow-lg p-8 mb-8">
             {/* H1 Title */}
             <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              {city.nameKK} қаласындағы несиелер, {region.nameKK}
+              {city.nameKk} қаласындағы несиелер, {region.nameKk}
             </h1>
 
             {/* Unique Introduction */}
@@ -263,7 +263,7 @@ export default function CityPage({ params }: CityPageProps) {
             {/* Available Loan Types */}
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                {city.nameKK} қаласында қолжетімді несие түрлері
+                {city.nameKk} қаласында қолжетімді несие түрлері
               </h2>
               <div className="grid md:grid-cols-2 gap-4">
                 {cityContent.loanTypes.map((type, index) => (
@@ -354,12 +354,12 @@ export default function CityPage({ params }: CityPageProps) {
             {/* FAQ Section */}
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                Жиі қойылатын сұрақтар – {city.nameKK}
+                Жиі қойылатын сұрақтар – {city.nameKk}
               </h2>
               <div className="space-y-4">
                 <details className="group bg-gray-50 rounded-lg p-5 hover:bg-gray-100 transition-colors">
                   <summary className="font-semibold text-gray-900 cursor-pointer list-none flex justify-between items-center">
-                    <span>{city.nameKK} қаласында несие алу үшін қандай құжаттар қажет?</span>
+                    <span>{city.nameKk} қаласында несие алу үшін қандай құжаттар қажет?</span>
                     <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -371,7 +371,7 @@ export default function CityPage({ params }: CityPageProps) {
 
                 <details className="group bg-gray-50 rounded-lg p-5 hover:bg-gray-100 transition-colors">
                   <summary className="font-semibold text-gray-900 cursor-pointer list-none flex justify-between items-center">
-                    <span>{city.nameKK} қаласында несие бойынша пайыздық мөлшерлеме қандай?</span>
+                    <span>{city.nameKk} қаласында несие бойынша пайыздық мөлшерлеме қандай?</span>
                     <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -395,7 +395,7 @@ export default function CityPage({ params }: CityPageProps) {
 
                 <details className="group bg-gray-50 rounded-lg p-5 hover:bg-gray-100 transition-colors">
                   <summary className="font-semibold text-gray-900 cursor-pointer list-none flex justify-between items-center">
-                    <span>{city.nameKK} қаласында онлайн несие алуға бола ма?</span>
+                    <span>{city.nameKk} қаласында онлайн несие алуға бола ма?</span>
                     <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -432,7 +432,7 @@ export default function CityPage({ params }: CityPageProps) {
                       href={`/kz/cities/${params.region}/${nearbyCity.slug}`}
                       className="block p-4 bg-gradient-to-br from-blue-50 to-green-50 rounded-lg hover:shadow-md transition-all hover:scale-105"
                     >
-                      <span className="text-gray-800 font-medium">{nearbyCity.nameKK}</span>
+                      <span className="text-gray-800 font-medium">{nearbyCity.nameKk}</span>
                     </Link>
                   ))}
                 </div>
@@ -473,7 +473,7 @@ export default function CityPage({ params }: CityPageProps) {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
-              {region.nameKK} облысына оралу
+              {region.nameKk} облысына оралу
             </Link>
           </div>
         </div>

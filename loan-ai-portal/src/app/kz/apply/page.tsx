@@ -85,9 +85,6 @@ export default function KazakhstanApplyPage() {
                 <Script
                   src="https://www.doaff.net/publisherScript.js?c=jjt"
                   strategy="afterInteractive"
-                  onLoad={() => {
-                    console.log('Doaff script loaded successfully')
-                  }}
                 />
                 <noscript>
                   <div className="rounded-lg border border-yellow-300 bg-yellow-50 p-6 text-center">

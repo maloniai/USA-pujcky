@@ -142,79 +142,102 @@ export const liveCountries: CountryHub[] = [
     status: 'live',
     launchDate: '2025-10',
   },
-]
-// Country hubs in active development
-export const inProgressCountries: CountryHub[] = []
-
-// Planned country expansions
-export const comingSoonCountries: CountryHub[] = [
   {
     code: 'pl',
     name: 'Poland',
     flag: '🇵🇱',
-    description: 'Pożyczki osobiste i konsolidacja długów dla mieszkańców Polski.',
+    description:
+      'Pożyczki osobiste i konsolidacja długów dla mieszkańców Polski. Porównaj oferty licencjonowanych pożyczkodawców KNF.',
+    coverage: '16 województw • 100+ miast',
     population: '38M',
     languages: ['Polish'],
+    regulator: 'Komisja Nadzoru Finansowego (KNF)',
     href: '/pl',
-    ctaLabel: 'Coming soon',
-    status: 'coming-soon',
+    ctaLabel: 'Przeglądaj pożyczki w Polsce',
+    status: 'live',
+    launchDate: '2025-10',
   },
   {
     code: 'es',
     name: 'Spain',
     flag: '🇪🇸',
-    description: 'Préstamos personales y consolidación de deudas para residentes en España.',
+    description:
+      'Préstamos personales y consolidación de deudas para residentes en España. Compara ofertas de prestamistas regulados por el Banco de España.',
+    coverage: '17 comunidades autónomas • 80+ ciudades',
     population: '47M',
-    languages: ['Spanish'],
+    languages: ['Spanish', 'Catalan', 'Basque', 'Galician'],
+    regulator: 'Banco de España',
     href: '/es',
-    ctaLabel: 'Coming soon',
-    status: 'coming-soon',
+    ctaLabel: 'Explorar préstamos en España',
+    status: 'live',
+    launchDate: '2025-10',
   },
   {
     code: 'za',
     name: 'South Africa',
     flag: '🇿🇦',
-    description: 'Personal loans and debt consolidation for South African residents.',
+    description:
+      'Personal loans and debt consolidation for South African residents. Compare offers from NCR-registered lenders.',
+    coverage: '9 provinces • 50+ cities',
     population: '60M',
-    languages: ['English', 'Afrikaans'],
+    languages: ['English', 'Afrikaans', 'Zulu', 'Xhosa'],
+    regulator: 'National Credit Regulator (NCR)',
     href: '/za',
-    ctaLabel: 'Coming soon',
-    status: 'coming-soon',
+    ctaLabel: 'Explore South African loans',
+    status: 'live',
+    launchDate: '2025-10',
   },
   {
     code: 'au',
     name: 'Australia',
     flag: '🇦🇺',
-    description: 'Personal loans and debt consolidation for Australian residents.',
+    description:
+      'Personal loans and debt consolidation for Australian residents. Compare offers from ASIC-licensed lenders across all states.',
+    coverage: '8 states & territories • 100+ cities',
     population: '26M',
     languages: ['English'],
+    regulator: 'Australian Securities and Investments Commission (ASIC)',
     href: '/au',
-    ctaLabel: 'Coming soon',
-    status: 'coming-soon',
+    ctaLabel: 'Explore Australian loans',
+    status: 'live',
+    launchDate: '2025-10',
   },
   {
     code: 'nz',
     name: 'New Zealand',
     flag: '🇳🇿',
-    description: 'Personal loans and debt consolidation for New Zealand residents.',
+    description:
+      'Personal loans and debt consolidation for New Zealand residents. Compare offers from FMA-licensed lenders nationwide.',
+    coverage: '16 regions • 30+ cities',
     population: '5M',
     languages: ['English', 'Māori'],
+    regulator: 'Financial Markets Authority (FMA)',
     href: '/nz',
-    ctaLabel: 'Coming soon',
-    status: 'coming-soon',
+    ctaLabel: 'Explore New Zealand loans',
+    status: 'live',
+    launchDate: '2025-10',
   },
   {
     code: 'ph',
     name: 'Philippines',
     flag: '🇵🇭',
-    description: 'Personal loans and debt consolidation for Philippine residents.',
+    description:
+      'Personal loans and debt consolidation for Philippine residents. Compare offers from BSP-licensed lenders across all regions.',
+    coverage: '17 regions • 100+ cities',
     population: '113M',
     languages: ['English', 'Filipino'],
+    regulator: 'Bangko Sentral ng Pilipinas (BSP)',
     href: '/ph',
-    ctaLabel: 'Coming soon',
-    status: 'coming-soon',
+    ctaLabel: 'Explore Philippine loans',
+    status: 'live',
+    launchDate: '2025-10',
   },
 ]
+// Country hubs in active development
+export const inProgressCountries: CountryHub[] = []
+
+// Planned country expansions
+export const comingSoonCountries: CountryHub[] = []
 
 // All countries combined
 export const allCountries: CountryHub[] = [
