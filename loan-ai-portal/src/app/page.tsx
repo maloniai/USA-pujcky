@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     languages: {
       'en': 'https://loansai.com',
       'en-US': 'https://loansai.com/us',
-      'es-US': 'https://loansai.com/es',
+      'es-ES': 'https://loansai.com/es',
       'cs-CZ': 'https://loansai.com/cz',
       'en-CA': 'https://loansai.com/ca',
       'fr-CA': 'https://loansai.com/ca/fr',
@@ -43,7 +43,6 @@ export const metadata: Metadata = {
       'kk-KZ': 'https://loansai.com/kz',
       'vi-VN': 'https://loansai.com/vn',
       'pl-PL': 'https://loansai.com/pl',
-      'es-ES': 'https://loansai.com/es',
       'en-ZA': 'https://loansai.com/za',
       'en-AU': 'https://loansai.com/au',
       'en-NZ': 'https://loansai.com/nz',
