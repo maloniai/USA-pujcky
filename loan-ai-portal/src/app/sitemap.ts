@@ -324,6 +324,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+
+    // Colombia hub pages (Spanish)
+    {
+      url: `${baseUrl}/co`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+
+    // Australia hub pages (English)
+    {
+      url: `${baseUrl}/au`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+
+    // New Zealand hub pages (English)
+    {
+      url: `${baseUrl}/nz`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+
+    // Philippines hub pages (English)
+    {
+      url: `${baseUrl}/ph`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
     
     // Legal pages (English)
     {
