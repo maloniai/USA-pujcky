@@ -6,6 +6,7 @@ interface NavigationLabels {
 	countries: string
 	aiMatching: string
 	usaHub: string
+	canadaHub: string
 	czHub: string
 	blog: string
 	apply: string
@@ -52,6 +53,7 @@ const navigationTranslations: Record<Locale, NavigationLabels> = {
 		countries: 'Countries',
 		aiMatching: 'AI Matching',
 		usaHub: 'USA Loans',
+		canadaHub: 'Canada Loans',
 		czHub: 'Czech Republic',
 		blog: 'Blog',
 		apply: 'Apply Now',
@@ -64,6 +66,7 @@ const navigationTranslations: Record<Locale, NavigationLabels> = {
 		countries: 'Países',
 		aiMatching: 'Coincidencia IA',
 		usaHub: 'Estados Unidos',
+		canadaHub: 'Canadá',
 		czHub: 'República Checa',
 		blog: 'Blog',
 		apply: 'Solicitar Ahora',
@@ -76,6 +79,7 @@ const navigationTranslations: Record<Locale, NavigationLabels> = {
 		countries: 'Země',
 		aiMatching: 'AI párování',
 		usaHub: 'USA půjčky',
+		canadaHub: 'Kanada půjčky',
 		czHub: 'Česká republika',
 		blog: 'Blog',
 		apply: 'Požádat o úvěr',

@@ -193,6 +193,47 @@ export const czHubSEO: SEOData = {
   },
 };
 
+export const kzHubSEO: SEOData = {
+  title: 'Қазақстандағы жеке несиелер | Несие салыстыру және AI таңдау',
+  description:
+    'Қазақстанда лицензияланған несие берушілерді салыстырыңыз. Өңірлік нұсқаулықтар, теңгедегі өкілді мысалдар және ҚР Ұлттық Банкі ережелеріне сәйкес AI ұсыныстары.',
+  keywords: [
+    'жеке несие',
+    'несие салыстыру',
+    'қазақстан несиелері',
+    'микроқаржы ұйымдары',
+    'онлайн несие',
+    'AI несие таңдау',
+    'ҚР Ұлттық Банкі',
+    'банктік несиелер',
+  ],
+  canonicalUrl: new URL('/kz', SITE_URL).toString(),
+  alternateLanguages: {
+    kk: new URL('/kz', SITE_URL).toString(),
+  },
+  locale: 'kk_KZ',
+  alternateLocales: ['en_US'],
+  siteName: 'Loan AI Portal',
+  structuredData: {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Loan AI Portal – Қазақстан',
+    inLanguage: 'kk-KZ',
+    description:
+      'Қазақстанда AI қолдаумен несие салыстыру порталы. Лицензияланған банктер мен МҚҰ-дан ұсыныстарды салыстырыңыз.',
+    about: {
+      '@type': 'FinancialService',
+      name: 'Loan AI Portal',
+      areaServed: {
+        '@type': 'Country',
+        name: 'Қазақстан Республикасы',
+        '@id': 'https://www.wikidata.org/wiki/Q232',
+      },
+      regulation: 'Қазақстан Республикасының Ұлттық Банкі',
+    },
+  },
+};
+
 export const statesSEO: SEOData = {
   title: 'State-Specific Loan Information | Loan Requirements by State',
   description: 'Find loan information specific to your state. Compare loan requirements, regulations, and available lenders across all 50 US states. State-by-state lending laws and rates.',

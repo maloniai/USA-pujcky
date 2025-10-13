@@ -2,9 +2,11 @@ import { MetadataRoute } from 'next'
 import { blogPostsEN } from '@/data/blog-posts'
 import { usStates } from '@/data/states'
 import { cities } from '@/data/cities'
+import { czRegions } from '@/data/cz-regions'
+import { caProvinces } from '@/data/ca-provinces'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://loan-platform.com'
+  const baseUrl = 'https://loansai.com'
   
   // Timestamp helpers for realistic lastModified dates
   const now = new Date()
@@ -37,13 +39,57 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
   
-  // Generate all 400 city URLs from city data (dynamically generated)
+  // Generate all 400+ city URLs from city data (dynamically generated)
   const cityUrls = cities.map((city) => ({
     url: `${baseUrl}/cities/${city.state.toLowerCase().replace(/\s+/g, '-')}/${city.slug}`,
     lastModified: twoWeeksAgo, // City pages updated less frequently
     changeFrequency: 'weekly' as const,
     priority: 0.7,
   }))
+
+  // Czech Republic regions (14 regions)
+  const czRegionUrls = czRegions.map((region) => ({
+    url: `${baseUrl}/cz/regions/${region.code}`,
+    lastModified: oneWeekAgo,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  // Czech Republic cities (600+ cities across all regions)
+  const czCityUrls = czRegions.flatMap((region) =>
+    region.featuredCities.map((city) => ({
+      url: `${baseUrl}/cz/cities/${region.code}/${city.toLowerCase().replace(/\s+/g, '-')}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.6,
+    }))
+  )
+
+  // Canadian provinces (10 provinces + 3 territories)
+  const caProvinceUrls = caProvinces.map((province) => ({
+    url: `${baseUrl}/ca/provinces/${province.slug}`,
+    lastModified: oneWeekAgo,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  // Canadian provinces (French)
+  const caProvinceUrlsFr = caProvinces.map((province) => ({
+    url: `${baseUrl}/ca/fr/provinces/${province.slug}`,
+    lastModified: oneWeekAgo,
+    changeFrequency: 'weekly' as const,
+    priority: 0.6,
+  }))
+
+  // Canadian cities (100+ major cities across all provinces)
+  const caCityUrls = caProvinces.flatMap((province) =>
+    province.featuredCities.map((city) => ({
+      url: `${baseUrl}/ca/cities/${province.abbreviation.toLowerCase()}/${city.toLowerCase().replace(/\s+/g, '-')}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.6,
+    }))
+  )
   
   return [
     // Homepage - Highest priority (English)
@@ -132,6 +178,60 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+
+    // Czech Republic hub pages
+    {
+      url: `${baseUrl}/cz`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/cz/regions`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/cz/cities`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+
+    // Canada hub pages (English)
+    {
+      url: `${baseUrl}/ca`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/ca/provinces`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ca/cities`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+
+    // Canada hub pages (French)
+    {
+      url: `${baseUrl}/ca/fr`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ca/fr/provinces`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
     
     // Legal pages (English)
     {
@@ -189,6 +289,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     
   // All city pages (English)
   ...cityUrls,
+
+  // Czech Republic regions
+  ...czRegionUrls,
+
+  // Czech Republic cities
+  ...czCityUrls,
+
+  // Canadian provinces (English)
+  ...caProvinceUrls,
+
+  // Canadian provinces (French)
+  ...caProvinceUrlsFr,
+
+  // Canadian cities
+  ...caCityUrls,
     
     // All blog posts
     ...blogPostsENUrls,

@@ -28,6 +28,7 @@ export default function Navigation({ locale = 'en' }: NavigationProps) {
   const globalCoverageHref = `${homeHref}#global-coverage`
   const usaHubHref = '/us'
   const czechHubHref = '/cz'
+  const canadaHubHref = '/ca'
 
   const handleLanguageToggle = () => {
     saveLocalePreference(alternateLocale)
@@ -104,6 +105,12 @@ export default function Navigation({ locale = 'en' }: NavigationProps) {
                   {labels.usaHub}
                 </Link>
                 <Link
+                  href={canadaHubHref}
+                  className="text-gray-600 transition-colors hover:text-blue-600"
+                >
+                  {labels.canadaHub}
+                </Link>
+                <Link
                   href={czechHubHref}
                   className="text-gray-600 transition-colors hover:text-blue-600"
                 >
@@ -170,6 +177,12 @@ export default function Navigation({ locale = 'en' }: NavigationProps) {
                 className="block font-semibold text-blue-900 transition-colors hover:text-blue-600"
               >
                 {labels.usaHub}
+              </Link>
+              <Link
+                href={canadaHubHref}
+                className="block text-blue-900 transition-colors hover:text-blue-600"
+              >
+                {labels.canadaHub}
               </Link>
               <Link
                 href={czechHubHref}
