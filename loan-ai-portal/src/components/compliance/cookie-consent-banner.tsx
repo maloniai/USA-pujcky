@@ -55,6 +55,15 @@ const COPY: Record<Locale, CookieCopy> = {
     analyticsNote:
       'Odmítnutí deaktivuje analytické a reklamní cookies, ponechá pouze ty nezbytně nutné.',
   },
+  kk: {
+    title: 'Құпиялылық таңдауларыңыз',
+    body:
+      'Біз сайттың жұмысын қамтамасыз ету, өнімділікті түсіну және несие берушілерді сәйкестендіруді жақсарту үшін cookie файлдарын пайдаланамыз. ' +
+      'Біз жеке ақпаратты сатпаймыз және сіз маңызды емес cookie файлдарынан кез келген уақытта бас тарта аласыз.',
+    accept: 'Cookie-ларға рұқсат беру',
+    optOut: 'Маңызды емес cookie-лардан бас тарту',
+    analyticsNote: 'Бас тарту аналитикалық және жарнамалық cookie файлдарын өшіреді, тек қажеттілерін қалдырады.',
+  },
 }
 
 function readConsentCookie(): ConsentValue | null {
@@ -188,7 +197,9 @@ export default function CookieConsentBanner() {
           href="/privacy"
           className="text-xs text-blue-700 underline decoration-dotted hover:text-blue-900"
         >
-          {locale === 'cs' 
+          {locale === 'kk'
+            ? 'Біздің толық құпиялылық саясатымызды оқыңыз'
+            : locale === 'cs' 
             ? 'Přečtěte si naše úplné zásady ochrany osobních údajů' 
             : locale === 'es' 
             ? 'Lee nuestra política de privacidad completa' 

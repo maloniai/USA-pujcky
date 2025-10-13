@@ -465,6 +465,139 @@ const statesPageCopy: Record<Locale, StatesPageCopy> = {
         'Get matched with licensed lenders in your state. Quick application, fast decisions, and competitive rates. Our network includes lenders operating in all 50 states with full regulatory compliance.',
     },
   },
+  // Kazakh: Not applicable for US states - returns English fallback
+  kk: {
+    breadcrumbStates: 'All 50 States',
+    intro: {
+      title: 'Personal Loans by State - Compare Rates & Requirements',
+      lead:
+        'Find state-specific personal loan information, requirements, and regulations.',
+      description:
+        'Compare average rates, loan amounts, and lending laws across all 50 US states. Each state has unique lending regulations, interest rate caps, and consumer protection laws. Use our comprehensive guide to understand personal loan options in your state.',
+    },
+    search: {
+      heading: 'Find Personal Loan Information for Your State',
+      searchLabel: 'Search by state name, abbreviation, or city',
+      resultLabelSingular: 'Showing 1 state',
+      resultLabelPlural: 'Showing {count} states',
+    },
+    statHeading: 'Understanding State-Specific Personal Loan Requirements',
+    statLabels: {
+      population: 'Population',
+      avgLoanAmount: 'Avg. Loan Amount',
+      avgInterestRate: 'Avg. Interest Rate',
+      maxLoanAmount: 'Max Loan Amount',
+    },
+    stateCardLabels: {
+      regulations: 'Key Regulations',
+      popularCities: 'Popular Cities',
+    },
+    regulationsSection: {
+      title: 'Why State Laws Matter for Personal Loans',
+      intro:
+        'Personal loan regulations vary significantly across the United States. Understanding your state\'s specific regulations helps you:',
+      bullets: [
+        'Know the maximum interest rate lenders can charge',
+        'Understand your rights and consumer protections',
+        'Find lenders that are properly licensed in your state',
+        'Avoid predatory lending practices',
+        'Compare loan offers within legal bounds',
+      ],
+    },
+    lowRateHighlight: {
+      title: 'States with Lowest Average Rates',
+      description:
+        'Some states maintain competitive rates due to robust markets and favorable regulations:',
+      items: [
+        'California – 8.5% average with strong consumer protections',
+        'New York – 8.6% average with strict usury laws',
+        'Massachusetts – 8.8% average with comprehensive regulations',
+        'Washington – 8.9% average with borrower protections',
+      ],
+    },
+    highLimitHighlight: {
+      title: 'States with Highest Loan Limits',
+      description:
+        'These states allow higher maximum loan amounts for qualified borrowers:',
+      items: [
+        'California & New York – Up to $100,000',
+        'Washington & Massachusetts – Up to $90,000',
+        'Florida & Texas – Up to $85,000',
+        'Arizona & Oregon – Up to $80,000',
+      ],
+    },
+    verificationNotice: {
+      title: 'Important: Verify Your State\'s Current Regulations',
+      body:
+        'Lending laws and regulations can change. Always verify information with your state\'s banking department or financial services agency. This guide is for educational purposes only and does not replace professional legal or financial advice.',
+    },
+    regionOverviewTitle: 'Common Lending Regulations by Region',
+    regionInsights: [
+      {
+        title: 'Northeast Region',
+        description:
+          'States like New York, Massachusetts, and New Jersey have strong consumer protections with strict interest rate caps and licensing requirements.',
+      },
+      {
+        title: 'Southeast Region',
+        description:
+          'Florida, Georgia, and North Carolina balance consumer protection with competitive markets, offering diverse lending options.',
+      },
+      {
+        title: 'Midwest Region',
+        description:
+          'Illinois, Ohio, and Michigan typically follow the Uniform Consumer Credit Code, with moderate rates and reasonable limits.',
+      },
+      {
+        title: 'Southwest Region',
+        description:
+          'Texas and Arizona feature competitive markets with high maximum amounts and flexible terms.',
+      },
+      {
+        title: 'West Region',
+        description:
+          'California, Washington, and Oregon combine comprehensive regulations with competitive rates, high limits, and strong borrower rights.',
+      },
+    ],
+    faqTitle: 'Frequently Asked Questions About State Loans',
+    faqs: [
+      {
+        question: 'Can I get a personal loan from a lender in another state?',
+        answer:
+          'Yes, many online lenders operate in multiple states. However, they must be licensed in your state and comply with your state\'s regulations, including interest rate caps.',
+      },
+      {
+        question: 'How do state laws affect my interest rate?',
+        answer:
+          'Each state sets a maximum legal interest rate. Your actual rate depends on your creditworthiness within that cap. Both state regulation and your credit history affect the final rate.',
+      },
+      {
+        question: 'What consumer protections do states offer?',
+        answer:
+          'Most states require lender licensing, transparent disclosures, and fair lending practices. Many states also cap fees and provide complaint mechanisms.',
+      },
+      {
+        question: 'Do loan requirements differ between states?',
+        answer:
+          'While basic requirements are similar nationwide, some states have additional documentation, waiting periods, or disclosure requirements. Check with lenders licensed in your state.',
+      },
+      {
+        question: 'How can I verify if a lender is licensed in my state?',
+        answer:
+          'Contact your state\'s banking department or financial services agency. Most maintain public databases of licensed lenders. Always verify before sharing personal information.',
+      },
+      {
+        question: 'Which states have the best rates?',
+        answer:
+          'California, New York, Massachusetts, Washington, and New Jersey typically have the lowest average rates due to competitive markets and strong consumer protections.',
+      },
+    ],
+    cta: {
+      title: 'Ready to Apply for a Personal Loan in Your State?',
+      description:
+        'Get matched with licensed lenders in your state. Quick application, fast decisions, and competitive rates. Our network includes lenders operating in all 50 states with full regulatory compliance.',
+    },
+  },
 }
 
 export function getStatesPageCopy(locale: Locale): StatesPageCopy {

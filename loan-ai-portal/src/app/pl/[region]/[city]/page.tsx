@@ -9,11 +9,18 @@ import PolandDisclosure from '@/components/poland/poland-disclosure'
 import PolandFAQ, { type FAQItem } from '@/components/poland/poland-faq'
 import StickyApplyButton from '@/components/poland/sticky-apply-button'
 import { getPolandRegionBySlug } from '@/data/poland-regions'
-import { getPolandCityBySlug, getPolandCitiesByRegion } from '@/data/poland-cities'
+import { getPolandCityBySlug, getPolandCitiesByRegion, polandCities } from '@/data/poland-cities'
 import Script from 'next/script'
 
 interface PageProps {
   params: { region: string; city: string }
+}
+
+export async function generateStaticParams() {
+  return polandCities.map((city) => ({
+    region: city.regionSlug,
+    city: city.slug,
+  }))
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
