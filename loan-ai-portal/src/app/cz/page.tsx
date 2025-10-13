@@ -91,8 +91,14 @@ export default function CzechRepublicHubPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                href="#regional-guides"
+                href="/cz/zadost"
                 className="inline-flex items-center justify-center rounded-md bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+              >
+                Podat žádost o půjčku
+              </Link>
+              <Link
+                href="#regional-guides"
+                className="inline-flex items-center justify-center rounded-md border border-blue-500 px-5 py-2 text-sm font-semibold text-blue-600 shadow-sm transition hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               >
                 Zobrazit krajské průvodce
               </Link>
