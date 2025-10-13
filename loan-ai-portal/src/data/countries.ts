@@ -52,6 +52,20 @@ export const liveCountries: CountryHub[] = [
     status: 'live',
     launchDate: '2024-09',
   },
+  {
+    code: 'vn',
+    name: 'Vietnam',
+    flag: '🇻🇳',
+    description: 'Vay tiêu dùng và hợp nhất nợ cho cư dân Việt Nam. So sánh lãi suất từ các tổ chức tài chính được cấp phép.',
+    coverage: '8 regions • 56 cities',
+    population: '98M',
+    languages: ['Vietnamese'],
+    regulator: 'State Bank of Vietnam (NHNN)',
+    href: '/vn',
+    ctaLabel: 'Explore Vietnam loans',
+    status: 'live',
+    launchDate: '2025-01',
+  },
 ]
 
 // Country hubs in active development
@@ -104,17 +118,6 @@ export const comingSoonCountries: CountryHub[] = [
     population: '19M',
     languages: ['Romanian'],
     href: '/ro',
-    ctaLabel: 'Coming soon',
-    status: 'coming-soon',
-  },
-  {
-    code: 'vn',
-    name: 'Vietnam',
-    flag: '🇻🇳',
-    description: 'Vay tiêu dùng và hợp nhất nợ cho cư dân Việt Nam.',
-    population: '98M',
-    languages: ['Vietnamese'],
-    href: '/vn',
     ctaLabel: 'Coming soon',
     status: 'coming-soon',
   },

@@ -49,25 +49,45 @@ export default function Footer({ locale = 'en' }: FooterProps) {
               },
             ],
           }
-        : {
-            heading: 'Talk to our compliance team',
-            phone: 'Call us: (800) 562-6264 (7 AM – 9 PM CT, daily)',
-            email: 'Email: compliance@loan-platform.com',
-            infoEmail: 'General inquiries: info@loan-platform.com',
-            company: 'Operated by Maloni s.r.o., Revoluční 1403/28, 110 00 Prague 1, Czech Republic',
-            chat: 'Live chat & support center',
-            certificationsHeading: 'Certifications & assurances',
-            certifications: [
-              {
-                text: 'SOC 2 Type II (2025) bridge letter',
-                href: '/docs/soc2-bridge-letter-2025-10-06',
-              },
-              {
-                text: 'Performance metrics (2M+ borrowers, $5B+ funded)',
-                href: '/docs/performance-metrics-2025',
-              },
-            ],
-          }
+        : locale === 'vi'
+          ? {
+              heading: 'Liên hệ đội ngũ của chúng tôi',
+              phone: 'Gọi: +84 28 1234 5678 (8 giờ sáng – 8 giờ tối, hàng ngày)',
+              email: 'Email: compliance@loan-platform.com',
+              infoEmail: 'Câu hỏi chung: info@loan-platform.com',
+              company: 'Được vận hành bởi Maloni s.r.o., Revoluční 1403/28, 110 00 Praha 1, Cộng hòa Séc',
+              chat: 'Chat trực tuyến & trung tâm hỗ trợ',
+              certificationsHeading: 'Chứng nhận & đảm bảo',
+              certifications: [
+                {
+                  text: 'SOC 2 Type II (2025) – thư xác nhận',
+                  href: '/docs/soc2-bridge-letter-2025-10-06',
+                },
+                {
+                  text: 'Chỉ số hiệu suất (Phục vụ người vay Việt Nam)',
+                  href: '/docs/performance-metrics-2025',
+                },
+              ],
+            }
+          : {
+              heading: 'Talk to our compliance team',
+              phone: 'Call us: (800) 562-6264 (7 AM – 9 PM CT, daily)',
+              email: 'Email: compliance@loan-platform.com',
+              infoEmail: 'General inquiries: info@loan-platform.com',
+              company: 'Operated by Maloni s.r.o., Revoluční 1403/28, 110 00 Prague 1, Czech Republic',
+              chat: 'Live chat & support center',
+              certificationsHeading: 'Certifications & assurances',
+              certifications: [
+                {
+                  text: 'SOC 2 Type II (2025) bridge letter',
+                  href: '/docs/soc2-bridge-letter-2025-10-06',
+                },
+                {
+                  text: 'Performance metrics (2M+ borrowers, $5B+ funded)',
+                  href: '/docs/performance-metrics-2025',
+                },
+              ],
+            }
 
   return (
     <footer className="bg-gray-900 text-white" role="contentinfo">
