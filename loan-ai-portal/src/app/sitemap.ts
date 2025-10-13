@@ -5,6 +5,7 @@ import { cities } from '@/data/cities'
 import { czRegions } from '@/data/cz-regions'
 import { caProvinces } from '@/data/ca-provinces'
 import { kazakhstanRegions, kazakhstanCities } from '@/data/kz-regions'
+import { southAfricaRegions, allZACities } from '@/data/za-data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://loansai.com'
@@ -103,6 +104,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Kazakhstan cities (180+ cities across all regions)
   const kzCityUrls = kazakhstanCities.map((city) => ({
     url: `${baseUrl}/kz/cities/${city.region}/${city.slug}`,
+    lastModified: twoWeeksAgo,
+    changeFrequency: 'weekly' as const,
+    priority: 0.6,
+  }))
+
+  // South Africa regions (9 provinces)
+  const zaRegionUrls = southAfricaRegions.map((region) => ({
+    url: `${baseUrl}/za/regions/${region.slug}`,
+    lastModified: oneWeekAgo,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  // South Africa cities (50+ cities across all provinces)
+  const zaCityUrls = allZACities.map((city) => ({
+    url: `${baseUrl}/za/cities/${city.slug}`,
     lastModified: twoWeeksAgo,
     changeFrequency: 'weekly' as const,
     priority: 0.6,
@@ -281,6 +298,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.5,
     },
+
+    // South Africa hub pages (English)
+    {
+      url: `${baseUrl}/za`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/za/apply`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/za/regions`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/za/cities`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
     
     // Legal pages (English)
     {
@@ -359,6 +402,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Kazakhstan cities
   ...kzCityUrls,
+
+  // South Africa regions
+  ...zaRegionUrls,
+
+  // South Africa cities
+  ...zaCityUrls,
     
     // All blog posts
     ...blogPostsENUrls,
