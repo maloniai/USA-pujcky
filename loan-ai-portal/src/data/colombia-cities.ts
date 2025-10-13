@@ -353,6 +353,21 @@ export const colombiaCities: ColombiaCity[] = [
     topLoanTypes: ['Personal Loans', 'Business Loans', 'Vehicle Loans'],
     topLoanTypesEs: ['Préstamos Personales', 'Préstamos Empresariales', 'Préstamos Vehiculares'],
     nearbyCities: ['Bucaramanga', 'Floridablanca', 'Girón', 'Tona', 'Aratoca']
+  },
+  {
+    name: 'Cartagena',
+    nameEs: 'Cartagena',
+    slug: 'cartagena',
+    regionSlug: 'atlantico',
+    description: 'Historic Caribbean port city, major tourist and cultural center',
+    descriptionEs: 'Ciudad portuaria histórica del Caribe, importante centro turístico y cultural',
+    population: '1.0 millón',
+    avgLoanAmount: '$10,500,000 COP',
+    avgRate: '27.0%',
+    lenderCount: '48+',
+    topLoanTypes: ['Personal Loans', 'Business Loans', 'Tourism Loans'],
+    topLoanTypesEs: ['Préstamos Personales', 'Préstamos Empresariales', 'Préstamos Turísticos'],
+    nearbyCities: ['Barranquilla', 'Turbaco', 'Arjona', 'Magangué']
   }
 ];
 
