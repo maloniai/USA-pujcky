@@ -459,6 +459,9 @@ export function getAllNZCities(): NZCity[] {
   return newZealandRegions.flatMap(region => region.cities)
 }
 
+// Export all cities as a const for generateStaticParams
+export const allNZCities: NZCity[] = newZealandRegions.flatMap(region => region.cities)
+
 // Helper function to get top cities by population
 export function getTopNZCities(limit: number = 10): NZCity[] {
   return getAllNZCities()

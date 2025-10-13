@@ -3,12 +3,18 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import NZNavigation from '@/components/new-zealand/nz-navigation'
 import NZFooter from '@/components/new-zealand/nz-footer'
-import { getNZRegionBySlug } from '@/data/nz-data'
+import { getNZRegionBySlug, newZealandRegions } from '@/data/nz-data'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 
 type Props = {
   params: { regionSlug: string }
+}
+
+export async function generateStaticParams() {
+  return newZealandRegions.map((region) => ({
+    regionSlug: region.slug,
+  }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

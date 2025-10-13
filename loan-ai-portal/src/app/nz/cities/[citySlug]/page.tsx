@@ -3,11 +3,17 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import NZNavigation from '@/components/new-zealand/nz-navigation'
 import NZFooter from '@/components/new-zealand/nz-footer'
-import { getNZCityBySlug, getNZRegionBySlug } from '@/data/nz-data'
+import { getNZCityBySlug, getNZRegionBySlug, allNZCities } from '@/data/nz-data'
 import { Button } from '@/components/ui/button'
 
 type Props = {
   params: { citySlug: string }
+}
+
+export async function generateStaticParams() {
+  return allNZCities.map((city) => ({
+    citySlug: city.slug,
+  }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
