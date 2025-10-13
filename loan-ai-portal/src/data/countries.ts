@@ -67,6 +67,21 @@ export const liveCountries: CountryHub[] = [
     status: 'live',
     launchDate: '2025-01',
   },
+  {
+    code: 'mx',
+    name: 'Mexico',
+    flag: '🇲🇽',
+    description:
+      'Préstamos personales y consolidación de deudas para residentes en México. Compara ofertas de prestamistas regulados por CONDUSEF.',
+    coverage: '26 estados • 52+ ciudades',
+    population: '128M',
+    languages: ['Spanish (Mexican)'],
+    regulator: 'CONDUSEF',
+    href: '/mx',
+    ctaLabel: 'Explorar préstamos en México',
+    status: 'live',
+    launchDate: '2025-01',
+  },
 ]
 
 // Country hubs in active development
@@ -119,17 +134,6 @@ export const comingSoonCountries: CountryHub[] = [
     population: '98M',
     languages: ['Vietnamese'],
     href: '/vn',
-    ctaLabel: 'Coming soon',
-    status: 'coming-soon',
-  },
-  {
-    code: 'mx',
-    name: 'Mexico',
-    flag: '🇲🇽',
-    description: 'Préstamos personales y consolidación de deudas para residentes en México.',
-    population: '128M',
-    languages: ['Spanish'],
-    href: '/mx',
     ctaLabel: 'Coming soon',
     status: 'coming-soon',
   },
