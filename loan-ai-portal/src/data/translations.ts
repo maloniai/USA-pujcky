@@ -221,6 +221,24 @@ const footerTranslations: Record<Locale, FooterLabels> = {
 				],
 			},
 			{
+				heading: 'České kraje',
+				links: [
+					{ label: 'Hlavní město Praha', href: '/cz/regions/praha' },
+					{ label: 'Středočeský kraj', href: '/cz/regions/stredocesky' },
+					{ label: 'Jihočeský kraj', href: '/cz/regions/jihocesky' },
+					{ label: 'Plzeňský kraj', href: '/cz/regions/plzensky' },
+				],
+			},
+			{
+				heading: 'Rychlé odkazy',
+				links: [
+					{ label: 'Česká republika - přehled', href: '/cz' },
+					{ label: 'Požádat o půjčku', href: '/cz/apply' },
+					{ label: 'Jak to funguje', href: '/cz#regional-guides' },
+					{ label: 'Licencovaní poskytovatelé', href: '/cz#regional-guides' },
+				],
+			},
+			{
 				heading: 'Globální nabídka',
 				links: [
 					{ label: 'Globální přehled', href: '/#global-coverage' },
@@ -229,32 +247,13 @@ const footerTranslations: Record<Locale, FooterLabels> = {
 				],
 			},
 			{
-				heading: 'USA – státy',
-				links: [
-					{ label: 'Kalifornie', href: '/us/states/california' },
-					{ label: 'Texas', href: '/us/states/texas' },
-					{ label: 'Florida', href: '/us/states/florida' },
-					{ label: 'New York', href: '/us/states/new-york' },
-				],
-			},
-			{
-				heading: 'USA – města',
-				links: [
-					{ label: 'Los Angeles, CA', href: '/us/cities/california/los-angeles' },
-					{ label: 'Houston, TX', href: '/us/cities/texas/houston' },
-					{ label: 'Dallas, TX', href: '/us/cities/texas/dallas' },
-					{ label: 'Orlando, FL', href: '/us/cities/florida/orlando' },
-				],
-			},
-			{
 				heading: 'Zdroje',
 				links: [
 					{ label: 'Blog', href: '/blog' },
-					{ label: 'USA státy', href: '/us/states' },
-					{ label: 'USA města', href: '/us/cities' },
 					{ label: 'FAQ', href: '/faq' },
 					{ label: 'Vyloučení odpovědnosti', href: '/disclaimer' },
 					{ label: 'Licencování', href: '/licenses' },
+					{ label: 'ČNB registr poskytovatelů', href: 'https://www.cnb.cz' },
 				],
 			},
 		],
