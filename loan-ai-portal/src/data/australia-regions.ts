@@ -190,3 +190,7 @@ export const australiaRegions: AustraliaRegionInfo[] = [
 export function getAustraliaRegionBySlug(slug: string): AustraliaRegionInfo | undefined {
   return australiaRegions.find(region => region.slug === slug)
 }
+
+export function getAllAustraliaRegionSlugs(): string[] {
+  return australiaRegions.map(region => region.slug)
+}
