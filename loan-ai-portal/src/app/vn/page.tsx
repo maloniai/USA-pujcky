@@ -8,6 +8,7 @@ import VietnamDisclosure from '@/components/vietnam/vietnam-disclosure'
 import VietnamFAQ from '@/components/vietnam/vietnam-faq'
 import StickyApplyButton from '@/components/vietnam/sticky-apply-button'
 import { vietnamCities } from '@/data/cities/countries/vietnam'
+import { CollectionPageSchema } from '@/components/seo/collection-page-schema'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
@@ -149,6 +150,22 @@ export default function VietnamHubPage() {
 
   return (
     <>
+      {/* CollectionPage Schema for Hub */}
+      <CollectionPageSchema
+        name="Vay Tiêu Dùng Việt Nam - Tất Cả Tỉnh Thành"
+        description="So sánh vay tiêu dùng tại tất cả các tỉnh thành Việt Nam. Tổ chức tín dụng được Ngân hàng Nhà nước cấp phép."
+        url="https://loansai.com/vn"
+        items={vietnamCities.slice(0, 20).map(city => ({
+          name: city.name,
+          url: `https://loansai.com/vn/cities/${city.slug}`,
+          description: `Vay tiêu dùng tại ${city.name}`
+        }))}
+        breadcrumbs={[
+          { name: 'Trang chủ', url: 'https://loansai.com' },
+          { name: 'Việt Nam', url: 'https://loansai.com/vn' }
+        ]}
+      />
+      
       {/* Structured Data */}
       <Script id="schema-financial-service" type="application/ld+json">
         {JSON.stringify(schemaData)}
