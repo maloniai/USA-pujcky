@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
 }
 
 // City-specific unique content generator
-function getCityUniqueContent(cityName: string, regionName: string): {
+function getCityUniqueContent(citySlug: string, cityName: string, regionName: string): {
   intro: string;
   economicContext: string;
   loanTypes: string[];
@@ -75,7 +75,7 @@ function getCityUniqueContent(cityName: string, regionName: string): {
     }
   };
 
-  return cityData[params.city] || { ...cityData['default'], intro: cityData['default'].intro };
+  return cityData[citySlug] || { ...cityData['default'], intro: cityData['default'].intro };
 }
 
 export default function CityPage({ params }: CityPageProps) {
@@ -86,7 +86,7 @@ export default function CityPage({ params }: CityPageProps) {
   if (!city) notFound();
 
   const currentYear = new Date().getFullYear();
-  const cityContent = getCityUniqueContent(params.city, region.nameKk);
+  const cityContent = getCityUniqueContent(params.city, city.nameKk, region.nameKk);
 
   // Get nearby cities for internal linking
   const nearbyCities = kazakhstanCities.filter((c) => c.region === params.region && c.slug !== city.slug).slice(0, 6);
