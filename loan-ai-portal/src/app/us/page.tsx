@@ -70,7 +70,7 @@ export default function UnitedStatesHubPage() {
                 </p>
               </Link>
               <Link
-                href="/us/disclosures"
+                href="/disclosures"
                 className="group rounded-2xl border border-blue-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-400 hover:shadow-lg"
               >
                 <span className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-2xl text-blue-700">
@@ -117,7 +117,7 @@ export default function UnitedStatesHubPage() {
                 Prefer email? Write to <a href="mailto:compliance@loan-platform.com" className="underline decoration-blue-400">compliance@loan-platform.com</a> for compliance escalations or <a href="mailto:info@loan-platform.com" className="underline decoration-blue-400">info@loan-platform.com</a> for general enquiries.
               </p>
               <Link
-                href="/us/contact"
+                href="/contact"
                 className="mt-6 inline-flex items-center justify-center rounded-lg border border-blue-300 px-4 py-2 text-sm font-semibold text-blue-700 transition hover:bg-blue-600 hover:text-white"
               >
                 Open support center
@@ -134,7 +134,7 @@ export default function UnitedStatesHubPage() {
             </p>
             <div className="mt-6 grid gap-4 md:grid-cols-2">
               <Link
-                href="/us/ai-loan-matching"
+                href="/ai-loan-matching"
                 className="group rounded-2xl border border-gray-200 p-5 transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
               >
                 <span className="text-lg font-semibold text-blue-900">AI-powered lender matching</span>
@@ -147,7 +147,7 @@ export default function UnitedStatesHubPage() {
                 </span>
               </Link>
               <Link
-                href="/us/licenses"
+                href="/licenses"
                 className="group rounded-2xl border border-gray-200 p-5 transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
               >
                 <span className="text-lg font-semibold text-blue-900">Licensing & accreditation</span>
