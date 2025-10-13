@@ -1,17 +1,18 @@
 # Loan AI Portal
 
-A Next.js application for AI-powered personal loan matching serving customers across all 50 US states.
+A Next.js application for AI-powered personal loan matching serving customers globally.
 
 ## 🎯 Features
 
 - 🤖 **AI-Powered Loan Matching** - 200+ data point analysis for best rates
-- 🇺🇸 **USA Market Focus** - Serving all 50 states
-- 🏛️ **State-Specific Information** - Local lending regulations and rates
+- 🌍 **Global Market Coverage** - USA, Australia, Poland, and more
+- 🏛️ **Location-Specific Information** - Local lending regulations and rates
 - 📱 **Responsive Design** - Mobile-first approach
 - ⚡ **Fast Performance** - Static export, WebP images, lazy loading
-- 🔒 **Secure & Compliant** - Bank-level security, GLBA/TILA compliant
+- 🔒 **Secure & Compliant** - Bank-level security, regulatory compliant
 - 🔍 **SEO Optimized** - #1 Google ranking keywords, AI search ready
 - 🖼️ **Image Optimization** - WebP format, lazy loading, SEO alt tags
+- 🇦🇺 **NEW: Australia Hub** - ASIC-licensed lenders, all states and territories
 
 ## 🛠️ Technology Stack
 
@@ -31,26 +32,54 @@ loan-ai-portal/
 │   ├── app/
 │   │   ├── layout.tsx               # Root layout with OrganizationSchema
 │   │   ├── page.tsx                 # Homepage with HowTo schema
-│   │   ├── about/                   # About Us (2M+ borrowers)
+│   │   ├── au/                      # 🇦🇺 Australia Hub (NEW)
+│   │   │   ├── page.tsx             # Australia homepage
+│   │   │   ├── apply/               # Australia loan application
+│   │   │   ├── [region]/            # Australian states/territories
+│   │   │   │   ├── page.tsx         # State/territory page
+│   │   │   │   └── [city]/          # City pages
+│   │   │   │       └── page.tsx     # City loan information
+│   │   │   └── layout.tsx           # Australia layout (en-AU)
+│   │   ├── us/                      # 🇺🇸 USA Hub
+│   │   │   ├── states/              # All 50 US states
+│   │   │   └── cities/              # US cities
+│   │   ├── pl/                      # 🇵🇱 Poland Hub
+│   │   ├── mx/                      # 🇲🇽 Mexico Hub
+│   │   ├── ro/                      # 🇷🇴 Romania Hub
+│   │   ├── kz/                      # 🇰🇿 Kazakhstan Hub
+│   │   ├── cz/                      # 🇨🇿 Czech Republic Hub
+│   │   ├── vn/                      # 🇻🇳 Vietnam Hub
+│   │   ├── about/                   # About Us
 │   │   ├── ai-loan-matching/        # AI matching explanation
-│   │   ├── faq/                     # 40 FAQ with schema markup
+│   │   ├── faq/                     # FAQ with schema markup
 │   │   ├── contact/                 # Contact page
-│   │   ├── states/                  # All 50 US states
 │   │   └── (legal pages)            # Privacy, Terms, Disclaimer, Licenses
 │   ├── components/
 │   │   ├── ui/                      # Reusable UI components
+│   │   ├── australia/               # 🇦🇺 Australia-specific components (NEW)
+│   │   │   ├── australia-navigation.tsx
+│   │   │   ├── australia-footer.tsx
+│   │   │   ├── australia-disclosure.tsx
+│   │   │   ├── australia-faq.tsx
+│   │   │   └── sticky-apply-button.tsx
+│   │   ├── poland/                  # Poland-specific components
+│   │   ├── mexico/                  # Mexico-specific components
 │   │   ├── optimized-image.tsx      # SEO-optimized image component
 │   │   ├── faq-schema.tsx           # FAQPage structured data
 │   │   ├── howto-schema.tsx         # HowTo structured data
 │   │   └── organization-schema.tsx  # Organization structured data
 │   ├── lib/
-│   │   ├── seo.ts                   # SEO configuration (USA focus)
-│   │   ├── page-metadata.ts         # #1 Google ranking keywords
+│   │   ├── seo.ts                   # SEO configuration
+│   │   ├── page-metadata.ts         # Metadata helpers
 │   │   ├── image-seo.ts             # Image SEO helpers
 │   │   └── image-examples.tsx       # Image usage examples
 │   └── data/
-│       ├── states.ts                # All 50 US states data
-│       ├── faqs.ts                  # 40 FAQ questions
+│       ├── australia-regions.ts     # 🇦🇺 Australian states/territories (NEW)
+│       ├── australia-cities.ts      # 🇦🇺 Australian cities (NEW)
+│       ├── states.ts                # US states data
+│       ├── poland-regions.ts        # Poland regions
+│       ├── poland-cities.ts         # Poland cities
+│       ├── faqs.ts                  # FAQ questions
 │       └── translations.ts          # Multi-language support
 ├── public/
 │   └── images/                      # Optimized images (WebP)
@@ -193,7 +222,21 @@ All 15+ pages have complete metadata with #1 Google ranking keywords:
 
 ## 🌍 Geographic Coverage
 
-Serving customers in all 50 US states:
+### Australia 🇦🇺 (NEW)
+**8 States and Territories** with 25+ major cities:
+- New South Wales (Sydney, Newcastle, Wollongong, Parramatta)
+- Victoria (Melbourne, Geelong, Ballarat, Bendigo)
+- Queensland (Brisbane, Gold Coast, Sunshine Coast, Townsville)
+- Western Australia (Perth, Mandurah, Bunbury)
+- South Australia (Adelaide, Mount Gambier)
+- Australian Capital Territory (Canberra)
+- Tasmania (Hobart, Launceston)
+- Northern Territory (Darwin, Alice Springs)
+
+**Regulation**: All lenders ASIC-licensed, National Consumer Credit Protection Act 2009 compliant
+
+### United States 🇺🇸
+**All 50 States** including:
 - Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware
 - Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky
 - Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi
@@ -202,7 +245,17 @@ Serving customers in all 50 US states:
 - Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont
 - Virginia, Washington, West Virginia, Wisconsin, Wyoming
 
-Each state has dedicated page with local lending information.
+### Poland 🇵🇱
+**16 Voivodeships** (Województwa) with 200+ cities
+
+### Other Markets
+- 🇲🇽 Mexico - All states and major cities
+- 🇷🇴 Romania - All regions
+- 🇰🇿 Kazakhstan - Major regions
+- 🇨🇿 Czech Republic - Major regions
+- 🇻🇳 Vietnam - Major cities
+
+Each location has dedicated pages with local lending information, regulations, and licensed lenders.
 
 ## 📚 Documentation
 
