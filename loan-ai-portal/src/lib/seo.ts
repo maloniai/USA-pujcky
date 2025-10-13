@@ -333,6 +333,68 @@ export const applySEOEs: SEOData = {
   siteName: 'Portal de Préstamos IA',
 };
 
+export const applySEOCs: SEOData = {
+  title: 'Žádost o osobní půjčku online | AI schválení za 2 minuty',
+  description:
+    'Vyplňte žádost o osobní půjčku v češtině a získejte nezávazné posouzení za 2 minuty. Srovnání licencovaných poskytovatelů, transparentní RPSN, bez skrytých poplatků a rychlé vyřízení prostředků.',
+  keywords: [
+    'žádost o půjčku online',
+    'osobní půjčka česky',
+    'rychlé schválení půjčky',
+    'AI půjčky Česko',
+    'RPSN srovnání',
+    'nebankovní půjčky online',
+    'konsolidace půjček',
+    'spotřebitelský úvěr online',
+    'licence ČNB',
+  ],
+  structuredData: {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Žádost o osobní půjčku',
+    inLanguage: 'cs-CZ',
+    description:
+      'Online formulář pro žádost o osobní půjčku s AI doporučením licencovaných poskytovatelů v České republice.',
+    mainEntity: {
+      '@type': 'FinancialProduct',
+      name: 'Online žádost o půjčku',
+      description:
+        'Zabezpečený online formulář podporovaný AI, který spojuje žadatele s licencovanými poskytovateli osobních půjček registrovanými u ČNB.',
+      provider: {
+        '@type': 'FinancialService',
+        name: 'Loan AI Portál',
+        areaServed: {
+          '@type': 'Country',
+          name: 'Česká republika',
+          '@id': 'https://www.wikidata.org/wiki/Q213',
+        },
+      },
+      offers: {
+        '@type': 'Offer',
+        description: 'Osobní půjčky od 5 000 Kč do 500 000 Kč pro rezidenty České republiky',
+        eligibleRegion: {
+          '@type': 'Country',
+          name: 'CZ',
+        },
+        eligibleQuantity: {
+          '@type': 'QuantitativeValue',
+          minValue: 5000,
+          maxValue: 500000,
+          unitCode: 'CZK',
+        },
+      },
+    },
+  },
+  canonicalUrl: new URL('/cz/apply', SITE_URL).toString(),
+  alternateLanguages: {
+    cs: new URL('/cz/apply', SITE_URL).toString(),
+    en: new URL('/apply', SITE_URL).toString(),
+  },
+  locale: 'cs_CZ',
+  alternateLocales: ['en_US'],
+  siteName: 'Loan AI Portál',
+};
+
 export function generatePageMetadata(seoData: SEOData, path: string = '') {
   const canonical = resolveUrl((seoData.canonicalUrl ?? path) || SITE_URL.toString())
   const languages = seoData.alternateLanguages
