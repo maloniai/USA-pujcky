@@ -8,6 +8,7 @@ import RomaniaDisclosure from '@/components/romania/romania-disclosure'
 import RomaniaFAQ from '@/components/romania/romania-faq'
 import StickyApplyButton from '@/components/romania/sticky-apply-button'
 import { romaniaRegions } from '@/data/romania-regions'
+import { CollectionPageSchema } from '@/components/seo/collection-page-schema'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
@@ -105,6 +106,22 @@ export default function RomaniaHubPage() {
 
   return (
     <>
+      {/* CollectionPage Schema for Hub */}
+      <CollectionPageSchema
+        name="Credite Personale în România - Toate Regiunile"
+        description="Compară credite personale în toate cele 8 regiuni de dezvoltare din România. Creditori licențiați BNR, rate competitive."
+        url="https://loansai.com/ro"
+        items={romaniaRegions.map(r => ({
+          name: r.nameRo,
+          url: `https://loansai.com/ro/regions/${r.slug}`,
+          description: `Credite personale în regiunea ${r.nameRo}`
+        }))}
+        breadcrumbs={[
+          { name: 'Acasă', url: 'https://loansai.com' },
+          { name: 'România', url: 'https://loansai.com/ro' }
+        ]}
+      />
+      
       {/* Structured Data */}
       <Script id="schema-financial-service" type="application/ld+json">
         {JSON.stringify(schemaData)}

@@ -9,6 +9,7 @@ import PolandFAQ from '@/components/poland/poland-faq'
 import StickyApplyButton from '@/components/poland/sticky-apply-button'
 import { polandRegions } from '@/data/poland-regions'
 import { polandCities } from '@/data/poland-cities'
+import { CollectionPageSchema } from '@/components/seo/collection-page-schema'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
@@ -121,6 +122,22 @@ export default function PolandHubPage() {
 
   return (
     <>
+      {/* CollectionPage Schema for Hub */}
+      <CollectionPageSchema
+        name="Pożyczki Osobiste w Polsce - Wszystkie Województwa"
+        description="Porównaj pożyczki osobiste we wszystkich 16 województwach Polski. Licencjonowani pożyczkodawcy KNF, konkurencyjne stawki."
+        url="https://loansai.com/pl"
+        items={polandRegions.map(r => ({
+          name: r.namePl,
+          url: `https://loansai.com/pl/${r.slug}`,
+          description: `Pożyczki osobiste w województwie ${r.namePl}`
+        }))}
+        breadcrumbs={[
+          { name: 'Strona główna', url: 'https://loansai.com' },
+          { name: 'Polska', url: 'https://loansai.com/pl' }
+        ]}
+      />
+      
       {/* Structured Data */}
       <Script id="schema-financial-service" type="application/ld+json">
         {JSON.stringify(schemaData)}

@@ -7,6 +7,7 @@ import LeadGenDisclosure from '@/components/compliance/lead-gen-disclosure'
 import { kazakhstanRegions, totalKazakhstanCities } from '@/data/kz-regions'
 import { generatePageMetadata, kzHubSEO } from '@/lib/seo'
 import { StickyApplyButton } from '@/components/kz/sticky-apply-button'
+import { CollectionPageSchema } from '@/components/seo/collection-page-schema'
 
 export const metadata = generatePageMetadata(kzHubSEO, '/kz')
 
@@ -73,6 +74,20 @@ const faq = [
 export default function KazakhstanHubPage() {
   return (
     <>
+      <CollectionPageSchema
+        name="Қазақстандағы жеке несиелер - Барлық облыстар"
+        description="Қазақстанның барлық 17 облысында жеке несиелерді салыстырыңыз. ҚР ҰБ лицензиялаған несие берушілер."
+        url="https://loansai.com/kz"
+        items={kazakhstanRegions.map(r => ({
+          name: r.nameKk,
+          url: `https://loansai.com/kz/regions/${r.slug}`,
+          description: `${r.nameKk} облысындағы жеке несиелер`
+        }))}
+        breadcrumbs={[
+          { name: 'Басты бет', url: 'https://loansai.com' },
+          { name: 'Қазақстан', url: 'https://loansai.com/kz' }
+        ]}
+      />
       <Navigation locale="kk" />
       <StickyApplyButton />
       <main className="flex-1 bg-slate-50">
