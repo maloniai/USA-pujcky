@@ -9,9 +9,9 @@ import { HomepageSchema } from '@/components/seo/homepage-schema';
 import { FAQSchema } from '@/components/seo/faq-schema';
 
 export const metadata: Metadata = {
-  title: 'Personal Loans in 14 Countries | Get Rates in 60 Seconds | LoansAI',
+  title: 'Compare Personal Loans Globally | AI-Powered Matching in 14+ Countries | LoansAI',
   description: 'Compare personal loans across 14 countries: USA, Canada, Czech Republic, Poland, Spain, Australia, New Zealand, Philippines, South Africa, Mexico, Colombia, Kazakhstan, Vietnam, Romania. AI matches you with 500+ licensed lenders in 60 seconds.',
-  keywords: 'personal loans, compare loans, loan comparison, best loan rates, international loans, USA loans, Canada loans, European loans, Asia-Pacific loans',
+  keywords: 'compare personal loans, loan comparison, AI loan matching, best loan rates, international loans, global loans, USA loans, Canada loans, European loans, Asia-Pacific loans',
   openGraph: {
     title: 'Compare Personal Loans Across 14 Countries | LoansAI',
     description: 'AI-powered loan matching in 14 countries. Compare rates from 500+ licensed lenders in 60 seconds.',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     languages: {
       'en': 'https://loansai.com',
       'en-US': 'https://loansai.com/us',
-      'es-US': 'https://loansai.com/es',
+      'es-ES': 'https://loansai.com/es',
       'cs-CZ': 'https://loansai.com/cz',
       'en-CA': 'https://loansai.com/ca',
       'fr-CA': 'https://loansai.com/ca/fr',
@@ -43,7 +43,6 @@ export const metadata: Metadata = {
       'kk-KZ': 'https://loansai.com/kz',
       'vi-VN': 'https://loansai.com/vn',
       'pl-PL': 'https://loansai.com/pl',
-      'es-ES': 'https://loansai.com/es',
       'en-ZA': 'https://loansai.com/za',
       'en-AU': 'https://loansai.com/au',
       'en-NZ': 'https://loansai.com/nz',

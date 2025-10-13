@@ -8,6 +8,7 @@ import MexicoDisclosure from '@/components/mexico/mexico-disclosure'
 import MexicoFAQ from '@/components/mexico/mexico-faq'
 import StickyApplyButton from '@/components/mexico/sticky-apply-button'
 import { mexicoRegions } from '@/data/mexico-regions'
+import { CollectionPageSchema } from '@/components/seo/collection-page-schema'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
@@ -129,6 +130,22 @@ export default function MexicoHubPage() {
 
   return (
     <>
+      {/* CollectionPage Schema for Hub */}
+      <CollectionPageSchema
+        name="Préstamos Personales en México - Todos los Estados"
+        description="Compara préstamos personales en todos los 32 estados de México. Prestamistas regulados por CNBV y CONDUSEF."
+        url="https://loansai.com/mx"
+        items={mexicoRegions.map(r => ({
+          name: r.nameEs,
+          url: `https://loansai.com/mx/${r.slug}`,
+          description: `Préstamos personales en ${r.nameEs}`
+        }))}
+        breadcrumbs={[
+          { name: 'Inicio', url: 'https://loansai.com' },
+          { name: 'México', url: 'https://loansai.com/mx' }
+        ]}
+      />
+      
       {/* Structured Data */}
       <Script id="schema-financial-service" type="application/ld+json">
         {JSON.stringify(schemaData)}

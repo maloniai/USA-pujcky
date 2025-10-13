@@ -8,6 +8,7 @@ import HowToApplySchema from '@/components/howto-schema'
 import TransparencyBanner from '@/components/compliance/transparency-banner'
 import LeadGenDisclosure from '@/components/compliance/lead-gen-disclosure'
 import { generatePageMetadata, homeSEOEs } from '@/lib/seo'
+import { CollectionPageSchema } from '@/components/seo/collection-page-schema'
 
 export const metadata = generatePageMetadata(homeSEOEs)
 
@@ -30,6 +31,15 @@ export default function SpanishHomePage() {
 
   return (
     <>
+      <CollectionPageSchema
+        name="Préstamos Personales en España - Todas las Comunidades"
+        description="Compara préstamos personales en todas las comunidades autónomas de España. Prestamistas regulados, tasas competitivas."
+        url="https://loansai.com/es"
+        breadcrumbs={[
+          { name: 'Inicio', url: 'https://loansai.com' },
+          { name: 'España', url: 'https://loansai.com/es' }
+        ]}
+      />
       <HowToApplySchema />
       <Navigation locale="es" />
       <main className="flex-1">

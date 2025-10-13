@@ -6,6 +6,7 @@ import LeadGenDisclosure from '@/components/compliance/lead-gen-disclosure'
 import { VolsorLoanForm } from '@/components/cz/volsor-loan-form'
 import { czRegions, totalCzechCities } from '@/data/cz-regions'
 import { generatePageMetadata, czHubSEO } from '@/lib/seo'
+import { CollectionPageSchema } from '@/components/seo/collection-page-schema'
 
 export const metadata = generatePageMetadata(czHubSEO, '/cz')
 
@@ -59,6 +60,20 @@ const publishedRegionSlugs = new Set(['praha', 'stredocesky', 'jihocesky'])
 export default function CzechRepublicHubPage() {
   return (
     <>
+      <CollectionPageSchema
+        name="Půjčky v České Republice - Všechny kraje"
+        description="Porovnejte osobní půjčky ve všech 14 krajích České republiky. Transparentní srovnání úvěrů s AI technologií."
+        url="https://loansai.com/cz"
+        items={czRegions.map(region => ({
+          name: region.name,
+          url: `https://loansai.com/cz/regions/${region.code}`,
+          description: `Půjčky v kraji ${region.name}`
+        }))}
+        breadcrumbs={[
+          { name: 'Domů', url: 'https://loansai.com' },
+          { name: 'Česká republika', url: 'https://loansai.com/cz' },
+        ]}
+      />
       <Navigation locale="cs" />
       <main className="flex-1 bg-slate-50">
         <header className="border-b border-blue-100 bg-gradient-to-br from-blue-50 via-white to-blue-100">

@@ -8,6 +8,7 @@ import ApplicationFormScript from '@/components/application-form-script'
 import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 import { generatePageMetadata, usHubSEO } from '@/lib/seo'
+import { CollectionPageSchema } from '@/components/seo/collection-page-schema'
 
 export const metadata = generatePageMetadata(usHubSEO, '/us')
 
@@ -31,6 +32,15 @@ export default function UnitedStatesHubPage() {
   return (
     <>
       <HowToApplySchema />
+      <CollectionPageSchema
+        name="Personal Loans in United States - All 50 States"
+        description="Compare personal loan regulations, rates, and lenders across all 50 U.S. states. AI-powered matching with 100+ licensed lenders."
+        url="https://loansai.com/us"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://loansai.com' },
+          { name: 'United States', url: 'https://loansai.com/us' },
+        ]}
+      />
       <Navigation />
       <main className="flex-1 bg-gray-50">
         <div className="bg-gradient-to-br from-blue-50 to-blue-100 border-b border-blue-100">

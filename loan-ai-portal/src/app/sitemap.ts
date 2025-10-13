@@ -281,6 +281,128 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.5,
     },
+
+    // Romania hub pages
+    {
+      url: `${baseUrl}/ro`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/ro/regions`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ro/cities`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ro/apply`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+
+    // Poland hub pages
+    {
+      url: `${baseUrl}/pl`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/pl/apply`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+
+    // Vietnam hub pages
+    {
+      url: `${baseUrl}/vn`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+
+    // Mexico hub pages
+    {
+      url: `${baseUrl}/mx`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+
+    // Colombia hub pages
+    {
+      url: `${baseUrl}/co`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+
+    // South Africa hub pages
+    {
+      url: `${baseUrl}/za`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+
+    // Australia hub pages
+    {
+      url: `${baseUrl}/au`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+
+    // New Zealand hub pages
+    {
+      url: `${baseUrl}/nz`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+
+    // Philippines hub pages
+    {
+      url: `${baseUrl}/ph`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+
+    // United States hub pages
+    {
+      url: `${baseUrl}/us`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/us/states`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/us/cities`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/us/apply`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
     
     // Legal pages (English)
     {
