@@ -5,11 +5,12 @@ A Next.js application for AI-powered personal loan matching serving customers ac
 ## 🎯 Features
 
 - 🤖 **AI-Powered Loan Matching** - 200+ data point analysis for best rates
-- 🇺🇸 **USA Market Focus** - Serving all 50 states
-- 🏛️ **State-Specific Information** - Local lending regulations and rates
+- 🌎 **Multi-Country Coverage** - USA (50 states), Mexico, Poland, Romania, Colombia, and more
+- 🏛️ **Region-Specific Information** - Local lending regulations and rates
+- 🌍 **Multi-Language Support** - English, Spanish (España & Colombia), Polish, Romanian
 - 📱 **Responsive Design** - Mobile-first approach
 - ⚡ **Fast Performance** - Static export, WebP images, lazy loading
-- 🔒 **Secure & Compliant** - Bank-level security, GLBA/TILA compliant
+- 🔒 **Secure & Compliant** - Bank-level security, country-specific regulations
 - 🔍 **SEO Optimized** - #1 Google ranking keywords, AI search ready
 - 🖼️ **Image Optimization** - WebP format, lazy loading, SEO alt tags
 
@@ -36,9 +37,27 @@ loan-ai-portal/
 │   │   ├── faq/                     # 40 FAQ with schema markup
 │   │   ├── contact/                 # Contact page
 │   │   ├── states/                  # All 50 US states
+│   │   ├── co/                      # Colombia hub (NEW)
+│   │   │   ├── page.tsx             # Colombia homepage
+│   │   │   ├── [region]/            # Department pages (5 regions)
+│   │   │   │   ├── page.tsx
+│   │   │   │   └── [city]/          # City pages (27 cities)
+│   │   │   │       └── page.tsx
+│   │   │   └── apply/               # Apply page
+│   │   ├── mx/                      # Mexico hub
+│   │   ├── pl/                      # Poland hub
+│   │   ├── ro/                      # Romania hub
 │   │   └── (legal pages)            # Privacy, Terms, Disclaimer, Licenses
 │   ├── components/
 │   │   ├── ui/                      # Reusable UI components
+│   │   ├── colombia/                # Colombia-specific components (NEW)
+│   │   │   ├── colombia-navigation.tsx
+│   │   │   ├── colombia-footer.tsx
+│   │   │   ├── colombia-disclosure.tsx
+│   │   │   ├── colombia-faq.tsx
+│   │   │   └── sticky-apply-button.tsx
+│   │   ├── mexico/                  # Mexico-specific components
+│   │   ├── poland/                  # Poland-specific components
 │   │   ├── optimized-image.tsx      # SEO-optimized image component
 │   │   ├── faq-schema.tsx           # FAQPage structured data
 │   │   ├── howto-schema.tsx         # HowTo structured data
@@ -50,6 +69,11 @@ loan-ai-portal/
 │   │   └── image-examples.tsx       # Image usage examples
 │   └── data/
 │       ├── states.ts                # All 50 US states data
+│       ├── colombia-regions.ts      # Colombia departments data (NEW)
+│       ├── colombia-cities.ts       # Colombia cities data (NEW)
+│       ├── mexico/                  # Mexico data
+│       ├── poland-regions.ts        # Poland voivodeships
+│       ├── poland-cities.ts         # Poland cities
 │       ├── faqs.ts                  # 40 FAQ questions
 │       └── translations.ts          # Multi-language support
 ├── public/
@@ -193,16 +217,25 @@ All 15+ pages have complete metadata with #1 Google ranking keywords:
 
 ## 🌍 Geographic Coverage
 
-Serving customers in all 50 US states:
-- Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware
-- Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky
-- Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi
-- Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico
-- New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania
-- Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont
-- Virginia, Washington, West Virginia, Wisconsin, Wyoming
+### United States
+Serving customers in all 50 US states with dedicated pages for each state.
 
-Each state has dedicated page with local lending information.
+### Colombia 🇨🇴
+**NEW**: Complete Colombia hub with Spanish language support:
+- 5 Major Departments: Bogotá D.C., Antioquia, Valle del Cauca, Atlántico, Santander
+- 27 Cities: Including Bogotá, Medellín, Cali, Barranquilla, Bucaramanga, Cartagena, and more
+- Regulated by Superintendencia Financiera de Colombia
+- Full Spanish (Colombia) localization
+- Complete SEO optimization with local keywords
+
+### Other Markets
+- **Mexico 🇲🇽**: Multiple regions and cities
+- **Poland 🇵🇱**: 16 voivodeships, 200+ cities
+- **Romania 🇷🇴**: Major regions and cities
+- **New Zealand 🇳🇿**: Regional coverage
+- **South Africa 🇿🇦**: Provincial coverage
+
+Each country/region has dedicated pages with local lending information, regulations, and language support.
 
 ## 📚 Documentation
 
