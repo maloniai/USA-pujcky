@@ -142,6 +142,21 @@ export const liveCountries: CountryHub[] = [
     status: 'live',
     launchDate: '2025-10',
   },
+  {
+    code: 'nz',
+    name: 'New Zealand',
+    flag: '🇳🇿',
+    description:
+      'Personal loans and debt consolidation for New Zealand residents. Compare rates from FMA-licensed lenders.',
+    coverage: '16 regions • 30+ cities',
+    population: '5M',
+    languages: ['English'],
+    regulator: 'Financial Markets Authority (FMA)',
+    href: '/nz',
+    ctaLabel: 'Explore NZ loans',
+    status: 'live',
+    launchDate: '2025-10',
+  },
 ]
 // Country hubs in active development
 export const inProgressCountries: CountryHub[] = []
@@ -189,17 +204,6 @@ export const comingSoonCountries: CountryHub[] = [
     population: '26M',
     languages: ['English'],
     href: '/au',
-    ctaLabel: 'Coming soon',
-    status: 'coming-soon',
-  },
-  {
-    code: 'nz',
-    name: 'New Zealand',
-    flag: '🇳🇿',
-    description: 'Personal loans and debt consolidation for New Zealand residents.',
-    population: '5M',
-    languages: ['English', 'Māori'],
-    href: '/nz',
     ctaLabel: 'Coming soon',
     status: 'coming-soon',
   },
