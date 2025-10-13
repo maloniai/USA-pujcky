@@ -164,6 +164,10 @@ export const czHubSEO: SEOData = {
     'nebankovní půjčky Česko',
     'AI půjčky',
     'spotřebitelský úvěr čnb',
+    'půjčky online česko',
+    'rychlá půjčka',
+    'konsolidace úvěrů',
+    'refinancování půjček',
   ],
   canonicalUrl: new URL('/cz', SITE_URL).toString(),
   alternateLanguages: {
@@ -175,21 +179,110 @@ export const czHubSEO: SEOData = {
   siteName: 'Loan AI Portál',
   structuredData: {
     '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'Loan AI Portál – Česká republika',
-    inLanguage: 'cs-CZ',
-    description:
-      'Regionální průvodce osobními půjčkami podporovaný AI. Transparentní RPSN, srovnání bank i nebankovních poskytovatelů a kontakty na licencované poradce.',
-    about: {
-      '@type': 'FinancialService',
-      name: 'Loan AI Portál',
-      areaServed: {
-        '@type': 'Country',
-        name: 'Česká republika',
-        '@id': 'https://www.wikidata.org/wiki/Q213',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': 'https://loan-platform.com/cz#webpage',
+        url: 'https://loan-platform.com/cz',
+        name: 'Loan AI Portál – Česká republika',
+        inLanguage: 'cs-CZ',
+        description:
+          'Regionální průvodce osobními půjčkami podporovaný AI. Transparentní RPSN, srovnání bank i nebankovních poskytovatelů a kontakty na licencované poradce.',
+        isPartOf: {
+          '@id': 'https://loan-platform.com#website',
+        },
+        about: {
+          '@type': 'FinancialService',
+          name: 'Loan AI Portál',
+          areaServed: {
+            '@type': 'Country',
+            name: 'Česká republika',
+            '@id': 'https://www.wikidata.org/wiki/Q213',
+          },
+          regulation: 'Česká národní banka',
+        },
       },
-      regulation: 'Česká národní banka',
-    },
+      {
+        '@type': 'WebSite',
+        '@id': 'https://loan-platform.com#website',
+        url: 'https://loan-platform.com',
+        name: 'Loan AI Portál',
+        inLanguage: 'cs-CZ',
+        publisher: {
+          '@id': 'https://loan-platform.com#organization',
+        },
+      },
+      {
+        '@type': 'Organization',
+        '@id': 'https://loan-platform.com#organization',
+        name: 'Maloni s.r.o.',
+        url: 'https://loan-platform.com',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://loan-platform.com/logo.png',
+        },
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Revoluční 1403/28',
+          addressLocality: 'Praha 1',
+          postalCode: '110 00',
+          addressCountry: 'CZ',
+        },
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: '+420-255-790-777',
+          contactType: 'Customer Service',
+          areaServed: 'CZ',
+          availableLanguage: ['Czech', 'English'],
+        },
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Jak rychle získám peníze na účet?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Bankovní poskytovatelé obvykle vyplácí do následujícího pracovního dne po podpisu smlouvy. Nebankovní společnosti často vyplácí do 30 minut od schválení, pokud máte účet u stejné banky.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Jaké dokumenty budu potřebovat?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Standardem je občanský průkaz, potvrzení o příjmu nebo daňové přiznání (u OSVČ) a výpis z bankovního účtu. U konsolidací přiložte smlouvy k úvěrům, které chcete refinancovat.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Jak funguje AI doporučení v české sekci?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Model vyhodnocuje RPSN, celkovou přeplacenou částku, reputaci poskytovatele a dostupnost v jednotlivých krajích. Výsledky jsou seřazeny podle transparentních kritérií a můžete je dále filtrovat.',
+            },
+          },
+        ],
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Domů',
+            item: 'https://loan-platform.com/',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Půjčky Česko',
+            item: 'https://loan-platform.com/cz',
+          },
+        ],
+      },
+    ],
   },
 };
 

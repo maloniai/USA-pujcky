@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 import { blogPostsEN } from '@/data/blog-posts'
 import { usStates } from '@/data/states'
 import { cities } from '@/data/cities'
+import { czRegions } from '@/data/cz-regions'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://loan-platform.com'
@@ -45,6 +46,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
   
+  // Generate Czech region URLs (all 14 regions)
+  const czRegionUrls = czRegions.map((region) => ({
+    url: `${baseUrl}/cz/regions/${region.code}`,
+    lastModified: oneWeekAgo,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+  
   return [
     // Homepage - Highest priority (English)
     {
@@ -61,6 +70,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     
+    // Czech hub - High priority for Czech loan market
+    {
+      url: `${baseUrl}/cz`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+    
     // Primary conversion pages
     {
       url: `${baseUrl}/apply`,
@@ -70,6 +87,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/es/apply`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/cz/apply`,
       lastModified: oneWeekAgo,
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -192,5 +215,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     
     // All blog posts
     ...blogPostsENUrls,
+    
+    // All Czech region pages (14 regions)
+    ...czRegionUrls,
   ]
 }
