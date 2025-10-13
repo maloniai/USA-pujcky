@@ -1,15 +1,17 @@
 # Loan AI Portal
 
-A Next.js application for AI-powered personal loan matching serving customers across all 50 US states.
+A Next.js application for AI-powered personal loan matching serving customers across multiple countries including USA, Poland, Romania, Czech Republic, Kazakhstan, Mexico, Vietnam, and South Africa.
 
 ## 🎯 Features
 
 - 🤖 **AI-Powered Loan Matching** - 200+ data point analysis for best rates
+- 🌍 **Multi-Country Support** - USA, Poland, Romania, Czech Republic, Kazakhstan, Mexico, Vietnam, South Africa
 - 🇺🇸 **USA Market Focus** - Serving all 50 states
-- 🏛️ **State-Specific Information** - Local lending regulations and rates
+- 🇿🇦 **South Africa Hub** - 9 provinces, 50+ cities, NCR compliant
+- 🏛️ **State/Region-Specific Information** - Local lending regulations and rates
 - 📱 **Responsive Design** - Mobile-first approach
 - ⚡ **Fast Performance** - Static export, WebP images, lazy loading
-- 🔒 **Secure & Compliant** - Bank-level security, GLBA/TILA compliant
+- 🔒 **Secure & Compliant** - Bank-level security, regulatory compliant
 - 🔍 **SEO Optimized** - #1 Google ranking keywords, AI search ready
 - 🖼️ **Image Optimization** - WebP format, lazy loading, SEO alt tags
 
