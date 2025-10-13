@@ -164,6 +164,10 @@ export const czHubSEO: SEOData = {
     'nebankovní půjčky Česko',
     'AI půjčky',
     'spotřebitelský úvěr čnb',
+    'půjčky online česko',
+    'rychlá půjčka',
+    'konsolidace úvěrů',
+    'refinancování půjček',
   ],
   canonicalUrl: new URL('/cz', SITE_URL).toString(),
   alternateLanguages: {
@@ -175,21 +179,110 @@ export const czHubSEO: SEOData = {
   siteName: 'Loan AI Portál',
   structuredData: {
     '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'Loan AI Portál – Česká republika',
-    inLanguage: 'cs-CZ',
-    description:
-      'Regionální průvodce osobními půjčkami podporovaný AI. Transparentní RPSN, srovnání bank i nebankovních poskytovatelů a kontakty na licencované poradce.',
-    about: {
-      '@type': 'FinancialService',
-      name: 'Loan AI Portál',
-      areaServed: {
-        '@type': 'Country',
-        name: 'Česká republika',
-        '@id': 'https://www.wikidata.org/wiki/Q213',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': 'https://loan-platform.com/cz#webpage',
+        url: 'https://loan-platform.com/cz',
+        name: 'Loan AI Portál – Česká republika',
+        inLanguage: 'cs-CZ',
+        description:
+          'Regionální průvodce osobními půjčkami podporovaný AI. Transparentní RPSN, srovnání bank i nebankovních poskytovatelů a kontakty na licencované poradce.',
+        isPartOf: {
+          '@id': 'https://loan-platform.com#website',
+        },
+        about: {
+          '@type': 'FinancialService',
+          name: 'Loan AI Portál',
+          areaServed: {
+            '@type': 'Country',
+            name: 'Česká republika',
+            '@id': 'https://www.wikidata.org/wiki/Q213',
+          },
+          regulation: 'Česká národní banka',
+        },
       },
-      regulation: 'Česká národní banka',
-    },
+      {
+        '@type': 'WebSite',
+        '@id': 'https://loan-platform.com#website',
+        url: 'https://loan-platform.com',
+        name: 'Loan AI Portál',
+        inLanguage: 'cs-CZ',
+        publisher: {
+          '@id': 'https://loan-platform.com#organization',
+        },
+      },
+      {
+        '@type': 'Organization',
+        '@id': 'https://loan-platform.com#organization',
+        name: 'Maloni s.r.o.',
+        url: 'https://loan-platform.com',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://loan-platform.com/logo.png',
+        },
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Revoluční 1403/28',
+          addressLocality: 'Praha 1',
+          postalCode: '110 00',
+          addressCountry: 'CZ',
+        },
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: '+420-255-790-777',
+          contactType: 'Customer Service',
+          areaServed: 'CZ',
+          availableLanguage: ['Czech', 'English'],
+        },
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Jak rychle získám peníze na účet?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Bankovní poskytovatelé obvykle vyplácí do následujícího pracovního dne po podpisu smlouvy. Nebankovní společnosti často vyplácí do 30 minut od schválení, pokud máte účet u stejné banky.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Jaké dokumenty budu potřebovat?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Standardem je občanský průkaz, potvrzení o příjmu nebo daňové přiznání (u OSVČ) a výpis z bankovního účtu. U konsolidací přiložte smlouvy k úvěrům, které chcete refinancovat.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Jak funguje AI doporučení v české sekci?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Model vyhodnocuje RPSN, celkovou přeplacenou částku, reputaci poskytovatele a dostupnost v jednotlivých krajích. Výsledky jsou seřazeny podle transparentních kritérií a můžete je dále filtrovat.',
+            },
+          },
+        ],
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Domů',
+            item: 'https://loan-platform.com/',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Půjčky Česko',
+            item: 'https://loan-platform.com/cz',
+          },
+        ],
+      },
+    ],
   },
 };
 
@@ -331,6 +424,68 @@ export const applySEOEs: SEOData = {
   locale: 'es_US',
   alternateLocales: ['en_US'],
   siteName: 'Portal de Préstamos IA',
+};
+
+export const applySEOCs: SEOData = {
+  title: 'Žádost o osobní půjčku online | AI schválení za 2 minuty',
+  description:
+    'Vyplňte žádost o osobní půjčku v češtině a získejte nezávazné posouzení za 2 minuty. Srovnání licencovaných poskytovatelů, transparentní RPSN, bez skrytých poplatků a rychlé vyřízení prostředků.',
+  keywords: [
+    'žádost o půjčku online',
+    'osobní půjčka česky',
+    'rychlé schválení půjčky',
+    'AI půjčky Česko',
+    'RPSN srovnání',
+    'nebankovní půjčky online',
+    'konsolidace půjček',
+    'spotřebitelský úvěr online',
+    'licence ČNB',
+  ],
+  structuredData: {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Žádost o osobní půjčku',
+    inLanguage: 'cs-CZ',
+    description:
+      'Online formulář pro žádost o osobní půjčku s AI doporučením licencovaných poskytovatelů v České republice.',
+    mainEntity: {
+      '@type': 'FinancialProduct',
+      name: 'Online žádost o půjčku',
+      description:
+        'Zabezpečený online formulář podporovaný AI, který spojuje žadatele s licencovanými poskytovateli osobních půjček registrovanými u ČNB.',
+      provider: {
+        '@type': 'FinancialService',
+        name: 'Loan AI Portál',
+        areaServed: {
+          '@type': 'Country',
+          name: 'Česká republika',
+          '@id': 'https://www.wikidata.org/wiki/Q213',
+        },
+      },
+      offers: {
+        '@type': 'Offer',
+        description: 'Osobní půjčky od 5 000 Kč do 500 000 Kč pro rezidenty České republiky',
+        eligibleRegion: {
+          '@type': 'Country',
+          name: 'CZ',
+        },
+        eligibleQuantity: {
+          '@type': 'QuantitativeValue',
+          minValue: 5000,
+          maxValue: 500000,
+          unitCode: 'CZK',
+        },
+      },
+    },
+  },
+  canonicalUrl: new URL('/cz/apply', SITE_URL).toString(),
+  alternateLanguages: {
+    cs: new URL('/cz/apply', SITE_URL).toString(),
+    en: new URL('/apply', SITE_URL).toString(),
+  },
+  locale: 'cs_CZ',
+  alternateLocales: ['en_US'],
+  siteName: 'Loan AI Portál',
 };
 
 export function generatePageMetadata(seoData: SEOData, path: string = '') {
