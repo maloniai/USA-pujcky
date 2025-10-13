@@ -1,16 +1,17 @@
 # Loan AI Portal
 
-A Next.js application for AI-powered personal loan matching serving customers across all 50 US states.
+A Next.js application for AI-powered personal loan matching serving customers across multiple countries.
 
 ## 🎯 Features
 
 - 🤖 **AI-Powered Loan Matching** - 200+ data point analysis for best rates
-- 🇺🇸 **USA Market Focus** - Serving all 50 states
-- 🏛️ **State-Specific Information** - Local lending regulations and rates
+- 🌍 **Global Market Coverage** - USA (50 states), Philippines (8 regions), Romania, Czech Republic, Poland, Mexico, South Africa, Kazakhstan, Vietnam
+- 🏛️ **Location-Specific Information** - Local lending regulations and rates
 - 📱 **Responsive Design** - Mobile-first approach
 - ⚡ **Fast Performance** - Static export, WebP images, lazy loading
-- 🔒 **Secure & Compliant** - Bank-level security, GLBA/TILA compliant
+- 🔒 **Secure & Compliant** - Bank-level security, regulatory compliant
 - 🔍 **SEO Optimized** - #1 Google ranking keywords, AI search ready
+- 🌐 **Multi-Language Support** - English, Spanish, Tagalog, Romanian, Czech, Polish, and more
 - 🖼️ **Image Optimization** - WebP format, lazy loading, SEO alt tags
 
 ## 🛠️ Technology Stack
@@ -115,6 +116,41 @@ This application is configured for deployment to Azure Static Web Apps with:
 - Optimized for Azure hosting
 - GitHub Actions workflow ready
 - Multi-language routing support
+
+## 🌏 Country-Specific Hubs
+
+### Philippines Hub (`/ph`)
+
+Complete loan comparison platform for the Philippines with:
+
+- **8 Regions**: NCR, Central Luzon, Calabarzon, Central Visayas, Davao, Western Visayas, Northern Mindanao, Bicol
+- **29+ Cities**: Manila, Cebu City, Davao City, Quezon City, and more
+- **BSP Compliance**: Full compliance with Philippine lending regulations (RA 3765, 9474, 11765, 10173)
+- **Bilingual Content**: English and Tagalog translations
+- **43 Unique Pages**: Region pages, city pages, apply page, legal pages
+
+See [PHILIPPINES-HUB-IMPLEMENTATION.md](PHILIPPINES-HUB-IMPLEMENTATION.md) for full documentation.
+
+### Romania Hub (`/ro`)
+
+- 8 Development Regions with 40+ major cities
+- BNR (Banca Națională a României) compliance
+- Romanian language support
+
+### Czech Republic Hub (`/cz`)
+
+- Major regions including Prague, South Bohemia, Plzeň
+- CNB compliance
+- Czech language support
+
+### Other Markets
+
+- **United States** (`/us`): All 50 states with 400+ cities
+- **Mexico** (`/mx`): Major states and cities, Spanish language
+- **Poland** (`/pl`): 16 voivodeships, Polish language
+- **South Africa** (`/za`): 9 provinces
+- **Kazakhstan** (`/kz`): Major regions, Kazakh/Russian
+- **Vietnam** (`/vn`): Major cities, Vietnamese
 
 ### Quick Deploy
 
