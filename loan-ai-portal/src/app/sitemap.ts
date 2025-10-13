@@ -2,6 +2,21 @@ import { MetadataRoute } from 'next'
 import { blogPostsEN } from '@/data/blog-posts'
 import { usStates } from '@/data/states'
 import { cities } from '@/data/cities'
+import { czRegions } from '@/data/cz-regions'
+import { jihoceskyCityContent } from '@/data/cz-jihocesky'
+import { stredoceskyCityContent } from '@/data/cz-stredocesky'
+import { plzenskyCityContent } from '@/data/cz-plzensky'
+import { pragueCityContent } from '@/data/cz-prague'
+import { karlovarskyCityContent } from '@/data/cz-karlovarsky'
+import { usteckyCityContent } from '@/data/cz-ustecky'
+import { libereckyCityContent } from '@/data/cz-liberecky'
+import { kralovehradeckyCityContent } from '@/data/cz-kralovehradecky'
+import { pardubickyCityContent } from '@/data/cz-pardubicky'
+import { vysocinaCityContent } from '@/data/cz-vysocina'
+import { jihomoravskyCityContent } from '@/data/cz-jihomoravsky'
+import { olomouckyCityContent } from '@/data/cz-olomoucky'
+import { zlinskyCityContent } from '@/data/cz-zlinsky'
+import { moravskoslezyskyCityContent } from '@/data/cz-moravskoslezsky'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://loan-platform.com'
@@ -44,6 +59,110 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'weekly' as const,
     priority: 0.7,
   }))
+
+  // Generate CZ region URLs
+  const publishedCzRegions = [
+    'praha', 'stredocesky', 'jihocesky', 'plzensky',
+    'karlovarsky', 'ustecky', 'liberecky', 'kralovehradecky',
+    'pardubicky', 'vysocina', 'jihomoravsky', 'olomoucky',
+    'zlinsky', 'moravskoslezsky'
+  ]
+  const czRegionUrls = czRegions
+    .filter(region => publishedCzRegions.includes(region.code))
+    .map((region) => ({
+      url: `${baseUrl}/cz/regions/${region.code}`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    }))
+
+  // Generate CZ city URLs
+  const czCityUrls = [
+    ...pragueCityContent.map(city => ({
+      url: `${baseUrl}/cz/regions/praha/${city.slug}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+    ...jihoceskyCityContent.map(city => ({
+      url: `${baseUrl}/cz/regions/jihocesky/${city.slug}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+    ...stredoceskyCityContent.map(city => ({
+      url: `${baseUrl}/cz/regions/stredocesky/${city.slug}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+    ...plzenskyCityContent.map(city => ({
+      url: `${baseUrl}/cz/regions/plzensky/${city.slug}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+    ...karlovarskyCityContent.map(city => ({
+      url: `${baseUrl}/cz/regions/karlovarsky/${city.slug}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+    ...usteckyCityContent.map(city => ({
+      url: `${baseUrl}/cz/regions/ustecky/${city.slug}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+    ...libereckyCityContent.map(city => ({
+      url: `${baseUrl}/cz/regions/liberecky/${city.slug}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+    ...kralovehradeckyCityContent.map(city => ({
+      url: `${baseUrl}/cz/regions/kralovehradecky/${city.slug}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+    ...pardubickyCityContent.map(city => ({
+      url: `${baseUrl}/cz/regions/pardubicky/${city.slug}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+    ...vysocinaCityContent.map(city => ({
+      url: `${baseUrl}/cz/regions/vysocina/${city.slug}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+    ...jihomoravskyCityContent.map(city => ({
+      url: `${baseUrl}/cz/regions/jihomoravsky/${city.slug}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+    ...olomouckyCityContent.map(city => ({
+      url: `${baseUrl}/cz/regions/olomoucky/${city.slug}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+    ...zlinskyCityContent.map(city => ({
+      url: `${baseUrl}/cz/regions/zlinsky/${city.slug}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+    ...moravskoslezyskyCityContent.map(city => ({
+      url: `${baseUrl}/cz/regions/moravskoslezsky/${city.slug}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+  ]
   
   return [
     // Homepage - Highest priority (English)
@@ -60,6 +179,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily',
       priority: 1,
     },
+    // Czech homepage
+    {
+      url: `${baseUrl}/cz`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
     
     // Primary conversion pages
     {
@@ -70,6 +196,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/es/apply`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/cz/zadost`,
       lastModified: oneWeekAgo,
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -186,6 +318,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Spanish localized state detail pages
   ...stateUrlsEs,
+
+  // Czech region pages
+  ...czRegionUrls,
+
+  // Czech city pages  
+  ...czCityUrls,
     
   // All city pages (English)
   ...cityUrls,

@@ -6,6 +6,9 @@ import LeadGenDisclosure from '@/components/compliance/lead-gen-disclosure'
 import { VolsorLoanForm } from '@/components/cz/volsor-loan-form'
 import { czRegions, totalCzechCities } from '@/data/cz-regions'
 import { generatePageMetadata, czHubSEO } from '@/lib/seo'
+import FAQSchema from '@/components/faq-schema'
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema'
+import OrganizationSchema from '@/components/organization-schema'
 
 export const metadata = generatePageMetadata(czHubSEO, '/cz')
 
@@ -54,11 +57,24 @@ const faq = [
   },
 ]
 
-const publishedRegionSlugs = new Set(['praha', 'stredocesky', 'jihocesky'])
+const breadcrumbItems = [
+  { name: 'Domů', url: '/', position: 1 },
+  { name: 'Půjčky Česko', url: '/cz', position: 2 },
+]
+
+const publishedRegionSlugs = new Set([
+  'praha', 'stredocesky', 'jihocesky', 'plzensky',
+  'karlovarsky', 'ustecky', 'liberecky', 'kralovehradecky',
+  'pardubicky', 'vysocina', 'jihomoravsky', 'olomoucky',
+  'zlinsky', 'moravskoslezsky'
+])
 
 export default function CzechRepublicHubPage() {
   return (
     <>
+      <OrganizationSchema locale="cs" />
+      <FAQSchema faqs={faq.map(f => ({ q: f.question, a: f.answer }))} />
+      <BreadcrumbSchema items={breadcrumbItems} />
       <Navigation locale="cs" />
       <main className="flex-1 bg-slate-50">
         <header className="border-b border-blue-100 bg-gradient-to-br from-blue-50 via-white to-blue-100">
@@ -75,8 +91,14 @@ export default function CzechRepublicHubPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                href="#regional-guides"
+                href="/cz/zadost"
                 className="inline-flex items-center justify-center rounded-md bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+              >
+                Podat žádost o půjčku
+              </Link>
+              <Link
+                href="#regional-guides"
+                className="inline-flex items-center justify-center rounded-md border border-blue-500 px-5 py-2 text-sm font-semibold text-blue-600 shadow-sm transition hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               >
                 Zobrazit krajské průvodce
               </Link>
@@ -134,9 +156,9 @@ export default function CzechRepublicHubPage() {
           <p className="mt-3 max-w-3xl text-sm text-blue-900/80">
             Každý kraj obsahuje RPSN tabulky, licencované poskytovatele, kontakty na pobočky, doporučené účely a upozornění na nejčastější poplatky. Podklady vycházejí z registrů ČNB a veřejných sazebníků.
           </p>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <div className="mt-8 grid gap-6 md:grid-cols-2" role="list" aria-label="Seznam českých krajů s regionálními průvodci">
             {czRegions.map((region) => (
-              <Card key={region.code} className="h-full border-blue-100 shadow-sm">
+              <Card key={region.code} className="h-full border-blue-100 shadow-sm" role="listitem">
                 <CardHeader>
                   <CardTitle className="text-xl text-blue-900">{region.name}</CardTitle>
                   <p className="text-sm text-blue-900/70">
@@ -147,7 +169,7 @@ export default function CzechRepublicHubPage() {
                   <p>{region.growthFocus}</p>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wide text-blue-500">Prioritní města</p>
-                    <ul className="mt-2 space-y-1">
+                    <ul className="mt-2 space-y-1" role="list">
                       {region.featuredCities.map((city) => (
                         <li key={city}>• {city}</li>
                       ))}
@@ -157,6 +179,7 @@ export default function CzechRepublicHubPage() {
                     <Link
                       href={`/cz/regions/${region.code}`}
                       className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:underline"
+                      aria-label={`Zobrazit podrobný regionální průvodce pro ${region.name}`}
                     >
                       Otevřít regionální průvodce <span aria-hidden>→</span>
                     </Link>
@@ -258,9 +281,9 @@ export default function CzechRepublicHubPage() {
 
         <section className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="text-3xl font-semibold text-blue-900">Nejčastější dotazy</h2>
-          <div className="mt-8 space-y-4">
+          <div className="mt-8 space-y-4" role="list" aria-label="Často kladené otázky o půjčkách v České republice">
             {faq.map((item) => (
-              <details key={item.question} className="rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
+              <details key={item.question} className="rounded-2xl border border-blue-100 bg-white p-5 shadow-sm" role="listitem">
                 <summary className="cursor-pointer text-lg font-semibold text-blue-900">
                   {item.question}
                 </summary>
