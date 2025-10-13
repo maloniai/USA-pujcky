@@ -234,6 +234,49 @@ export const kzHubSEO: SEOData = {
   },
 };
 
+export const nzHubSEO: SEOData = {
+  title: 'NZ Personal Loans | Compare Rates & CCCFA-Compliant Lenders',
+  description:
+    'Compare licensed personal loan providers in New Zealand. Access regional guides, representative examples in NZD, and AI-powered recommendations under CCCFA 2003 regulations.',
+  keywords: [
+    'personal loans nz',
+    'new zealand loans',
+    'personal loan comparison',
+    'cccfa compliant loans',
+    'licensed lenders nz',
+    'loan rates new zealand',
+    'responsible lending nz',
+    'consumer finance nz',
+    'ai loan matching nz',
+    'online loans new zealand',
+  ],
+  canonicalUrl: new URL('/nz', SITE_URL).toString(),
+  alternateLanguages: {
+    en: new URL('/nz', SITE_URL).toString(),
+  },
+  locale: 'en_NZ',
+  alternateLocales: ['en_US'],
+  siteName: 'Loan AI Portal',
+  structuredData: {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Loan AI Portal – New Zealand',
+    inLanguage: 'en-NZ',
+    description:
+      'Regional personal loan guide powered by AI. Compare licensed banks and lenders across 16 regions with transparent rates and CCCFA 2003 compliance.',
+    about: {
+      '@type': 'FinancialService',
+      name: 'Loan AI Portal',
+      areaServed: {
+        '@type': 'Country',
+        name: 'New Zealand',
+        '@id': 'https://www.wikidata.org/wiki/Q664',
+      },
+      regulation: 'Commerce Commission & Financial Markets Authority',
+    },
+  },
+};
+
 export const statesSEO: SEOData = {
   title: 'State-Specific Loan Information | Loan Requirements by State',
   description: 'Find loan information specific to your state. Compare loan requirements, regulations, and available lenders across all 50 US states. State-by-state lending laws and rates.',
@@ -479,6 +522,161 @@ export function getKZMetadata(options: {
       kk: new URL(path, SITE_URL).toString(),
     },
     locale: 'kk_KZ',
+    alternateLocales: ['en_US'],
+    siteName: 'Loan AI Portal',
+  }, path);
+}
+
+/**
+ * Generate metadata for New Zealand (NZ) city pages
+ */
+export function generateNZCityMetadata(
+  cityName: string,
+  regionName: string,
+  year: number = new Date().getFullYear()
+): SEOData {
+  const path = `/nz/cities/${regionName.toLowerCase().replace(/\s+/g, '-')}/${cityName.toLowerCase().replace(/\s+/g, '-')}`;
+  const title = `${cityName} Personal Loans ${year} | Compare NZ Lenders`;
+  const description = `Compare personal loan options in ${cityName}, ${regionName}. Licensed NZ lenders, CCCFA-compliant rates, and responsible lending guidance for ${cityName} residents.`;
+
+  return {
+    title,
+    description,
+    keywords: [
+      `personal loans ${cityName}`,
+      `${cityName} loans`,
+      `loans ${regionName}`,
+      'personal loans nz',
+      `${cityName} lenders`,
+      'cccfa compliant loans',
+      `loan rates ${cityName}`,
+      'responsible lending nz',
+      `online loans ${cityName}`,
+      'new zealand personal loans',
+    ],
+    canonicalUrl: new URL(path, SITE_URL).toString(),
+    alternateLanguages: {
+      en: new URL(path, SITE_URL).toString(),
+    },
+    locale: 'en_NZ',
+    alternateLocales: ['en_US'],
+    siteName: 'Loan AI Portal',
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: `${cityName} Personal Loans`,
+      inLanguage: 'en-NZ',
+      description,
+      about: {
+        '@type': 'FinancialService',
+        name: 'Loan AI Portal',
+        areaServed: {
+          '@type': 'City',
+          name: cityName,
+          containedIn: {
+            '@type': 'State',
+            name: regionName,
+            containedIn: {
+              '@type': 'Country',
+              name: 'New Zealand',
+              '@id': 'https://www.wikidata.org/wiki/Q664',
+            },
+          },
+        },
+        regulation: 'Commerce Commission & Financial Markets Authority',
+      },
+    },
+  };
+}
+
+/**
+ * Generate metadata for New Zealand (NZ) region pages
+ */
+export function generateNZRegionMetadata(
+  regionName: string,
+  year: number = new Date().getFullYear()
+): SEOData {
+  const path = `/nz/regions/${regionName.toLowerCase().replace(/\s+/g, '-')}`;
+  const title = `${regionName} Personal Loans ${year} | Compare Regional Rates`;
+  const description = `Find personal loan options in ${regionName} region. Compare licensed lenders, explore city-specific guides, and access CCCFA-compliant lending options.`;
+
+  return {
+    title,
+    description,
+    keywords: [
+      `personal loans ${regionName}`,
+      `${regionName} loans`,
+      `${regionName} lenders`,
+      'personal loans nz',
+      'regional loan comparison',
+      'cccfa compliant loans',
+      `loan rates ${regionName}`,
+      'responsible lending nz',
+      'new zealand loans',
+      `${regionName} cities loans`,
+    ],
+    canonicalUrl: new URL(path, SITE_URL).toString(),
+    alternateLanguages: {
+      en: new URL(path, SITE_URL).toString(),
+    },
+    locale: 'en_NZ',
+    alternateLocales: ['en_US'],
+    siteName: 'Loan AI Portal',
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: `${regionName} Region Personal Loans`,
+      inLanguage: 'en-NZ',
+      description,
+      about: {
+        '@type': 'FinancialService',
+        name: 'Loan AI Portal',
+        areaServed: {
+          '@type': 'State',
+          name: regionName,
+          containedIn: {
+            '@type': 'Country',
+            name: 'New Zealand',
+            '@id': 'https://www.wikidata.org/wiki/Q664',
+          },
+        },
+        regulation: 'Commerce Commission & Financial Markets Authority',
+      },
+    },
+  };
+}
+
+/**
+ * Generate metadata for New Zealand (NZ) general pages
+ */
+export function getNZMetadata(options: {
+  title: string;
+  description: string;
+  path?: string;
+  type?: string;
+}): ReturnType<typeof generatePageMetadata> {
+  const { title, description, path = '/nz', type = 'website' } = options;
+  
+  return generatePageMetadata({
+    title,
+    description,
+    keywords: [
+      'personal loans nz',
+      'new zealand loans',
+      'personal loan comparison',
+      'cccfa compliant loans',
+      'licensed lenders nz',
+      'loan rates new zealand',
+      'responsible lending nz',
+      'consumer finance nz',
+      'ai loan matching nz',
+      'online loans new zealand',
+    ],
+    canonicalUrl: new URL(path, SITE_URL).toString(),
+    alternateLanguages: {
+      en: new URL(path, SITE_URL).toString(),
+    },
+    locale: 'en_NZ',
     alternateLocales: ['en_US'],
     siteName: 'Loan AI Portal',
   }, path);

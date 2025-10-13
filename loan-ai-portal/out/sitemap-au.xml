@@ -1,33 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Australia Homepage -->
+  <!-- Apply Page (available globally) -->
   <url>
-    <loc>https://loansai.com/au</loc>
-    <lastmod>2025-10-13T15:40:43.698Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- Australia Apply Page -->
-  <url>
-    <loc>https://loansai.com/au/apply</loc>
-    <lastmod>2025-10-06T15:40:43.698Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Australia States Index -->
-  <url>
-    <loc>https://loansai.com/au/states</loc>
-    <lastmod>2025-10-06T15:40:43.698Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Australia Cities Index -->
-  <url>
-    <loc>https://loansai.com/au/cities</loc>
-    <lastmod>2025-10-06T15:40:43.698Z</lastmod>
+    <loc>https://loansai.com/apply</loc>
+    <lastmod>2025-10-13T18:34:25.521Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
