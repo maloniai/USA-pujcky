@@ -13,7 +13,7 @@ export interface PhilippinesCityInfo {
   lenderCount: number
   description: string
   descriptionTl: string
-  nearbyC ities: string[]
+  nearbyCities: string[]
 }
 
 export const philippinesCities: PhilippinesCityInfo[] = [
