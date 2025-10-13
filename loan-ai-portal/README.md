@@ -1,15 +1,15 @@
 # Loan AI Portal
 
-A Next.js application for AI-powered personal loan matching serving customers across all 50 US states.
+A Next.js application for AI-powered personal loan matching serving customers across multiple countries including the USA, Romania, Poland, Czech Republic, Mexico, Kazakhstan, Vietnam, and Australia.
 
 ## 🎯 Features
 
 - 🤖 **AI-Powered Loan Matching** - 200+ data point analysis for best rates
-- 🇺🇸 **USA Market Focus** - Serving all 50 states
-- 🏛️ **State-Specific Information** - Local lending regulations and rates
+- 🌍 **Multi-Country Coverage** - USA (50 states), Australia (8 states/territories), Romania, Poland, Czech Republic, Mexico, Kazakhstan, Vietnam
+- 🏛️ **Region-Specific Information** - Local lending regulations and rates
 - 📱 **Responsive Design** - Mobile-first approach
 - ⚡ **Fast Performance** - Static export, WebP images, lazy loading
-- 🔒 **Secure & Compliant** - Bank-level security, GLBA/TILA compliant
+- 🔒 **Secure & Compliant** - Bank-level security, country-specific compliance (ASIC, BNR, GLBA, etc.)
 - 🔍 **SEO Optimized** - #1 Google ranking keywords, AI search ready
 - 🖼️ **Image Optimization** - WebP format, lazy loading, SEO alt tags
 
@@ -30,26 +30,52 @@ loan-ai-portal/
 ├── src/
 │   ├── app/
 │   │   ├── layout.tsx               # Root layout with OrganizationSchema
-│   │   ├── page.tsx                 # Homepage with HowTo schema
+│   │   ├── page.tsx                 # Global homepage
 │   │   ├── about/                   # About Us (2M+ borrowers)
 │   │   ├── ai-loan-matching/        # AI matching explanation
 │   │   ├── faq/                     # 40 FAQ with schema markup
 │   │   ├── contact/                 # Contact page
-│   │   ├── states/                  # All 50 US states
+│   │   ├── us/                      # USA hub (50 states)
+│   │   │   ├── page.tsx             # USA landing page
+│   │   │   ├── states/              # State-specific pages
+│   │   │   └── cities/              # City-specific pages
+│   │   ├── au/                      # Australia hub (NEW)
+│   │   │   ├── page.tsx             # Australia landing page
+│   │   │   ├── regions/             # State/territory pages
+│   │   │   ├── cities/              # City pages
+│   │   │   └── apply/               # Application page
+│   │   ├── ro/                      # Romania hub
+│   │   ├── pl/                      # Poland hub
+│   │   ├── cz/                      # Czech Republic hub
+│   │   ├── mx/                      # Mexico hub
+│   │   ├── kz/                      # Kazakhstan hub
+│   │   ├── vn/                      # Vietnam hub
 │   │   └── (legal pages)            # Privacy, Terms, Disclaimer, Licenses
 │   ├── components/
 │   │   ├── ui/                      # Reusable UI components
+│   │   ├── australia/               # Australia-specific components (NEW)
+│   │   │   ├── australia-navigation.tsx
+│   │   │   ├── australia-footer.tsx
+│   │   │   ├── australia-disclosure.tsx
+│   │   │   ├── australia-faq.tsx
+│   │   │   └── sticky-apply-button.tsx
+│   │   ├── romania/                 # Romania-specific components
+│   │   ├── poland/                  # Poland-specific components
 │   │   ├── optimized-image.tsx      # SEO-optimized image component
 │   │   ├── faq-schema.tsx           # FAQPage structured data
 │   │   ├── howto-schema.tsx         # HowTo structured data
 │   │   └── organization-schema.tsx  # Organization structured data
 │   ├── lib/
-│   │   ├── seo.ts                   # SEO configuration (USA focus)
+│   │   ├── seo.ts                   # SEO configuration (multi-country)
 │   │   ├── page-metadata.ts         # #1 Google ranking keywords
 │   │   ├── image-seo.ts             # Image SEO helpers
 │   │   └── image-examples.tsx       # Image usage examples
 │   └── data/
 │       ├── states.ts                # All 50 US states data
+│       ├── australia-regions.ts     # Australian states/territories (NEW)
+│       ├── australia-cities.ts      # Australian cities data (NEW)
+│       ├── romania-regions.ts       # Romanian regions
+│       ├── poland-regions.ts        # Polish voivodeships
 │       ├── faqs.ts                  # 40 FAQ questions
 │       └── translations.ts          # Multi-language support
 ├── public/
@@ -193,16 +219,36 @@ All 15+ pages have complete metadata with #1 Google ranking keywords:
 
 ## 🌍 Geographic Coverage
 
-Serving customers in all 50 US states:
-- Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware
-- Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky
-- Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi
-- Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico
-- New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania
-- Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont
-- Virginia, Washington, West Virginia, Wisconsin, Wyoming
+### 🇺🇸 United States
+Serving customers in all 50 US states with state-specific lending information, regulations, and rates.
 
-Each state has dedicated page with local lending information.
+### 🇦🇺 Australia (NEW)
+Complete coverage of Australian states and territories:
+- **New South Wales (NSW)** - Sydney, Newcastle, Wollongong, Central Coast
+- **Victoria (VIC)** - Melbourne, Geelong, Ballarat, Bendigo
+- **Queensland (QLD)** - Brisbane, Gold Coast, Sunshine Coast, Townsville
+- **Western Australia (WA)** - Perth, Mandurah, Bunbury, Rockingham
+- **South Australia (SA)** - Adelaide, Mount Gambier, Whyalla, Murray Bridge
+- **Australian Capital Territory (ACT)** - Canberra, Queanbeyan
+- **Tasmania (TAS)** - Hobart, Launceston, Devonport, Burnie
+- **Northern Territory (NT)** - Darwin, Palmerston, Alice Springs, Katherine
+
+**Australia Features:**
+- ✅ ASIC-licensed lenders only
+- ✅ National Consumer Credit Protection Act compliance
+- ✅ Comparison rate disclosure
+- ✅ State-specific regulations and rates
+- ✅ 15+ major cities covered
+- ✅ Full schema markup (FinancialService, FAQPage, BreadcrumbList)
+- ✅ Affiliate disclosure compliant with Australian consumer law
+
+### 🇷🇴 Romania
+8 development regions with BNR (Banca Națională a României) licensed lenders.
+
+### 🇵🇱 Poland, 🇨🇿 Czech Republic, 🇲🇽 Mexico, 🇰🇿 Kazakhstan, 🇻🇳 Vietnam
+Regional coverage with country-specific regulations and compliance.
+
+Each country/state has dedicated pages with local lending information, regulations, and consumer protections.
 
 ## 📚 Documentation
 
