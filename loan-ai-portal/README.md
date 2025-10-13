@@ -5,12 +5,13 @@ A Next.js application for AI-powered personal loan matching serving customers ac
 ## 🎯 Features
 
 - 🤖 **AI-Powered Loan Matching** - 200+ data point analysis for best rates
-- 🇺🇸 **USA Market Focus** - Serving all 50 states
-- 🏛️ **State-Specific Information** - Local lending regulations and rates
+- 🌎 **Multi-Country Coverage** - USA (50 states), Czech Republic, Romania, Colombia
+- 🏛️ **Localized Information** - Regional lending regulations and rates
 - 📱 **Responsive Design** - Mobile-first approach
 - ⚡ **Fast Performance** - Static export, WebP images, lazy loading
-- 🔒 **Secure & Compliant** - Bank-level security, GLBA/TILA compliant
+- 🔒 **Secure & Compliant** - Bank-level security, regulatory compliant
 - 🔍 **SEO Optimized** - #1 Google ranking keywords, AI search ready
+- 🗣️ **Multi-Language** - English, Spanish (Colombia), Czech, Romanian
 - 🖼️ **Image Optimization** - WebP format, lazy loading, SEO alt tags
 
 ## 🛠️ Technology Stack
@@ -193,7 +194,13 @@ All 15+ pages have complete metadata with #1 Google ranking keywords:
 
 ## 🌍 Geographic Coverage
 
-Serving customers in all 50 US states:
+### Live Markets:
+- **🇺🇸 United States** - All 50 states, 1,200+ cities
+- **🇨🇿 Czech Republic** - 14 regions, 600+ cities
+- **🇷🇴 Romania** - 8 regions, 40+ cities
+- **🇨🇴 Colombia** - 5 regions, 65+ cities (NEW!)
+
+### USA States (50):
 - Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware
 - Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky
 - Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi
@@ -202,12 +209,16 @@ Serving customers in all 50 US states:
 - Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont
 - Virginia, Washington, West Virginia, Wisconsin, Wyoming
 
-Each state has dedicated page with local lending information.
+### Colombia Regions (5):
+- Bogotá D.C., Antioquia, Valle del Cauca, Atlántico, Santander
+
+Each location has dedicated pages with local lending information, regulations, and licensed lenders.
 
 ## 📚 Documentation
 
 - **SEO Optimization**: `SEO-OPTIMIZATION-REPORT.md` - Complete audit & results
 - **AI Search Strategy**: `AI-SEARCH-OPTIMIZATION.md` - ChatGPT optimization
+- **Colombia Hub**: `COLOMBIA-HUB-IMPLEMENTATION.md` - Colombia market implementation
 - **Breadcrumb Navigation**: `BREADCRUMB-IMPLEMENTATION-REPORT.md` - Navigation schema
 - **Image Optimization**: `IMAGE-OPTIMIZATION-REPORT.md` - WebP, lazy loading
 - **Quick Reference**: `IMAGE-QUICK-REFERENCE.md` - Developer cheat sheet
