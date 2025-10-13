@@ -1,4 +1,4 @@
-import { Inter } from 'next/font/google'
+// import { Inter } from 'next/font/google'
 import './globals.css'
 import { defaultSEO, generatePageMetadata } from '@/lib/seo'
 import StructuredData from '@/components/structured-data'
@@ -11,12 +11,12 @@ import CookieConsentBanner from '@/components/compliance/cookie-consent-banner'
 import ChatWidget from '@/components/ai/chat-widget'
 
 // Optimized font loading with display swap and subset
-const inter = Inter({ 
-  subsets: ['latin'],
-  display: 'swap',
-  preload: true,
-  variable: '--font-inter',
-})
+// const inter = Inter({ 
+//   subsets: ['latin'],
+//   display: 'swap',
+//   preload: true,
+//   variable: '--font-inter',
+// })
 
 export const metadata = generatePageMetadata(defaultSEO)
 
@@ -74,7 +74,7 @@ export default function RootLayout({
           gtag('config', 'G-00GXP8M8F3');
         `}
       </Script>
-      <body className={inter.className} data-locale={DEFAULT_LOCALE}>
+      <body className="font-sans" data-locale={DEFAULT_LOCALE}>
         <HtmlLang locale={DEFAULT_LOCALE} />
         <CookieConsentBanner />
         <div className="min-h-screen bg-gray-50 flex flex-col">
