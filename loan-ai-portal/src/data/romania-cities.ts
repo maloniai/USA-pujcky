@@ -38,7 +38,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Debt Consolidation'],
     topLoanTypesRo: ['Credite personale', 'Consolidare datorii'],
     lenderCount: 45,
-    nearbyCities: ['Voluntari', 'Popești-Leordeni', 'Pantelimon']
+    nearbyCity: ['Voluntari', 'Popești-Leordeni', 'Pantelimon']
   },
   {
     name: 'Voluntari',
@@ -55,7 +55,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Home Renovation'],
     topLoanTypesRo: ['Credite personale', 'Renovare locuință'],
     lenderCount: 32,
-    nearbyCities: ['București', 'Popești-Leordeni', 'Pantelimon']
+    nearbyCity: ['București', 'Popești-Leordeni', 'Pantelimon']
   },
   {
     name: 'Popești-Leordeni',
@@ -72,7 +72,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Vehicle Purchase'],
     topLoanTypesRo: ['Credite personale', 'Cumpărare vehicul'],
     lenderCount: 28,
-    nearbyCities: ['București', 'Voluntari', 'Bragadiru']
+    nearbyCity: ['București', 'Voluntari', 'Bragadiru']
   },
 
   // Centru (Transilvania Centrală) Region
@@ -91,7 +91,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Business Startup'],
     topLoanTypesRo: ['Credite personale', 'Startup afacere'],
     lenderCount: 38,
-    nearbyCities: ['Florești', 'Turda', 'Gherla']
+    nearbyCity: ['Florești', 'Turda', 'Gherla']
   },
   {
     name: 'Brașov',
@@ -108,7 +108,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Home Renovation'],
     topLoanTypesRo: ['Credite personale', 'Renovare locuință'],
     lenderCount: 35,
-    nearbyCities: ['Săcele', 'Codlea', 'Predeal']
+    nearbyCity: ['Săcele', 'Codlea', 'Predeal']
   },
   {
     name: 'Sibiu',
@@ -125,7 +125,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Education'],
     topLoanTypesRo: ['Credite personale', 'Educație'],
     lenderCount: 30,
-    nearbyCities: ['Mediaș', 'Agnita', 'Avrig']
+    nearbyCity: ['Mediaș', 'Agnita', 'Avrig']
   },
   {
     name: 'Târgu Mureș',
@@ -142,7 +142,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Medical'],
     topLoanTypesRo: ['Credite personale', 'Medical'],
     lenderCount: 28,
-    nearbyCities: ['Reghin', 'Sovata', 'Luduș']
+    nearbyCity: ['Reghin', 'Sovata', 'Luduș']
   },
 
   // Nord-Est (Moldova) Region
@@ -161,7 +161,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Education'],
     topLoanTypesRo: ['Credite personale', 'Educație'],
     lenderCount: 33,
-    nearbyCities: ['Pașcani', 'Hârlău', 'Târgu Frumos']
+    nearbyCity: ['Pașcani', 'Hârlău', 'Târgu Frumos']
   },
   {
     name: 'Bacău',
@@ -178,7 +178,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Debt Consolidation'],
     topLoanTypesRo: ['Credite personale', 'Consolidare datorii'],
     lenderCount: 26,
-    nearbyCities: ['Onești', 'Moinești', 'Comănești']
+    nearbyCity: ['Onești', 'Moinești', 'Comănești']
   },
   {
     name: 'Suceava',
@@ -195,7 +195,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Agricultural'],
     topLoanTypesRo: ['Credite personale', 'Agricultură'],
     lenderCount: 24,
-    nearbyCities: ['Fălticeni', 'Rădăuți', 'Vatra Dornei']
+    nearbyCity: ['Fălticeni', 'Rădăuți', 'Vatra Dornei']
   },
   {
     name: 'Piatra Neamț',
@@ -212,7 +212,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Small Business'],
     topLoanTypesRo: ['Credite personale', 'Afacere mică'],
     lenderCount: 22,
-    nearbyCities: ['Roman', 'Târgu Neamț', 'Bicaz']
+    nearbyCity: ['Roman', 'Târgu Neamț', 'Bicaz']
   },
 
   // Sud-Est (Dobrogea) Region
@@ -231,7 +231,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Tourism Business'],
     topLoanTypesRo: ['Credite personale', 'Afacere turistică'],
     lenderCount: 34,
-    nearbyCities: ['Mamaia', 'Năvodari', 'Mangalia']
+    nearbyCity: ['Mamaia', 'Năvodari', 'Mangalia']
   },
   {
     name: 'Galați',
@@ -248,7 +248,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Vehicle Purchase'],
     topLoanTypesRo: ['Credite personale', 'Cumpărare vehicul'],
     lenderCount: 28,
-    nearbyCities: ['Tecuci', 'Târgu Bujor', 'Berești']
+    nearbyCity: ['Tecuci', 'Târgu Bujor', 'Berești']
   },
   {
     name: 'Brăila',
@@ -265,7 +265,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Home Improvement'],
     topLoanTypesRo: ['Credite personale', 'Îmbunătățire locuință'],
     lenderCount: 26,
-    nearbyCities: ['Ianca', 'Făurei', 'Însurăței']
+    nearbyCity: ['Ianca', 'Făurei', 'Însurăței']
   },
   {
     name: 'Tulcea',
@@ -282,7 +282,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Tourism'],
     topLoanTypesRo: ['Credite personale', 'Turism'],
     lenderCount: 20,
-    nearbyCities: ['Sulina', 'Babadag', 'Măcin']
+    nearbyCity: ['Sulina', 'Babadag', 'Măcin']
   },
 
   // Sud-Muntenia Region
@@ -301,7 +301,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Business Expansion'],
     topLoanTypesRo: ['Credite personale', 'Extindere afacere'],
     lenderCount: 30,
-    nearbyCities: ['Câmpina', 'Băicoi', 'Boldești-Scăeni']
+    nearbyCity: ['Câmpina', 'Băicoi', 'Boldești-Scăeni']
   },
   {
     name: 'Pitești',
@@ -318,7 +318,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Vehicle Purchase'],
     topLoanTypesRo: ['Credite personale', 'Cumpărare vehicul'],
     lenderCount: 28,
-    nearbyCities: ['Mioveni', 'Curtea de Argeș', 'Câmpulung']
+    nearbyCity: ['Mioveni', 'Curtea de Argeș', 'Câmpulung']
   },
   {
     name: 'Târgoviște',
@@ -335,7 +335,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Home Renovation'],
     topLoanTypesRo: ['Credite personale', 'Renovare locuință'],
     lenderCount: 24,
-    nearbyCities: ['Moreni', 'Pucioasa', 'Găești']
+    nearbyCity: ['Moreni', 'Pucioasa', 'Găești']
   },
   {
     name: 'Giurgiu',
@@ -352,7 +352,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Small Business'],
     topLoanTypesRo: ['Credite personale', 'Afacere mică'],
     lenderCount: 22,
-    nearbyCities: ['Bolintin-Vale', 'Mihăilești', 'Videle']
+    nearbyCity: ['Bolintin-Vale', 'Mihăilești', 'Videle']
   },
 
   // Sud-Vest Oltenia Region
@@ -371,7 +371,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Education'],
     topLoanTypesRo: ['Credite personale', 'Educație'],
     lenderCount: 32,
-    nearbyCities: ['Filiași', 'Calafat', 'Bailești']
+    nearbyCity: ['Filiași', 'Calafat', 'Bailești']
   },
   {
     name: 'Drobeta-Turnu Severin',
@@ -388,7 +388,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Agricultural'],
     topLoanTypesRo: ['Credite personale', 'Agricultură'],
     lenderCount: 23,
-    nearbyCities: ['Vânju Mare', 'Strehaia', 'Orșova']
+    nearbyCity: ['Vânju Mare', 'Strehaia', 'Orșova']
   },
   {
     name: 'Râmnicu Vâlcea',
@@ -405,7 +405,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Tourism'],
     topLoanTypesRo: ['Credite personale', 'Turism'],
     lenderCount: 24,
-    nearbyCities: ['Călimănești', 'Drăgășani', 'Brezoi']
+    nearbyCity: ['Călimănești', 'Drăgășani', 'Brezoi']
   },
   {
     name: 'Slatina',
@@ -422,7 +422,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Debt Consolidation'],
     topLoanTypesRo: ['Credite personale', 'Consolidare datorii'],
     lenderCount: 21,
-    nearbyCities: ['Caracal', 'Corabia', 'Balș']
+    nearbyCity: ['Caracal', 'Corabia', 'Balș']
   },
 
   // Vest (Banat) Region
@@ -441,7 +441,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Business Startup'],
     topLoanTypesRo: ['Credite personale', 'Startup afacere'],
     lenderCount: 40,
-    nearbyCities: ['Lugoj', 'Deta', 'Buziaș']
+    nearbyCity: ['Lugoj', 'Deta', 'Buziaș']
   },
   {
     name: 'Arad',
@@ -458,7 +458,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Home Purchase'],
     topLoanTypesRo: ['Credite personale', 'Cumpărare locuință'],
     lenderCount: 29,
-    nearbyCities: ['Ineu', 'Chișineu-Criș', 'Pâncota']
+    nearbyCity: ['Ineu', 'Chișineu-Criș', 'Pâncota']
   },
   {
     name: 'Reșița',
@@ -475,7 +475,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Home Improvement'],
     topLoanTypesRo: ['Credite personale', 'Îmbunătățire locuință'],
     lenderCount: 23,
-    nearbyCities: ['Caransebeș', 'Moldova Nouă', 'Oravița']
+    nearbyCity: ['Caransebeș', 'Moldova Nouă', 'Oravița']
   },
 
   // Nord-Vest (Crișana-Maramureș) Region
@@ -494,7 +494,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Business Expansion'],
     topLoanTypesRo: ['Credite personale', 'Extindere afacere'],
     lenderCount: 31,
-    nearbyCities: ['Salonta', 'Marghita', 'Aleșd']
+    nearbyCity: ['Salonta', 'Marghita', 'Aleșd']
   },
   {
     name: 'Baia Mare',
@@ -511,7 +511,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Education'],
     topLoanTypesRo: ['Credite personale', 'Educație'],
     lenderCount: 26,
-    nearbyCities: ['Sighetu Marmației', 'Borșa', 'Cavnic']
+    nearbyCity: ['Sighetu Marmației', 'Borșa', 'Cavnic']
   },
   {
     name: 'Satu Mare',
@@ -528,7 +528,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Small Business'],
     topLoanTypesRo: ['Credite personale', 'Afacere mică'],
     lenderCount: 25,
-    nearbyCities: ['Carei', 'Negrești-Oaș', 'Tășnad']
+    nearbyCity: ['Carei', 'Negrești-Oaș', 'Tășnad']
   },
   {
     name: 'Zalău',
@@ -545,7 +545,7 @@ export const romaniaCities: RomaniaCityInfo[] = [
     topLoanTypes: ['Personal Loans', 'Agricultural'],
     topLoanTypesRo: ['Credite personale', 'Agricultură'],
     lenderCount: 21,
-    nearbyCities: ['Jibou', 'Șimleu Silvaniei', 'Cehu Silvaniei']
+    nearbyCity: ['Jibou', 'Șimleu Silvaniei', 'Cehu Silvaniei']
   }
 ]
 
@@ -567,7 +567,7 @@ export function getNearbyCities(citySlug: string, limit: number = 3): RomaniaCit
   if (!city) return []
   
   return romaniaCities
-    .filter(c => city.nearbyCities.includes(c.name))
+    .filter(c => city.nearbyCity.includes(c.name))
     .slice(0, limit)
 }
 

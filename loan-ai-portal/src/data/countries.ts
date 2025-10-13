@@ -67,6 +67,21 @@ export const liveCountries: CountryHub[] = [
     status: 'live',
     launchDate: '2025-01',
   },
+  {
+    code: 'kk',
+    name: 'Kazakhstan',
+    flag: '🇰🇿',
+    description:
+      'Қазақстандағы жеке несиелерді салыстыру. ҚҰБ лицензиясы бар несие берушілерден ең жақсы мөлшерлемелерді табыңыз.',
+    coverage: '20 облыс • 25+ қала',
+    population: '19M',
+    languages: ['Kazakh'],
+    regulator: 'National Bank of Kazakhstan (ҚҰБ)',
+    href: '/kk',
+    ctaLabel: 'Explore Kazakhstan loans',
+    status: 'live',
+    launchDate: '2025-01',
+  },
 ]
 
 // Country hubs in active development
@@ -141,17 +156,6 @@ export const comingSoonCountries: CountryHub[] = [
     population: '51M',
     languages: ['Spanish'],
     href: '/co',
-    ctaLabel: 'Coming soon',
-    status: 'coming-soon',
-  },
-  {
-    code: 'kz',
-    name: 'Kazakhstan',
-    flag: '🇰🇿',
-    description: 'Жеке несиелер және қарыздарды біріктіру Қазақстан тұрғындары үшін.',
-    population: '19M',
-    languages: ['Kazakh', 'Russian'],
-    href: '/kz',
     ctaLabel: 'Coming soon',
     status: 'coming-soon',
   },

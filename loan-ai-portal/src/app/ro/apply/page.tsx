@@ -106,9 +106,6 @@ export default function RomaniaApplyPage() {
                 <Script
                   src="https://www.doaff.net/publisherScript.js?c=jjn"
                   strategy="afterInteractive"
-                  onLoad={() => {
-                    console.log('Affiliate form script loaded successfully')
-                  }}
                 />
                 <noscript>
                   <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 text-center">
