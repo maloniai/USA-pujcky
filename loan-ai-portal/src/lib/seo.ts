@@ -179,7 +179,7 @@ export const czHubSEO: SEOData = {
     name: 'Loan AI Portál – Česká republika',
     inLanguage: 'cs-CZ',
     description:
-      'Regionální průvodce osobními půjčkami podporovaný AI. Transparentní RPSN, srovnání bank i nebankovních poskytovatelů a kontakty na licencované poradce.',
+      'Regionální průvodce osobními půjčkami podporovaný AI. Transparentní RPSN, srovnání bank i nebankovních poskytovatelů a kontakty na licencowane poradce.',
     about: {
       '@type': 'FinancialService',
       name: 'Loan AI Portál',
@@ -189,6 +189,47 @@ export const czHubSEO: SEOData = {
         '@id': 'https://www.wikidata.org/wiki/Q213',
       },
       regulation: 'Česká národní banka',
+    },
+  },
+};
+
+export const defaultSEOPl: SEOData = {
+  title: 'Portal Pożyczek AI dla Polski | Porównanie RRSO i AI',
+  description:
+    'Porównaj licencjonowanych pożyczkodawców w Polsce. Dostęp do przewodników regionalnych, przykładów reprezentatywnych w PLN i rekomendacji AI zgodnie z ustawą o kredycie konsumenckim i nadzorem KNF.',
+  keywords: [
+    'pożyczki osobiste',
+    'porównanie pożyczek',
+    'RRSO',
+    'kredyty online Polska',
+    'AI pożyczki',
+    'kredyt konsumencki KNF',
+    'BIK',
+  ],
+  canonicalUrl: new URL('/pl', SITE_URL).toString(),
+  alternateLanguages: {
+    en: new URL('/pl', SITE_URL).toString(),
+    pl: new URL('/pl', SITE_URL).toString(),
+  },
+  locale: 'pl_PL',
+  alternateLocales: ['en_US'],
+  siteName: 'Portal Pożyczek AI',
+  structuredData: {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Portal Pożyczek AI – Polska',
+    inLanguage: 'pl-PL',
+    description:
+      'Regionalny przewodnik po pożyczkach osobistych z AI. Przejrzyste RRSO, porównanie banków i pożyczkodawców pozabankowych oraz kontakty do licencjonowanych doradców.',
+    about: {
+      '@type': 'FinancialService',
+      name: 'Portal Pożyczek AI',
+      areaServed: {
+        '@type': 'Country',
+        name: 'Polska',
+        '@id': 'https://www.wikidata.org/wiki/Q36',
+      },
+      regulation: 'Komisja Nadzoru Finansowego (KNF)',
     },
   },
 };
