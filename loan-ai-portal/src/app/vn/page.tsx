@@ -189,7 +189,7 @@ export default function VietnamHubPage() {
                   </span>
                 </Button>
               </Link>
-              <Link href="/vn/regions">
+              <Link href="#cities">
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6">
                   Khám Phá Các Khu Vực
                 </Button>
@@ -311,7 +311,7 @@ export default function VietnamHubPage() {
         </section>
 
         {/* Featured Cities by Region */}
-        <section className="container mx-auto px-4 py-12 bg-gray-50">
+        <section id="cities" className="container mx-auto px-4 py-12 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
               Thành Phố Nổi Bật Theo Khu Vực

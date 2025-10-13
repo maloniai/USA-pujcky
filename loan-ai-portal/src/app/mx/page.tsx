@@ -475,7 +475,7 @@ export default function MexicoHubPage() {
         </section>
 
         {/* Popular Cities */}
-        <section className="container mx-auto px-4 py-12 bg-white">
+        <section id="cities" className="container mx-auto px-4 py-12 bg-white">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-green-900 mb-8">
               Ciudades Principales
@@ -485,7 +485,7 @@ export default function MexicoHubPage() {
                 'Juárez', 'Zapopan', 'Querétaro', 'Mérida', 'Cancún', 'Aguascalientes'].map((city) => (
                 <Link
                   key={city}
-                  href={`/mx/cities`}
+                  href="#cities"
                   className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center hover:border-green-400 hover:shadow-md transition hover:bg-green-50"
                 >
                   <div className="text-2xl mb-2">🏙️</div>
@@ -494,7 +494,7 @@ export default function MexicoHubPage() {
               ))}
             </div>
             <div className="text-center mt-8">
-              <Link href="/mx/cities">
+              <Link href="#cities">
                 <Button variant="outline" size="lg" className="border-green-600 text-green-700 hover:bg-green-50">
                   Ver Todas las Ciudades (150+)
                 </Button>
