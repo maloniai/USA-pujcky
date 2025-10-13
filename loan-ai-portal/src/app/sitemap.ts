@@ -6,6 +6,7 @@ import { czRegions } from '@/data/cz-regions'
 import { caProvinces } from '@/data/ca-provinces'
 import { kazakhstanRegions, kazakhstanCities } from '@/data/kz-regions'
 import { southAfricaRegions, allZACities } from '@/data/za-data'
+import { philippinesRegions } from '@/data/ph-data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://loansai.com'
@@ -124,6 +125,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'weekly' as const,
     priority: 0.6,
   }))
+
+  // Philippines regions (4 major regions)
+  const phRegionUrls = philippinesRegions.map((region) => ({
+    url: `${baseUrl}/ph/regions/${region.slug}`,
+    lastModified: oneWeekAgo,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  // Philippines cities (10+ major cities across all regions)
+  const phCityUrls = philippinesRegions.flatMap((region) =>
+    region.cities.map((city) => ({
+      url: `${baseUrl}/ph/cities/${region.slug}/${city.slug}`,
+      lastModified: twoWeeksAgo,
+      changeFrequency: 'weekly' as const,
+      priority: 0.6,
+    }))
+  )
   
   return [
     // Homepage - Highest priority (English)
@@ -324,6 +343,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+
+    // Philippines hub pages (English)
+    {
+      url: `${baseUrl}/ph`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/ph/apply`,
+      lastModified: oneWeekAgo,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
     
     // Legal pages (English)
     {
@@ -408,6 +441,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // South Africa cities
   ...zaCityUrls,
+
+  // Philippines regions
+  ...phRegionUrls,
+
+  // Philippines cities
+  ...phCityUrls,
     
     // All blog posts
     ...blogPostsENUrls,
