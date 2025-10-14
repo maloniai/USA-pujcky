@@ -2488,6 +2488,677 @@ export const canadianCitiesTier1: CanadianCityTier1[] = [
       },
     ],
   },
+
+  // ===== PRIORITY 3 CITIES =====
+  // Manitoba (4): Winnipeg, Brandon, Steinbach, Thompson
+  // Saskatchewan (4): Saskatoon, Regina, Prince Albert, Moose Jaw
+  // Nova Scotia (3): Halifax, Dartmouth, Sydney
+
+  // ===== MANITOBA PRIORITY 3 (4 cities) =====
+  {
+    name: 'Winnipeg',
+    nameFr: 'Winnipeg',
+    slug: 'winnipeg',
+    province: 'manitoba',
+    provinceAbbr: 'MB',
+    population: '749K',
+    populationNumber: 749000,
+    description:
+      'Winnipeg is Manitoba\'s capital and largest city, serving as the economic and cultural center of the province and central Canada. The diverse economy includes finance, manufacturing, healthcare, education, and transportation, with major employers in insurance, aerospace, and government. Licensed lenders serve a multicultural population with comprehensive loan products from major banks, credit unions, and alternative lenders. Winnipeg\'s stable economy and affordable cost of living create favorable borrowing conditions with competitive rates for the Prairies.',
+    descriptionFr:
+      'Winnipeg est la capitale du Manitoba et la plus grande ville, servant de centre économique et culturel de la province et du centre du Canada. L\'économie diversifiée comprend la finance, la fabrication, les soins de santé, l\'éducation et le transport, avec des employeurs majeurs dans l\'assurance, l\'aérospatiale et le gouvernement. Les prêteurs autorisés servent une population multiculturelle avec des produits de prêt complets des grandes banques, des coopératives de crédit et des prêteurs alternatifs. L\'économie stable de Winnipeg et le coût de la vie abordable créent des conditions d\'emprunt favorables avec des taux compétitifs pour les Prairies.',
+    avgRate: '10.99% - 21.99%',
+    loanRange: '$1,000 - $75,000',
+    lenderCount: 45,
+    topIndustries: ['Finance', 'Manufacturing', 'Healthcare', 'Transportation', 'Government'],
+    topIndustriesFr: ['Finance', 'Fabrication', 'Santé', 'Transport', 'Gouvernement'],
+    keyFeatures: [
+      'Provincial capital banking hub',
+      'Multicultural lending services',
+      'Strong credit union network',
+      'Affordable cost of living',
+    ],
+    keyFeaturesFr: [
+      'Centre bancaire de la capitale provinciale',
+      'Services de prêt multiculturels',
+      'Réseau de coopératives de crédit solide',
+      'Coût de la vie abordable',
+    ],
+    nearbyCities: ['steinbach', 'selkirk', 'portage-la-prairie', 'winkler'],
+    isProvincialCapital: true,
+    isMajorMetro: true,
+    tier: 1,
+    faqs: [
+      {
+        question: 'What are typical personal loan rates in Winnipeg?',
+        questionFr: 'Quels sont les taux de prêt personnel typiques à Winnipeg?',
+        answer:
+          'Winnipeg personal loan rates range from 10.99% to 21.99% APR, competitive for the Prairies. Major banks offer 10.99-15.99% APR for good credit, credit unions like Assiniboine Credit Union provide 12.99-17.99% APR, and alternative lenders charge 18-22% APR for fair credit. Rates are slightly higher than Toronto/Vancouver but reflect Manitoba\'s stable economy.',
+        answerFr:
+          'Les taux de prêt personnel à Winnipeg varient de 10,99 % à 21,99 % TAP, compétitifs pour les Prairies. Les grandes banques offrent 10,99 à 15,99 % TAP pour un bon crédit, les coopératives de crédit comme Assiniboine Credit Union fournissent 12,99 à 17,99 % TAP, et les prêteurs alternatifs facturent 18 à 22 % TAP pour un crédit passable. Les taux sont légèrement plus élevés que Toronto/Vancouver mais reflètent l\'économie stable du Manitoba.',
+      },
+      {
+        question: 'Can new immigrants in Winnipeg access personal loans?',
+        questionFr: 'Les nouveaux immigrants à Winnipeg peuvent-ils accéder à des prêts personnels?',
+        answer:
+          'Yes, Winnipeg has extensive newcomer lending programs due to its large immigrant population. Many credit unions and banks offer newcomer programs for recent immigrants with limited Canadian credit. These may require employment verification, larger down payments, or co-signers, but provide paths to building credit. Manitoba\'s Provincial Nominee Program participants often qualify for special rates.',
+        answerFr:
+          'Oui, Winnipeg dispose de vastes programmes de prêt pour nouveaux arrivants en raison de sa grande population d\'immigrants. De nombreuses coopératives de crédit et banques offrent des programmes pour nouveaux arrivants pour les immigrants récents avec un crédit canadien limité. Ceux-ci peuvent nécessiter une vérification de l\'emploi, des acomptes plus importants ou des cosignataires, mais offrent des voies pour établir un crédit. Les participants au Programme des candidats du Manitoba se qualifient souvent pour des taux spéciaux.',
+      },
+      {
+        question: 'Are there special loan programs for University of Manitoba students?',
+        questionFr: 'Y a-t-il des programmes de prêt spéciaux pour les étudiants de l\'Université du Manitoba?',
+        answer:
+          'Yes, University of Manitoba students can access student lines of credit from major banks (7.99-11.99% APR) and local credit unions. Professional students (medicine, dentistry, law) qualify for higher limits ($100,000+) with deferred repayment. Manitoba student aid and Indigenous student programs provide additional support. Many credit unions offer special student accounts with competitive rates.',
+        answerFr:
+          'Oui, les étudiants de l\'Université du Manitoba peuvent accéder à des marges de crédit étudiantes des grandes banques (7,99 à 11,99 % TAP) et des coopératives de crédit locales. Les étudiants professionnels (médecine, dentisterie, droit) se qualifient pour des limites plus élevées (100 000 $+) avec un remboursement différé. L\'aide aux étudiants du Manitoba et les programmes pour étudiants autochtones offrent un soutien supplémentaire. De nombreuses coopératives de crédit offrent des comptes étudiants spéciaux avec des taux compétitifs.',
+      },
+    ],
+  },
+  {
+    name: 'Brandon',
+    nameFr: 'Brandon',
+    slug: 'brandon',
+    province: 'manitoba',
+    provinceAbbr: 'MB',
+    population: '51K',
+    populationNumber: 51000,
+    description:
+      'Brandon is Manitoba\'s second-largest city, serving as the commercial center for southwestern Manitoba. The economy combines agriculture, oil production, manufacturing, and education at Brandon University. Licensed lenders serve farmers, oil workers, families, and students with diverse loan products. Brandon\'s regional importance and agricultural economy mean lenders understand seasonal income patterns and offer flexible repayment terms suited to Prairie life.',
+    descriptionFr:
+      'Brandon est la deuxième plus grande ville du Manitoba, servant de centre commercial pour le sud-ouest du Manitoba. L\'économie combine l\'agriculture, la production pétrolière, la fabrication et l\'éducation à l\'Université de Brandon. Les prêteurs autorisés servent les agriculteurs, les travailleurs pétroliers, les familles et les étudiants avec des produits de prêt divers. L\'importance régionale de Brandon et l\'économie agricole signifient que les prêteurs comprennent les cycles de revenus saisonniers et offrent des modalités de remboursement flexibles adaptées à la vie des Prairies.',
+    avgRate: '12.49% - 23.49%',
+    loanRange: '$1,000 - $50,000',
+    lenderCount: 24,
+    topIndustries: ['Agriculture', 'Oil Production', 'Manufacturing', 'Education', 'Healthcare'],
+    topIndustriesFr: ['Agriculture', 'Production pétrolière', 'Fabrication', 'Éducation', 'Santé'],
+    keyFeatures: [
+      'Agricultural lending specialists',
+      'Southwestern Manitoba hub',
+      'Seasonal income flexibility',
+      'Regional credit union strength',
+    ],
+    keyFeaturesFr: [
+      'Spécialistes du prêt agricole',
+      'Centre du sud-ouest du Manitoba',
+      'Flexibilité de revenu saisonnier',
+      'Force des coopératives de crédit régionales',
+    ],
+    nearbyCities: ['souris', 'virden', 'carberry', 'shilo'],
+    isProvincialCapital: false,
+    isMajorMetro: false,
+    tier: 1,
+    faqs: [
+      {
+        question: 'Do Brandon lenders offer agricultural loans?',
+        questionFr: 'Les prêteurs de Brandon offrent-ils des prêts agricoles?',
+        answer:
+          'Yes, Brandon is an agricultural center with extensive farm lending. Credit unions and Farm Credit Canada offer equipment loans ($50,000-$1M), operating lines of credit, grain storage financing, and farmland mortgages. Programs understand crop cycles (planting to harvest) and offer flexible repayment aligned with commodity sales. Many also finance livestock operations and agricultural diversification.',
+        answerFr:
+          'Oui, Brandon est un centre agricole avec des prêts agricoles étendus. Les coopératives de crédit et Financement agricole Canada offrent des prêts d\'équipement (50 000 $ à 1 M$), des marges de crédit d\'exploitation, du financement d\'entreposage de grains et des hypothèques de terres agricoles. Les programmes comprennent les cycles de culture (plantation à récolte) et offrent un remboursement flexible aligné sur les ventes de produits de base. Beaucoup financent également les opérations d\'élevage et la diversification agricole.',
+      },
+      {
+        question: 'What are typical personal loan rates in Brandon?',
+        questionFr: 'Quels sont les taux de prêt personnel typiques à Brandon?',
+        answer:
+          'Brandon personal loan rates range from 12.49% to 23.49% APR, reflecting its smaller regional market. Local credit unions like Westoba Credit Union offer the best rates (12.49-17.99% APR) for members. While rates are higher than Winnipeg, Brandon\'s significantly lower cost of living (20-30% less) makes loan payments more manageable relative to income.',
+        answerFr:
+          'Les taux de prêt personnel à Brandon varient de 12,49 % à 23,49 % TAP, reflétant son marché régional plus petit. Les coopératives de crédit locales comme Westoba Credit Union offrent les meilleurs taux (12,49 à 17,99 % TAP) pour les membres. Bien que les taux soient plus élevés que Winnipeg, le coût de la vie considérablement inférieur de Brandon (20 à 30 % moins) rend les paiements de prêt plus gérables par rapport au revenu.',
+      },
+      {
+        question: 'Can Brandon University students get loans?',
+        questionFr: 'Les étudiants de l\'Université de Brandon peuvent-ils obtenir des prêts?',
+        answer:
+          'Yes, Brandon University students can access student lines of credit from major banks (8.49-12.49% APR) and local credit unions. Education, music, and healthcare students qualify for standard student loans. Local credit unions often provide personalized service and competitive rates for student members. Manitoba student aid provides additional grants and loans for eligible students.',
+        answerFr:
+          'Oui, les étudiants de l\'Université de Brandon peuvent accéder à des marges de crédit étudiantes des grandes banques (8,49 à 12,49 % TAP) et des coopératives de crédit locales. Les étudiants en éducation, musique et santé se qualifient pour des prêts étudiants standard. Les coopératives de crédit locales offrent souvent un service personnalisé et des taux compétitifs pour les membres étudiants. L\'aide aux étudiants du Manitoba fournit des subventions et des prêts supplémentaires pour les étudiants admissibles.',
+      },
+    ],
+  },
+  {
+    name: 'Steinbach',
+    nameFr: 'Steinbach',
+    slug: 'steinbach',
+    province: 'manitoba',
+    provinceAbbr: 'MB',
+    population: '18K',
+    populationNumber: 18000,
+    description:
+      'Steinbach is a rapidly growing city in southeastern Manitoba, serving as a regional center with strong Mennonite heritage. The economy combines manufacturing, retail, healthcare, and agriculture. Licensed lenders serve a financially conservative, family-oriented population with strong savings habits and excellent credit profiles. Steinbach\'s growth, proximity to Winnipeg (50 km), and stable economy provide access to competitive lending rates with personalized local service.',
+    descriptionFr:
+      'Steinbach est une ville en croissance rapide dans le sud-est du Manitoba, servant de centre régional avec un fort héritage mennonite. L\'économie combine la fabrication, le commerce de détail, les soins de santé et l\'agriculture. Les prêteurs autorisés servent une population financièrement conservatrice et axée sur la famille avec de fortes habitudes d\'épargne et d\'excellents profils de crédit. La croissance de Steinbach, la proximité de Winnipeg (50 km) et l\'économie stable donnent accès à des taux de prêt compétitifs avec un service local personnalisé.',
+    avgRate: '11.99% - 22.49%',
+    loanRange: '$1,000 - $60,000',
+    lenderCount: 20,
+    topIndustries: ['Manufacturing', 'Retail', 'Healthcare', 'Agriculture', 'Construction'],
+    topIndustriesFr: ['Fabrication', 'Commerce de détail', 'Santé', 'Agriculture', 'Construction'],
+    keyFeatures: [
+      'Strong credit profiles',
+      'Family-focused lending',
+      'Regional southeastern MB hub',
+      'Conservative financial culture',
+    ],
+    keyFeaturesFr: [
+      'Profils de crédit solides',
+      'Prêts axés sur la famille',
+      'Centre régional du sud-est du MB',
+      'Culture financière conservatrice',
+    ],
+    nearbyCities: ['winnipeg', 'niverville', 'grunthal', 'kleefeld'],
+    isProvincialCapital: false,
+    isMajorMetro: false,
+    tier: 1,
+    faqs: [
+      {
+        question: 'Why do Steinbach residents have good credit scores?',
+        questionFr: 'Pourquoi les résidents de Steinbach ont-ils de bonnes cotes de crédit?',
+        answer:
+          'Steinbach\'s Mennonite heritage emphasizes financial prudence, savings, and debt avoidance. The community has strong family support systems and financial literacy. This results in above-average credit scores (typically 700+), low default rates, and excellent approval rates. Lenders recognize Steinbach borrowers as lower-risk, sometimes offering preferential rates 0.25-0.5% below standard.',
+        answerFr:
+          'L\'héritage mennonite de Steinbach met l\'accent sur la prudence financière, l\'épargne et l\'évitement de la dette. La communauté a de solides systèmes de soutien familial et une littératie financière. Cela se traduit par des cotes de crédit supérieures à la moyenne (généralement 700+), des taux de défaut faibles et d\'excellents taux d\'approbation. Les prêteurs reconnaissent les emprunteurs de Steinbach comme à faible risque, offrant parfois des taux préférentiels de 0,25 à 0,5 % inférieurs à la norme.',
+      },
+      {
+        question: 'What are typical loan amounts in Steinbach?',
+        questionFr: 'Quels sont les montants de prêt typiques à Steinbach?',
+        answer:
+          'Steinbach residents typically borrow conservatively, with personal loans ranging $1,000-$60,000. Common uses include vehicles ($15,000-$35,000), home improvements ($10,000-$40,000), and business equipment ($20,000-$50,000). The community\'s strong savings culture means many people use loans strategically rather than for consumption, resulting in lower average loan amounts than similar-sized cities.',
+        answerFr:
+          'Les résidents de Steinbach empruntent généralement de manière conservatrice, avec des prêts personnels allant de 1 000 $ à 60 000 $. Les utilisations courantes incluent les véhicules (15 000 $ à 35 000 $), les améliorations domiciliaires (10 000 $ à 40 000 $) et l\'équipement commercial (20 000 $ à 50 000 $). La forte culture d\'épargne de la communauté signifie que de nombreuses personnes utilisent les prêts de manière stratégique plutôt que pour la consommation, ce qui entraîne des montants de prêt moyens inférieurs à ceux des villes de taille similaire.',
+      },
+      {
+        question: 'Can Steinbach residents access Winnipeg banking for better rates?',
+        questionFr: 'Les résidents de Steinbach peuvent-ils accéder aux services bancaires de Winnipeg pour de meilleurs taux?',
+        answer:
+          'Yes, Steinbach\'s proximity to Winnipeg (50 km) means residents can access Winnipeg banks with rates typically 0.5-1.0% lower. However, local Steinbach credit unions like Steinbach Credit Union often provide comparable rates for members, plus personalized service and community investment. Many residents maintain accounts in both locations to maximize benefits.',
+        answerFr:
+          'Oui, la proximité de Steinbach avec Winnipeg (50 km) signifie que les résidents peuvent accéder aux banques de Winnipeg avec des taux généralement de 0,5 à 1,0 % inférieurs. Cependant, les coopératives de crédit locales de Steinbach comme Steinbach Credit Union offrent souvent des taux comparables pour les membres, en plus d\'un service personnalisé et d\'investissement communautaire. De nombreux résidents maintiennent des comptes dans les deux emplacements pour maximiser les avantages.',
+      },
+    ],
+  },
+  {
+    name: 'Thompson',
+    nameFr: 'Thompson',
+    slug: 'thompson',
+    province: 'manitoba',
+    provinceAbbr: 'MB',
+    population: '14K',
+    populationNumber: 14000,
+    description:
+      'Thompson is northern Manitoba\'s largest city and a major nickel mining center, known as the "Hub of the North." The economy centers on mining (Vale), government services, healthcare, and Indigenous community support. Licensed lenders understand resource sector employment cycles and northern living costs, offering flexible loan products for miners, government workers, and families. Thompson\'s remote location and high wages create unique lending dynamics with rates reflecting northern market conditions.',
+    descriptionFr:
+      'Thompson est la plus grande ville du nord du Manitoba et un centre minier de nickel majeur, connu comme le "centre du Nord". L\'économie est centrée sur les mines (Vale), les services gouvernementaux, les soins de santé et le soutien communautaire autochtone. Les prêteurs autorisés comprennent les cycles d\'emploi du secteur des ressources et les coûts de vie du Nord, offrant des produits de prêt flexibles pour les mineurs, les travailleurs gouvernementaux et les familles. L\'emplacement éloigné de Thompson et les salaires élevés créent une dynamique de prêt unique avec des taux reflétant les conditions du marché nordique.',
+    avgRate: '13.49% - 25.49%',
+    loanRange: '$1,000 - $50,000',
+    lenderCount: 18,
+    topIndustries: ['Mining', 'Government', 'Healthcare', 'Retail', 'Indigenous Services'],
+    topIndustriesFr: ['Mines', 'Gouvernement', 'Santé', 'Commerce de détail', 'Services autochtones'],
+    keyFeatures: [
+      'Mining sector lending',
+      'Northern Manitoba expertise',
+      'High-wage borrower programs',
+      'Indigenous community support',
+    ],
+    keyFeaturesFr: [
+      'Prêts au secteur minier',
+      'Expertise du Nord du Manitoba',
+      'Programmes pour emprunteurs à salaire élevé',
+      'Soutien communautaire autochtone',
+    ],
+    nearbyCities: ['the-pas', 'flin-flon', 'churchill', 'gillam'],
+    isProvincialCapital: false,
+    isMajorMetro: false,
+    tier: 1,
+    faqs: [
+      {
+        question: 'Do Thompson lenders understand mining employment cycles?',
+        questionFr: 'Les prêteurs de Thompson comprennent-ils les cycles d\'emploi minier?',
+        answer:
+          'Yes, Thompson\'s mining economy means lenders specialize in resource sector lending. Credit unions offer flexible programs for Vale employees and contractors, understanding layoffs and production cycles. Miners with steady employment often qualify for competitive rates (13.49-18.99% APR) despite market volatility. Some lenders provide payment deferrals during mine shutdowns or work stoppages.',
+        answerFr:
+          'Oui, l\'économie minière de Thompson signifie que les prêteurs se spécialisent dans les prêts au secteur des ressources. Les coopératives de crédit offrent des programmes flexibles pour les employés et entrepreneurs de Vale, comprenant les mises à pied et les cycles de production. Les mineurs ayant un emploi stable se qualifient souvent pour des taux compétitifs (13,49 à 18,99 % TAP) malgré la volatilité du marché. Certains prêteurs offrent des reports de paiement pendant les arrêts de mine ou les arrêts de travail.',
+      },
+      {
+        question: 'Why are Thompson loan rates higher than Winnipeg?',
+        questionFr: 'Pourquoi les taux de prêt de Thompson sont-ils plus élevés que Winnipeg?',
+        answer:
+          'Thompson rates are 2-3% higher than Winnipeg due to remote location (650 km north), smaller market, higher operational costs, and lending risk in resource-dependent economies. However, Thompson wages are often 30-50% higher than southern Manitoba due to northern living allowances, making loan payments manageable. Local credit unions provide the most competitive rates for northern residents.',
+        answerFr:
+          'Les taux de Thompson sont de 2 à 3 % plus élevés que Winnipeg en raison de l\'emplacement éloigné (650 km au nord), du marché plus petit, des coûts opérationnels plus élevés et du risque de prêt dans les économies dépendantes des ressources. Cependant, les salaires de Thompson sont souvent de 30 à 50 % plus élevés que le sud du Manitoba en raison des allocations de vie du Nord, rendant les paiements de prêt gérables. Les coopératives de crédit locales offrent les taux les plus compétitifs pour les résidents du Nord.',
+      },
+      {
+        question: 'Are there special programs for Indigenous borrowers in Thompson?',
+        questionFr: 'Y a-t-il des programmes spéciaux pour les emprunteurs autochtones à Thompson?',
+        answer:
+          'Yes, Thompson has specialized lending programs for Indigenous community members. Some credit unions and banks offer Indigenous-focused programs with flexible approval criteria, financial education, and culturally appropriate service. Federal programs like Aboriginal Financial Institutions provide business and personal loans. Many lenders work with band councils and Indigenous organizations to serve northern Manitoba communities.',
+        answerFr:
+          'Oui, Thompson dispose de programmes de prêt spécialisés pour les membres de la communauté autochtone. Certaines coopératives de crédit et banques offrent des programmes axés sur les Autochtones avec des critères d\'approbation flexibles, une éducation financière et un service culturellement approprié. Des programmes fédéraux comme les Institutions financières autochtones fournissent des prêts commerciaux et personnels. De nombreux prêteurs travaillent avec les conseils de bande et les organisations autochtones pour servir les communautés du nord du Manitoba.',
+      },
+    ],
+  },
+
+  // ===== SASKATCHEWAN PRIORITY 3 (4 cities) =====
+  {
+    name: 'Saskatoon',
+    nameFr: 'Saskatoon',
+    slug: 'saskatoon',
+    province: 'saskatchewan',
+    provinceAbbr: 'SK',
+    population: '273K',
+    populationNumber: 273000,
+    description:
+      'Saskatoon is Saskatchewan\'s largest city, serving as a major economic and cultural center for the province. The economy combines potash mining, agriculture, technology, healthcare, and education at the University of Saskatchewan. Licensed lenders serve a diverse population including miners, farmers, students, and professionals with comprehensive loan products. Saskatoon\'s stable economy, growing tech sector, and affordable cost of living create favorable borrowing conditions with competitive Prairie rates.',
+    descriptionFr:
+      'Saskatoon est la plus grande ville de la Saskatchewan, servant de centre économique et culturel majeur pour la province. L\'économie combine l\'extraction de potasse, l\'agriculture, la technologie, les soins de santé et l\'éducation à l\'Université de la Saskatchewan. Les prêteurs autorisés servent une population diversifiée, notamment des mineurs, des agriculteurs, des étudiants et des professionnels avec des produits de prêt complets. L\'économie stable de Saskatoon, le secteur technologique en croissance et le coût de la vie abordable créent des conditions d\'emprunt favorables avec des taux compétitifs des Prairies.',
+    avgRate: '11.49% - 22.49%',
+    loanRange: '$1,000 - $60,000',
+    lenderCount: 38,
+    topIndustries: ['Potash Mining', 'Agriculture', 'Technology', 'Healthcare', 'Education'],
+    topIndustriesFr: ['Extraction de potasse', 'Agriculture', 'Technologie', 'Santé', 'Éducation'],
+    keyFeatures: [
+      'Provincial major center',
+      'Mining & agriculture lending',
+      'Growing tech sector',
+      'Strong credit union network',
+    ],
+    keyFeaturesFr: [
+      'Centre majeur provincial',
+      'Prêts miniers et agricoles',
+      'Secteur technologique en croissance',
+      'Réseau de coopératives de crédit solide',
+    ],
+    nearbyCities: ['martensville', 'warman', 'dundurn', 'langham'],
+    isProvincialCapital: false,
+    isMajorMetro: true,
+    tier: 1,
+    faqs: [
+      {
+        question: 'Do Saskatoon lenders understand potash mining employment?',
+        questionFr: 'Les prêteurs de Saskatoon comprennent-ils l\'emploi dans l\'extraction de potasse?',
+        answer:
+          'Yes, Saskatoon\'s potash industry means lenders specialize in mining sector lending. Credit unions offer programs for employees of Nutrien, Mosaic, and other potash companies with rates from 11.49-16.99% APR. Union members often access special low-rate programs. Lenders understand shift work, fly-in/fly-out schedules, and seasonal production cycles when structuring repayment terms.',
+        answerFr:
+          'Oui, l\'industrie de la potasse de Saskatoon signifie que les prêteurs se spécialisent dans les prêts au secteur minier. Les coopératives de crédit offrent des programmes pour les employés de Nutrien, Mosaic et d\'autres sociétés de potasse avec des taux de 11,49 à 16,99 % TAP. Les membres de syndicats accèdent souvent à des programmes spéciaux à taux réduit. Les prêteurs comprennent le travail par quarts, les horaires navette et les cycles de production saisonniers lors de la structuration des modalités de remboursement.',
+      },
+      {
+        question: 'Are there student loans for University of Saskatchewan students?',
+        questionFr: 'Y a-t-il des prêts étudiants pour les étudiants de l\'Université de la Saskatchewan?',
+        answer:
+          'Yes, U of S students can access student lines of credit from major banks (7.99-11.99% APR) and local credit unions like Affinity Credit Union. Professional students (medicine, dentistry, veterinary, law) qualify for higher limits ($100,000-$250,000) with deferred repayment. Saskatchewan student aid provides additional grants and loans. Agricultural students may access specialized farm succession financing.',
+        answerFr:
+          'Oui, les étudiants de l\'U de S peuvent accéder à des marges de crédit étudiantes des grandes banques (7,99 à 11,99 % TAP) et des coopératives de crédit locales comme Affinity Credit Union. Les étudiants professionnels (médecine, dentisterie, vétérinaire, droit) se qualifient pour des limites plus élevées (100 000 $ à 250 000 $) avec un remboursement différé. L\'aide aux étudiants de la Saskatchewan fournit des subventions et des prêts supplémentaires. Les étudiants en agriculture peuvent accéder à du financement spécialisé de succession agricole.',
+      },
+      {
+        question: 'How do Saskatoon loan rates compare to Regina?',
+        questionFr: 'Comment les taux de prêt de Saskatoon se comparent-ils à Regina?',
+        answer:
+          'Saskatoon and Regina rates are virtually identical (within 0.1-0.25%) as both are major Saskatchewan cities with similar markets. Both have strong credit union networks offering competitive rates. Saskatoon\'s larger size and growing tech sector may provide slightly more lender competition. The key is comparing multiple lenders in either city to find the best rate for your situation.',
+        answerFr:
+          'Les taux de Saskatoon et de Regina sont pratiquement identiques (à moins de 0,1 à 0,25 %) car les deux sont des villes majeures de la Saskatchewan avec des marchés similaires. Les deux ont de solides réseaux de coopératives de crédit offrant des taux compétitifs. La taille plus grande de Saskatoon et le secteur technologique en croissance peuvent offrir légèrement plus de concurrence entre les prêteurs. La clé est de comparer plusieurs prêteurs dans l\'une ou l\'autre ville pour trouver le meilleur taux pour votre situation.',
+      },
+    ],
+  },
+  {
+    name: 'Regina',
+    nameFr: 'Regina',
+    slug: 'regina',
+    province: 'saskatchewan',
+    provinceAbbr: 'SK',
+    population: '226K',
+    populationNumber: 226000,
+    description:
+      'Regina is Saskatchewan\'s capital and second-largest city, serving as the province\'s political, economic, and administrative center. The economy combines government, oil and gas, agriculture, technology, and finance. Licensed lenders serve a diverse population including government employees, energy workers, farmers, and professionals with comprehensive loan products. Regina\'s status as provincial capital and stable government employment create favorable borrowing conditions with competitive rates throughout the lending market.',
+    descriptionFr:
+      'Regina est la capitale de la Saskatchewan et la deuxième plus grande ville, servant de centre politique, économique et administratif de la province. L\'économie combine le gouvernement, le pétrole et le gaz, l\'agriculture, la technologie et la finance. Les prêteurs autorisés servent une population diversifiée, notamment des employés du gouvernement, des travailleurs de l\'énergie, des agriculteurs et des professionnels avec des produits de prêt complets. Le statut de capitale provinciale de Regina et l\'emploi gouvernemental stable créent des conditions d\'emprunt favorables avec des taux compétitifs sur tout le marché des prêts.',
+    avgRate: '11.49% - 22.49%',
+    loanRange: '$1,000 - $60,000',
+    lenderCount: 36,
+    topIndustries: ['Government', 'Oil & Gas', 'Agriculture', 'Technology', 'Finance'],
+    topIndustriesFr: ['Gouvernement', 'Pétrole et gaz', 'Agriculture', 'Technologie', 'Finance'],
+    keyFeatures: [
+      'Provincial capital',
+      'Government employment stability',
+      'Energy sector lending',
+      'Agricultural finance hub',
+    ],
+    keyFeaturesFr: [
+      'Capitale provinciale',
+      'Stabilité de l\'emploi gouvernemental',
+      'Prêts au secteur énergétique',
+      'Centre de financement agricole',
+    ],
+    nearbyCities: ['white-city', 'pilot-butte', 'balgonie', 'lumsden'],
+    isProvincialCapital: true,
+    isMajorMetro: true,
+    tier: 1,
+    faqs: [
+      {
+        question: 'Do Regina government employees get preferential loan rates?',
+        questionFr: 'Les employés du gouvernement de Regina obtiennent-ils des taux de prêt préférentiels?',
+        answer:
+          'Yes, provincial government employees in Regina often qualify for preferential rates (0.25-0.5% below standard) due to employment stability. Credit unions like Conexus Credit Union offer specific public sector programs. Federal employees (RCMP, federal agencies) access similar programs. Government payroll deduction options can further reduce rates through lower default risk.',
+        answerFr:
+          'Oui, les employés du gouvernement provincial à Regina se qualifient souvent pour des taux préférentiels (0,25 à 0,5 % sous la norme) en raison de la stabilité de l\'emploi. Les coopératives de crédit comme Conexus Credit Union offrent des programmes spécifiques pour le secteur public. Les employés fédéraux (GRC, agences fédérales) accèdent à des programmes similaires. Les options de déduction sur la paie gouvernementale peuvent réduire davantage les taux grâce à un risque de défaut plus faible.',
+      },
+      {
+        question: 'Are there agricultural loans available in Regina?',
+        questionFr: 'Y a-t-il des prêts agricoles disponibles à Regina?',
+        answer:
+          'Yes, Regina is a major agricultural finance center for Saskatchewan. Farm Credit Canada, credit unions, and major banks offer equipment loans ($50,000-$1M+), operating lines, grain storage financing, and farmland mortgages. Regina\'s position as capital means access to specialized agricultural advisors and government support programs. Many lenders understand crop cycles (wheat, canola, lentils) and commodity price volatility.',
+        answerFr:
+          'Oui, Regina est un centre majeur de financement agricole pour la Saskatchewan. Financement agricole Canada, les coopératives de crédit et les grandes banques offrent des prêts d\'équipement (50 000 $ à 1 M$+), des marges d\'exploitation, du financement d\'entreposage de grains et des hypothèques de terres agricoles. La position de Regina comme capitale signifie l\'accès à des conseillers agricoles spécialisés et à des programmes de soutien gouvernemental. De nombreux prêteurs comprennent les cycles de culture (blé, canola, lentilles) et la volatilité des prix des produits de base.',
+      },
+      {
+        question: 'What are typical personal loan amounts in Regina?',
+        questionFr: 'Quels sont les montants de prêt personnel typiques à Regina?',
+        answer:
+          'Regina residents typically borrow $1,000-$60,000 for personal loans. Common uses include vehicles ($15,000-$35,000), home renovations ($10,000-$40,000), and debt consolidation ($5,000-$25,000). Government and professional sector employment allows for larger loans at lower rates compared to resource-dependent cities. Regina\'s affordable cost of living makes loan repayment manageable even at moderate incomes.',
+        answerFr:
+          'Les résidents de Regina empruntent généralement de 1 000 $ à 60 000 $ pour des prêts personnels. Les utilisations courantes incluent les véhicules (15 000 $ à 35 000 $), les rénovations domiciliaires (10 000 $ à 40 000 $) et la consolidation de dettes (5 000 $ à 25 000 $). L\'emploi dans le secteur gouvernemental et professionnel permet des prêts plus importants à des taux inférieurs par rapport aux villes dépendantes des ressources. Le coût de la vie abordable de Regina rend le remboursement du prêt gérable même avec des revenus modérés.',
+      },
+    ],
+  },
+  {
+    name: 'Prince Albert',
+    nameFr: 'Prince Albert',
+    slug: 'prince-albert',
+    province: 'saskatchewan',
+    provinceAbbr: 'SK',
+    population: '37K',
+    populationNumber: 37000,
+    description:
+      'Prince Albert is northern Saskatchewan\'s largest city, known as the "Gateway to the North." The economy combines forestry, government services, healthcare, retail, and support for northern resource communities. Licensed lenders understand northern economic cycles and serve forestry workers, government employees, Indigenous communities, and families with flexible loan products. Prince Albert\'s role as regional center and northern location create unique lending dynamics with rates reflecting northern market conditions.',
+    descriptionFr:
+      'Prince Albert est la plus grande ville du nord de la Saskatchewan, connue comme la "porte d\'entrée du Nord". L\'économie combine la foresterie, les services gouvernementaux, les soins de santé, le commerce de détail et le soutien aux communautés de ressources du Nord. Les prêteurs autorisés comprennent les cycles économiques du Nord et servent les travailleurs forestiers, les employés du gouvernement, les communautés autochtones et les familles avec des produits de prêt flexibles. Le rôle de Prince Albert comme centre régional et l\'emplacement nordique créent une dynamique de prêt unique avec des taux reflétant les conditions du marché nordique.',
+    avgRate: '12.99% - 24.49%',
+    loanRange: '$1,000 - $50,000',
+    lenderCount: 22,
+    topIndustries: ['Forestry', 'Government', 'Healthcare', 'Retail', 'Indigenous Services'],
+    topIndustriesFr: ['Foresterie', 'Gouvernement', 'Santé', 'Commerce de détail', 'Services autochtones'],
+    keyFeatures: [
+      'Northern Saskatchewan hub',
+      'Forestry sector expertise',
+      'Indigenous community support',
+      'Regional service center',
+    ],
+    keyFeaturesFr: [
+      'Centre du nord de la Saskatchewan',
+      'Expertise du secteur forestier',
+      'Soutien communautaire autochtone',
+      'Centre de services régional',
+    ],
+    nearbyCities: ['shellbrook', 'christopher-lake', 'waskesiu', 'melfort'],
+    isProvincialCapital: false,
+    isMajorMetro: false,
+    tier: 1,
+    faqs: [
+      {
+        question: 'Do Prince Albert lenders offer forestry worker loans?',
+        questionFr: 'Les prêteurs de Prince Albert offrent-ils des prêts aux travailleurs forestiers?',
+        answer:
+          'Yes, Prince Albert lenders specialize in forestry sector lending due to the region\'s timber industry. Credit unions offer flexible programs for mill workers, logging contractors, and forestry equipment operators with rates from 12.99-19.49% APR. Programs understand seasonal work patterns, mill shutdowns, and forest fire season impacts on employment. Equipment financing is available for independent operators.',
+        answerFr:
+          'Oui, les prêteurs de Prince Albert se spécialisent dans les prêts au secteur forestier en raison de l\'industrie du bois de la région. Les coopératives de crédit offrent des programmes flexibles pour les travailleurs d\'usine, les entrepreneurs en exploitation forestière et les opérateurs d\'équipement forestier avec des taux de 12,99 à 19,49 % TAP. Les programmes comprennent les cycles de travail saisonniers, les fermetures d\'usine et les impacts de la saison des feux de forêt sur l\'emploi. Le financement d\'équipement est disponible pour les opérateurs indépendants.',
+      },
+      {
+        question: 'Why are Prince Albert rates higher than Saskatoon or Regina?',
+        questionFr: 'Pourquoi les taux de Prince Albert sont-ils plus élevés que Saskatoon ou Regina?',
+        answer:
+          'Prince Albert rates are 1.5-2% higher due to northern location, smaller market, and economic reliance on cyclical forestry and resource sectors. Higher lending risk in resource-dependent communities increases rates. However, local credit unions provide competitive rates for members, and government employees access preferential programs similar to southern cities.',
+        answerFr:
+          'Les taux de Prince Albert sont de 1,5 à 2 % plus élevés en raison de l\'emplacement nordique, du marché plus petit et de la dépendance économique sur les secteurs forestier et des ressources cycliques. Un risque de prêt plus élevé dans les communautés dépendantes des ressources augmente les taux. Cependant, les coopératives de crédit locales offrent des taux compétitifs pour les membres, et les employés du gouvernement accèdent à des programmes préférentiels similaires aux villes du sud.',
+      },
+      {
+        question: 'Are there programs for Indigenous borrowers in Prince Albert?',
+        questionFr: 'Y a-t-il des programmes pour les emprunteurs autochtones à Prince Albert?',
+        answer:
+          'Yes, Prince Albert has specialized lending for Indigenous community members. Local credit unions and Aboriginal Financial Institutions offer programs with flexible approval, financial literacy support, and culturally appropriate service. Federal and provincial programs support Indigenous entrepreneurs and homeownership. Many lenders partner with Tribal Councils and Métis organizations to serve northern Saskatchewan communities.',
+        answerFr:
+          'Oui, Prince Albert dispose de prêts spécialisés pour les membres de la communauté autochtone. Les coopératives de crédit locales et les Institutions financières autochtones offrent des programmes avec une approbation flexible, un soutien en littératie financière et un service culturellement approprié. Les programmes fédéraux et provinciaux soutiennent les entrepreneurs autochtones et l\'accession à la propriété. De nombreux prêteurs s\'associent avec les conseils tribaux et les organisations métisses pour servir les communautés du nord de la Saskatchewan.',
+      },
+    ],
+  },
+  {
+    name: 'Moose Jaw',
+    nameFr: 'Moose Jaw',
+    slug: 'moose-jaw',
+    province: 'saskatchewan',
+    provinceAbbr: 'SK',
+    population: '34K',
+    populationNumber: 34000,
+    description:
+      'Moose Jaw is a historic city in southern Saskatchewan, known for its military base (15 Wing Canadian Forces Base), tourism, and manufacturing. The economy combines military, agriculture, manufacturing, healthcare, and tourism attractions like the Tunnels of Moose Jaw. Licensed lenders serve military families, agricultural workers, manufacturers, and tourists with diverse loan products. Moose Jaw\'s military presence provides employment stability and access to specialized military lending programs with competitive rates.',
+    descriptionFr:
+      'Moose Jaw est une ville historique dans le sud de la Saskatchewan, connue pour sa base militaire (15e Escadre de la Base des Forces canadiennes), le tourisme et la fabrication. L\'économie combine le militaire, l\'agriculture, la fabrication, les soins de santé et les attractions touristiques comme les tunnels de Moose Jaw. Les prêteurs autorisés servent les familles militaires, les travailleurs agricoles, les fabricants et les touristes avec des produits de prêt divers. La présence militaire de Moose Jaw offre une stabilité d\'emploi et un accès à des programmes de prêt militaires spécialisés avec des taux compétitifs.',
+    avgRate: '12.49% - 23.49%',
+    loanRange: '$1,000 - $55,000',
+    lenderCount: 20,
+    topIndustries: ['Military', 'Agriculture', 'Manufacturing', 'Tourism', 'Healthcare'],
+    topIndustriesFr: ['Militaire', 'Agriculture', 'Fabrication', 'Tourisme', 'Santé'],
+    keyFeatures: [
+      'Military lending programs',
+      'Historic southern SK city',
+      'Agricultural service center',
+      'Tourism business support',
+    ],
+    keyFeaturesFr: [
+      'Programmes de prêt militaires',
+      'Ville historique du sud de la SK',
+      'Centre de services agricoles',
+      'Soutien aux entreprises touristiques',
+    ],
+    nearbyCities: ['regina', 'swift-current', 'weyburn', 'assiniboia'],
+    isProvincialCapital: false,
+    isMajorMetro: false,
+    tier: 1,
+    faqs: [
+      {
+        question: 'Do Canadian Forces members in Moose Jaw get special loan rates?',
+        questionFr: 'Les membres des Forces canadiennes à Moose Jaw obtiennent-ils des taux de prêt spéciaux?',
+        answer:
+          'Yes, Canadian Forces members at 15 Wing Moose Jaw qualify for military-specific loan programs with rates typically 0.5-1.0% below standard (11.99-17.99% APR). CFMWS (Canadian Forces Morale and Welfare Services) partners with lenders for preferential rates. Military banking programs understand postings, deployments, and living-away-from-home allowances. Many lenders offer payment flexibility during deployments.',
+        answerFr:
+          'Oui, les membres des Forces canadiennes à la 15e Escadre Moose Jaw se qualifient pour des programmes de prêt spécifiques aux militaires avec des taux généralement de 0,5 à 1,0 % inférieurs à la norme (11,99 à 17,99 % TAP). Les SBMFC (Services de bien-être et moral des Forces canadiennes) s\'associent avec des prêteurs pour des taux préférentiels. Les programmes bancaires militaires comprennent les affectations, les déploiements et les allocations de vie hors foyer. De nombreux prêteurs offrent une flexibilité de paiement pendant les déploiements.',
+      },
+      {
+        question: 'Are there agricultural loans in Moose Jaw?',
+        questionFr: 'Y a-t-il des prêts agricoles à Moose Jaw?',
+        answer:
+          'Yes, Moose Jaw serves southern Saskatchewan agriculture with extensive farm lending. Credit unions and Farm Credit Canada offer equipment loans, operating lines, and farmland financing. The region specializes in wheat, canola, and cattle operations. Lenders understand commodity cycles and offer flexible repayment aligned with harvest and livestock sales. Many provide seasonal operating lines for input costs (seed, fertilizer, fuel).',
+        answerFr:
+          'Oui, Moose Jaw dessert l\'agriculture du sud de la Saskatchewan avec des prêts agricoles étendus. Les coopératives de crédit et Financement agricole Canada offrent des prêts d\'équipement, des marges d\'exploitation et du financement de terres agricoles. La région se spécialise dans le blé, le canola et les opérations bovines. Les prêteurs comprennent les cycles de produits de base et offrent un remboursement flexible aligné sur les ventes de récoltes et de bétail. Beaucoup fournissent des marges d\'exploitation saisonnières pour les coûts d\'intrants (semences, engrais, carburant).',
+      },
+      {
+        question: 'Can Moose Jaw tourism businesses access financing?',
+        questionFr: 'Les entreprises touristiques de Moose Jaw peuvent-elles accéder au financement?',
+        answer:
+          'Yes, Moose Jaw\'s tourism industry (Tunnels, Temple Gardens Mineral Spa, casinos) means lenders offer hospitality business loans. Credit unions provide equipment financing, seasonal lines of credit, and expansion loans for hotels, restaurants, and attractions. Programs understand tourism seasonality (summer peak) and offer flexible winter payment schedules. Business Development Bank of Canada provides specialized tourism sector financing.',
+        answerFr:
+          'Oui, l\'industrie touristique de Moose Jaw (tunnels, Temple Gardens Mineral Spa, casinos) signifie que les prêteurs offrent des prêts commerciaux pour l\'hôtellerie. Les coopératives de crédit fournissent du financement d\'équipement, des marges de crédit saisonnières et des prêts d\'expansion pour les hôtels, restaurants et attractions. Les programmes comprennent la saisonnalité du tourisme (pic estival) et offrent des calendriers de paiement flexibles en hiver. La Banque de développement du Canada fournit du financement spécialisé pour le secteur touristique.',
+      },
+    ],
+  },
+
+  // ===== NOVA SCOTIA PRIORITY 3 (3 cities) =====
+  {
+    name: 'Halifax',
+    nameFr: 'Halifax',
+    slug: 'halifax',
+    province: 'nova-scotia',
+    provinceAbbr: 'NS',
+    population: '403K',
+    populationNumber: 403000,
+    description:
+      'Halifax is Nova Scotia\'s capital and Atlantic Canada\'s largest city, serving as the economic and cultural center for the Maritime provinces. The economy combines government, defense (CFB Halifax), education (multiple universities), healthcare, technology, and ocean industries. Licensed lenders serve a diverse population including military families, students, professionals, and ocean sector workers with comprehensive loan products. Halifax\'s status as regional financial center and stable diversified economy create favorable borrowing conditions with competitive Atlantic rates.',
+    descriptionFr:
+      'Halifax est la capitale de la Nouvelle-Écosse et la plus grande ville du Canada atlantique, servant de centre économique et culturel pour les provinces maritimes. L\'économie combine le gouvernement, la défense (BFC Halifax), l\'éducation (plusieurs universités), les soins de santé, la technologie et les industries océaniques. Les prêteurs autorisés servent une population diversifiée, notamment des familles militaires, des étudiants, des professionnels et des travailleurs du secteur océanique avec des produits de prêt complets. Le statut de Halifax comme centre financier régional et une économie diversifiée stable créent des conditions d\'emprunt favorables avec des taux compétitifs de l\'Atlantique.',
+    avgRate: '11.99% - 22.99%',
+    loanRange: '$1,000 - $65,000',
+    lenderCount: 42,
+    topIndustries: ['Government', 'Defense', 'Education', 'Healthcare', 'Ocean Technology'],
+    topIndustriesFr: ['Gouvernement', 'Défense', 'Éducation', 'Santé', 'Technologie océanique'],
+    keyFeatures: [
+      'Atlantic Canada financial hub',
+      'Military & student lending',
+      'Provincial capital',
+      'Ocean industries expertise',
+    ],
+    keyFeaturesFr: [
+      'Centre financier du Canada atlantique',
+      'Prêts militaires et étudiants',
+      'Capitale provinciale',
+      'Expertise des industries océaniques',
+    ],
+    nearbyCities: ['dartmouth', 'bedford', 'sackville', 'cole-harbour'],
+    isProvincialCapital: true,
+    isMajorMetro: true,
+    tier: 1,
+    faqs: [
+      {
+        question: 'Do Halifax military members get preferential loan rates?',
+        questionFr: 'Les membres militaires de Halifax obtiennent-ils des taux de prêt préférentiels?',
+        answer:
+          'Yes, Canadian Forces members at CFB Halifax (Navy, Army, Air Force) qualify for military-specific programs with rates 0.5-1.0% below standard. CFMWS partners with lenders for preferential rates (11.49-16.99% APR). Military banking understands deployments, postings, and sea duty. Local credit unions like CFMWS Sisip Financial offer specialized military banking with competitive rates and deployment payment flexibility.',
+        answerFr:
+          'Oui, les membres des Forces canadiennes à la BFC Halifax (Marine, Armée, Aviation) se qualifient pour des programmes spécifiques aux militaires avec des taux de 0,5 à 1,0 % inférieurs à la norme. Les SBMFC s\'associent avec des prêteurs pour des taux préférentiels (11,49 à 16,99 % TAP). Les services bancaires militaires comprennent les déploiements, les affectations et le service en mer. Les coopératives de crédit locales comme CFMWS Sisip Financial offrent des services bancaires militaires spécialisés avec des taux compétitifs et une flexibilité de paiement en déploiement.',
+      },
+      {
+        question: 'Are there student loans for Halifax university students?',
+        questionFr: 'Y a-t-il des prêts étudiants pour les étudiants universitaires de Halifax?',
+        answer:
+          'Yes, Halifax students (Dalhousie, Saint Mary\'s, Mount Saint Vincent, NSCAD) can access comprehensive student lending. Major banks offer student lines of credit (7.99-11.99% APR), credit unions provide competitive rates, and professional students (medicine, dentistry, law) qualify for limits up to $250,000. Nova Scotia Student Assistance provides provincial aid. Halifax\'s concentration of universities creates strong student lending competition.',
+        answerFr:
+          'Oui, les étudiants de Halifax (Dalhousie, Saint Mary\'s, Mount Saint Vincent, NSCAD) peuvent accéder à des prêts étudiants complets. Les grandes banques offrent des marges de crédit étudiantes (7,99 à 11,99 % TAP), les coopératives de crédit fournissent des taux compétitifs, et les étudiants professionnels (médecine, dentisterie, droit) se qualifient pour des limites allant jusqu\'à 250 000 $. L\'aide aux étudiants de la Nouvelle-Écosse fournit une aide provinciale. La concentration d\'universités de Halifax crée une forte concurrence de prêts étudiants.',
+      },
+      {
+        question: 'How do Halifax loan rates compare to other Atlantic cities?',
+        questionFr: 'Comment les taux de prêt de Halifax se comparent-ils aux autres villes de l\'Atlantique?',
+        answer:
+          'Halifax offers the best rates in Atlantic Canada due to its size, competition, and financial hub status. Rates are typically 0.5-1.5% lower than Moncton, Saint John, or St. John\'s. Halifax has the most lenders (42+), strongest credit union network, and highest lending competition. Borrowers in smaller Atlantic cities sometimes apply through Halifax institutions to access better rates, though local relationships matter for approval.',
+        answerFr:
+          'Halifax offre les meilleurs taux du Canada atlantique en raison de sa taille, de la concurrence et du statut de centre financier. Les taux sont généralement de 0,5 à 1,5 % inférieurs à Moncton, Saint John ou St. John\'s. Halifax compte le plus grand nombre de prêteurs (42+), le réseau de coopératives de crédit le plus solide et la plus forte concurrence de prêts. Les emprunteurs des petites villes de l\'Atlantique font parfois une demande auprès d\'institutions de Halifax pour accéder à de meilleurs taux, bien que les relations locales comptent pour l\'approbation.',
+      },
+    ],
+  },
+  {
+    name: 'Dartmouth',
+    nameFr: 'Dartmouth',
+    slug: 'dartmouth',
+    province: 'nova-scotia',
+    provinceAbbr: 'NS',
+    population: '101K',
+    populationNumber: 101000,
+    description:
+      'Dartmouth is Nova Scotia\'s second-largest city and part of the Halifax Regional Municipality, located across the harbour from Halifax. The economy combines manufacturing, retail, technology, oil refining, and residential services. Licensed lenders serve a diverse working-class to middle-class population with comprehensive loan products at rates competitive with Halifax. Dartmouth\'s integration into the Halifax metro area provides access to regional financial services while maintaining distinct community identity and local lending relationships.',
+    descriptionFr:
+      'Dartmouth est la deuxième plus grande ville de la Nouvelle-Écosse et fait partie de la municipalité régionale de Halifax, située en face du port de Halifax. L\'économie combine la fabrication, le commerce de détail, la technologie, le raffinage du pétrole et les services résidentiels. Les prêteurs autorisés servent une population diversifiée de classe ouvrière à classe moyenne avec des produits de prêt complets à des taux compétitifs avec Halifax. L\'intégration de Dartmouth dans la région métropolitaine de Halifax donne accès aux services financiers régionaux tout en maintenant une identité communautaire distincte et des relations de prêt locales.',
+    avgRate: '12.49% - 23.49%',
+    loanRange: '$1,000 - $60,000',
+    lenderCount: 28,
+    topIndustries: ['Manufacturing', 'Retail', 'Technology', 'Oil Refining', 'Services'],
+    topIndustriesFr: ['Fabrication', 'Commerce de détail', 'Technologie', 'Raffinage du pétrole', 'Services'],
+    keyFeatures: [
+      'Halifax metro integration',
+      'Working-class lending focus',
+      'Manufacturing sector support',
+      'Community credit unions',
+    ],
+    keyFeaturesFr: [
+      'Intégration métropolitaine de Halifax',
+      'Concentration sur les prêts classe ouvrière',
+      'Soutien au secteur manufacturier',
+      'Coopératives de crédit communautaires',
+    ],
+    nearbyCities: ['halifax', 'cole-harbour', 'eastern-passage', 'porters-lake'],
+    isProvincialCapital: false,
+    isMajorMetro: true,
+    tier: 1,
+    faqs: [
+      {
+        question: 'Are Dartmouth loan rates the same as Halifax?',
+        questionFr: 'Les taux de prêt de Dartmouth sont-ils les mêmes que Halifax?',
+        answer:
+          'Dartmouth rates are very similar to Halifax (within 0.25-0.5%) since both are part of Halifax Regional Municipality with integrated financial markets. Major banks and credit unions serve both communities with identical rate structures. Some Dartmouth-focused credit unions may offer slightly higher rates but provide stronger community relationships and personalized service. Borrowers can easily access lenders in either community.',
+        answerFr:
+          'Les taux de Dartmouth sont très similaires à Halifax (à moins de 0,25 à 0,5 %) puisque les deux font partie de la municipalité régionale de Halifax avec des marchés financiers intégrés. Les grandes banques et les coopératives de crédit servent les deux communautés avec des structures de taux identiques. Certaines coopératives de crédit axées sur Dartmouth peuvent offrir des taux légèrement plus élevés mais fournissent des relations communautaires plus fortes et un service personnalisé. Les emprunteurs peuvent facilement accéder aux prêteurs dans l\'une ou l\'autre communauté.',
+      },
+      {
+        question: 'Do Dartmouth manufacturing workers get special loan programs?',
+        questionFr: 'Les travailleurs manufacturiers de Dartmouth obtiennent-ils des programmes de prêt spéciaux?',
+        answer:
+          'Some Dartmouth credit unions offer programs for manufacturing and industrial workers with union-negotiated benefits. Imperial Manufacturing, refinery workers, and shipyard employees may access employer-sponsored lending programs with preferential rates. Credit unions understand shift work, overtime patterns, and seasonal production cycles. Union membership can provide access to special low-rate loan programs (11.99-17.49% APR).',
+        answerFr:
+          'Certaines coopératives de crédit de Dartmouth offrent des programmes pour les travailleurs manufacturiers et industriels avec des avantages négociés par les syndicats. Les travailleurs d\'Imperial Manufacturing, de raffinerie et de chantier naval peuvent accéder à des programmes de prêt parrainés par l\'employeur avec des taux préférentiels. Les coopératives de crédit comprennent le travail par quarts, les cycles d\'heures supplémentaires et les cycles de production saisonniers. L\'adhésion syndicale peut donner accès à des programmes de prêt spéciaux à taux réduit (11,99 à 17,49 % TAP).',
+      },
+      {
+        question: 'Can Dartmouth residents access Halifax lenders for better rates?',
+        questionFr: 'Les résidents de Dartmouth peuvent-ils accéder aux prêteurs de Halifax pour de meilleurs taux?',
+        answer:
+          'Yes, Dartmouth and Halifax form one integrated lending market. Residents freely access lenders in either community, with bridges and ferries connecting both sides. Major banks operate in both areas with identical rates. Some borrowers prefer Dartmouth credit unions for community focus and personalized service, while others choose Halifax downtown banks for broader product selection. Location matters less than lender comparison.',
+        answerFr:
+          'Oui, Dartmouth et Halifax forment un marché de prêt intégré. Les résidents accèdent librement aux prêteurs dans l\'une ou l\'autre communauté, avec des ponts et des traversiers reliant les deux côtés. Les grandes banques opèrent dans les deux zones avec des taux identiques. Certains emprunteurs préfèrent les coopératives de crédit de Dartmouth pour l\'accent communautaire et le service personnalisé, tandis que d\'autres choisissent les banques du centre-ville de Halifax pour une sélection de produits plus large. L\'emplacement importe moins que la comparaison des prêteurs.',
+      },
+    ],
+  },
+  {
+    name: 'Sydney',
+    nameFr: 'Sydney',
+    slug: 'sydney',
+    province: 'nova-scotia',
+    provinceAbbr: 'NS',
+    population: '32K',
+    populationNumber: 32000,
+    description:
+      'Sydney is the largest community on Cape Breton Island, serving as the economic and service center for eastern Nova Scotia. The economy combines healthcare, education at Cape Breton University, tourism, call centers, and legacy steel/coal industries transitioning to new sectors. Licensed lenders serve a resilient community recovering from industrial decline, offering flexible loan products for families, students, retirees, and small businesses. Sydney\'s regional importance and Cape Breton\'s unique economy mean lenders understand seasonal tourism and economic challenges.',
+    descriptionFr:
+      'Sydney est la plus grande communauté de l\'île du Cap-Breton, servant de centre économique et de services pour l\'est de la Nouvelle-Écosse. L\'économie combine les soins de santé, l\'éducation à l\'Université du Cap-Breton, le tourisme, les centres d\'appels et les industries héritées de l\'acier/charbon en transition vers de nouveaux secteurs. Les prêteurs autorisés servent une communauté résiliente se remettant du déclin industriel, offrant des produits de prêt flexibles pour les familles, les étudiants, les retraités et les petites entreprises. L\'importance régionale de Sydney et l\'économie unique du Cap-Breton signifient que les prêteurs comprennent le tourisme saisonnier et les défis économiques.',
+    avgRate: '13.49% - 24.99%',
+    loanRange: '$1,000 - $50,000',
+    lenderCount: 18,
+    topIndustries: ['Healthcare', 'Education', 'Tourism', 'Call Centers', 'Public Services'],
+    topIndustriesFr: ['Santé', 'Éducation', 'Tourisme', 'Centres d\'appels', 'Services publics'],
+    keyFeatures: [
+      'Cape Breton regional hub',
+      'Economic transition support',
+      'Tourism sector lending',
+      'Community-focused credit unions',
+    ],
+    keyFeaturesFr: [
+      'Centre régional du Cap-Breton',
+      'Soutien à la transition économique',
+      'Prêts au secteur touristique',
+      'Coopératives de crédit axées sur la communauté',
+    ],
+    nearbyCities: ['glace-bay', 'north-sydney', 'sydney-mines', 'new-waterford'],
+    isProvincialCapital: false,
+    isMajorMetro: false,
+    tier: 1,
+    faqs: [
+      {
+        question: 'Why are Sydney loan rates higher than Halifax?',
+        questionFr: 'Pourquoi les taux de prêt de Sydney sont-ils plus élevés que Halifax?',
+        answer:
+          'Sydney rates are 1.5-2.5% higher than Halifax due to smaller market, economic challenges from industrial transition, higher unemployment, and lower average incomes. Lending risk is higher in post-industrial communities. However, Cape Breton credit unions like New Dawn Enterprises and East Coast Credit Union offer competitive rates for local members (13.49-19.99% APR) and understand the community\'s economic reality with flexible approval criteria.',
+        answerFr:
+          'Les taux de Sydney sont de 1,5 à 2,5 % plus élevés que Halifax en raison d\'un marché plus petit, de défis économiques liés à la transition industrielle, d\'un chômage plus élevé et de revenus moyens plus faibles. Le risque de prêt est plus élevé dans les communautés post-industrielles. Cependant, les coopératives de crédit du Cap-Breton comme New Dawn Enterprises et East Coast Credit Union offrent des taux compétitifs pour les membres locaux (13,49 à 19,99 % TAP) et comprennent la réalité économique de la communauté avec des critères d\'approbation flexibles.',
+      },
+      {
+        question: 'Are there student loans for Cape Breton University students?',
+        questionFr: 'Y a-t-il des prêts étudiants pour les étudiants de l\'Université du Cap-Breton?',
+        answer:
+          'Yes, Cape Breton University students can access student lines of credit from major banks (8.49-12.49% APR) and local credit unions. CBU\'s focus on Indigenous education, nursing, and business means specialized programs exist for these fields. Nova Scotia Student Assistance provides provincial aid, and Indigenous students access federal programs. Local credit unions often provide personalized support recognizing Cape Breton\'s economic challenges.',
+        answerFr:
+          'Oui, les étudiants de l\'Université du Cap-Breton peuvent accéder à des marges de crédit étudiantes des grandes banques (8,49 à 12,49 % TAP) et des coopératives de crédit locales. L\'accent de CBU sur l\'éducation autochtone, les soins infirmiers et les affaires signifie que des programmes spécialisés existent pour ces domaines. L\'aide aux étudiants de la Nouvelle-Écosse fournit une aide provinciale, et les étudiants autochtones accèdent aux programmes fédéraux. Les coopératives de crédit locales offrent souvent un soutien personnalisé reconnaissant les défis économiques du Cap-Breton.',
+      },
+      {
+        question: 'Can Sydney tourism businesses access financing?',
+        questionFr: 'Les entreprises touristiques de Sydney peuvent-elles accéder au financement?',
+        answer:
+          'Yes, Cape Breton\'s tourism importance (Cabot Trail, Celtic culture, natural beauty) means specialized tourism lending exists. Credit unions and Business Development Bank of Canada offer equipment loans, seasonal operating lines, and expansion financing for hotels, restaurants, tour operators, and attractions. Programs understand tourism seasonality (May-October peak) with flexible winter payments. Some lenders offer preferential rates for businesses supporting Cape Breton economic development.',
+        answerFr:
+          'Oui, l\'importance du tourisme du Cap-Breton (Cabot Trail, culture celtique, beauté naturelle) signifie que des prêts touristiques spécialisés existent. Les coopératives de crédit et la Banque de développement du Canada offrent des prêts d\'équipement, des marges d\'exploitation saisonnières et du financement d\'expansion pour les hôtels, restaurants, voyagistes et attractions. Les programmes comprennent la saisonnalité du tourisme (pic mai-octobre) avec des paiements flexibles en hiver. Certains prêteurs offrent des taux préférentiels pour les entreprises soutenant le développement économique du Cap-Breton.',
+      },
+    ],
+  },
 ]
 
 // Export count for verification
