@@ -1,7 +1,4 @@
-import { Inter } from 'next/font/google'
 import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Loan AI Portal - Fast & Secure Loan Services',
@@ -15,7 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="font-sans">
         <div className="min-h-screen bg-gray-50">
           {children}
         </div>
