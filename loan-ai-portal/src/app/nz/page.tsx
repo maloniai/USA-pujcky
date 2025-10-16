@@ -471,11 +471,11 @@ export default function NewZealandHubPage() {
                         {state.description}
                       </p>
                       <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
-                        <span>Capital: {state.capital}</span>
-                        <span>{(state.population / 1000000).toFixed(1)}M people</span>
+                        <span>Population: {state.population}</span>
+                        <span>{state.topCities.length} major cities</span>
                       </div>
                       <div className="text-sm font-semibold text-blue-600">
-                        View {state.cities.length} Cities →
+                        View {state.topCities.length} Cities →
                       </div>
                     </CardContent>
                   </Card>
@@ -511,9 +511,9 @@ export default function NewZealandHubPage() {
                   className="bg-white rounded-lg p-4 hover:shadow-md transition-all hover:border-blue-400 border border-gray-200"
                 >
                   <h3 className="font-semibold text-gray-900 mb-1">{city.name}</h3>
-                  <p className="text-xs text-gray-500 capitalize">{city.state.replace('-', ' ')}</p>
-                  <p className="text-xs text-gray-400 mt-1">
-                    {(city.population / 1000).toFixed(0)}K residents
+                  <p className="text-xs text-gray-500 capitalize">{city.region}</p>
+                  <p className="text-xs text-gray-400">
+                    {city.population} residents
                   </p>
                 </Link>
               ))}
@@ -604,7 +604,7 @@ export default function NewZealandHubPage() {
         </section>
 
         {/* FAQ Section */}
-        <NZFAQ items={faqItems} />
+        <NZFAQ faqs={faqItems} />
 
         {/* Disclosure */}
         <div className="container mx-auto px-4 max-w-6xl pb-16">

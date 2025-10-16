@@ -86,5 +86,6 @@ User-Agent: PetalBot
 User-Agent: BLEXBot
 Disallow: /
 
-Host: https://loansai.com
-Sitemap: https://loansai.com/sitemap.xml
+Host: https://loan-platform.com
+Sitemap: https://loan-platform.com/sitemap-index.xml
+Sitemap: https://loan-platform.com/sitemap.xml

@@ -483,3 +483,117 @@ export function getKZMetadata(options: {
     siteName: 'Loan AI Portal',
   }, path);
 }
+
+/**
+ * Generate metadata for Canada (CA) pages
+ */
+export function getCAMetadata(options: {
+  title: string;
+  description: string;
+  path?: string;
+  type?: string;
+  lang?: string;
+}) {
+  const { title, description, path = '/ca', type = 'website', lang = 'en' } = options;
+  
+  return generatePageMetadata({
+    title,
+    description,
+    keywords: [
+      'personal loans canada',
+      'prêts personnels canada',
+      'canadian loans',
+      'compare loans canada',
+      'FCAC regulated',
+      'provincial lending',
+      'online loans canada',
+      'AI loan comparison',
+    ],
+    canonicalUrl: new URL(path, SITE_URL).toString(),
+    alternateLanguages: {
+      en: new URL(path, SITE_URL).toString(),
+      fr: new URL(`/ca/fr${path.replace('/ca', '')}`, SITE_URL).toString(),
+    },
+    locale: 'en_CA',
+    alternateLocales: ['fr_CA'],
+    siteName: 'Loan AI Portal Canada',
+  }, path);
+}
+
+/**
+ * SEO configuration for CA hub pages
+ */
+export const caHubSEO = {
+  title: 'Personal Loans Canada 2025 – Compare FCAC-Regulated Lenders',
+  description: 'Compare personal loans from FCAC-regulated lenders across Canada. Competitive rates, fast approval, complete transparency. Find the best loan offers in all provinces and territories.',
+  keywords: [
+    'personal loans canada',
+    'prêts personnels canada',
+    'canadian loans',
+    'FCAC regulated',
+    'provincial lending',
+    'compare loans canada',
+    'online loans',
+    'AI loan comparison',
+  ],
+  canonicalPath: '/ca',
+};
+
+/**
+ * Generate metadata for Canada region pages
+ */
+export function generateCARegionMetadata(
+  regionName: string,
+  regionNameFr: string,
+  year: number,
+  lang: string = 'en'
+) {
+  const isEnglish = lang === 'en';
+  const region = isEnglish ? regionName : regionNameFr;
+  
+  const title = isEnglish
+    ? `Personal Loans in ${region} – Compare ${year}`
+    : `Prêts personnels en ${region} – Comparer ${year}`;
+  
+  const description = isEnglish
+    ? `Compare personal loans in ${region}. Find FCAC-regulated lenders offering competitive rates, fast approval, and transparent terms across ${region}.`
+    : `Comparez les prêts personnels en ${region}. Trouvez des prêteurs réglementés par l'ACFC offrant des taux compétitifs, une approbation rapide et des conditions transparentes dans tout le ${region}.`;
+  
+  return getCAMetadata({
+    title,
+    description,
+    path: `/ca/regions/${regionName.toLowerCase().replace(/\s+/g, '-')}`,
+    lang,
+  });
+}
+
+/**
+ * Generate metadata for Canada city pages
+ */
+export function generateCACityMetadata(
+  cityName: string,
+  cityNameFr: string,
+  regionName: string,
+  regionNameFr: string,
+  year: number,
+  lang: string = 'en'
+) {
+  const isEnglish = lang === 'en';
+  const city = isEnglish ? cityName : cityNameFr;
+  const region = isEnglish ? regionName : regionNameFr;
+  
+  const title = isEnglish
+    ? `Personal Loans in ${city}, ${region} – Compare ${year}`
+    : `Prêts personnels à ${city}, ${region} – Comparer ${year}`;
+  
+  const description = isEnglish
+    ? `Compare personal loans in ${city}, ${region}. Find FCAC-regulated lenders offering competitive rates and fast approval for ${city} residents.`
+    : `Comparez les prêts personnels à ${city}, ${region}. Trouvez des prêteurs réglementés par l'ACFC offrant des taux compétitifs et une approbation rapide pour les résidents de ${city}.`;
+  
+  return getCAMetadata({
+    title,
+    description,
+    path: `/ca/cities/${regionName.toLowerCase().replace(/\s+/g, '-')}/${cityName.toLowerCase().replace(/\s+/g, '-')}`,
+    lang,
+  });
+}

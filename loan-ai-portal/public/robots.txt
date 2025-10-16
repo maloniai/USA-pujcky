@@ -1,0 +1,58 @@
+# Production robots.txt for loan-platform.com
+# Last Updated: October 15, 2025
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow API routes (if any)
+Disallow: /api/
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+
+# Master Sitemap Index (references all country sitemaps)
+Sitemap: https://loan-platform.com/sitemap-index.xml
+
+# Main sitemap (all 1,554 URLs)
+Sitemap: https://loan-platform.com/sitemap.xml
+
+# Country-specific sitemaps (LIVE)
+Sitemap: https://loan-platform.com/sitemap-us.xml
+Sitemap: https://loan-platform.com/sitemap-ca.xml
+Sitemap: https://loan-platform.com/sitemap-au.xml
+Sitemap: https://loan-platform.com/sitemap-co.xml
+Sitemap: https://loan-platform.com/sitemap-cz.xml
+
+# Country-specific sitemaps (Development)
+Sitemap: https://loan-platform.com/sitemap-kz.xml
+Sitemap: https://loan-platform.com/sitemap-za.xml
+Sitemap: https://loan-platform.com/sitemap-es.xml
+
+# Country-specific sitemaps (Planned)
+Sitemap: https://loan-platform.com/sitemap-mx.xml
+Sitemap: https://loan-platform.com/sitemap-ro.xml
+Sitemap: https://loan-platform.com/sitemap-vn.xml
+Sitemap: https://loan-platform.com/sitemap-pl.xml
+Sitemap: https://loan-platform.com/sitemap-nz.xml
+Sitemap: https://loan-platform.com/sitemap-ph.xml
+
+# Global pages sitemap
+Sitemap: https://loan-platform.com/sitemap-global.xml
+
+# Crawl-delay for aggressive bots (optional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+# Allow Google and Bing full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

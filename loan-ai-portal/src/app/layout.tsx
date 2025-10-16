@@ -8,7 +8,7 @@ import Script from 'next/script'
 import HtmlLang from '@/components/language/html-lang'
 import { DEFAULT_LOCALE } from '@/lib/i18n'
 import CookieConsentBanner from '@/components/compliance/cookie-consent-banner'
-import ChatWidget from '@/components/ai/chat-widget'
+// import ChatWidget from '@/components/ai/chat-widget'
 
 // Optimized font loading with display swap and subset
 const inter = Inter({ 
@@ -80,7 +80,7 @@ export default function RootLayout({
         <div className="min-h-screen bg-gray-50 flex flex-col">
           {children}
         </div>
-        <ChatWidget />
+        {/* <ChatWidget /> */}
       </body>
     </html>
   )

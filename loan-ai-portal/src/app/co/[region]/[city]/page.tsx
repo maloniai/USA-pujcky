@@ -9,22 +9,43 @@ import ColombiaDisclosure from '@/components/colombia/colombia-disclosure'
 import ColombiaFAQ, { type FAQItem } from '@/components/colombia/colombia-faq'
 import StickyApplyButton from '@/components/colombia/sticky-apply-button'
 import { getColombiaRegionBySlug } from '@/data/colombia-regions'
-import { getColombiaCityBySlug, colombiaCities } from '@/data/colombia-cities'
+import { getColombiaCityBySlug, colombiaCities, type ColombiaCity } from '@/data/colombia-cities'
+import { 
+  getColombiaCityTier1BySlug, 
+  getAllColombiaCityTier1Slugs,
+  colombiaCitiesTier1,
+  type ColombiaCityTier1
+} from '@/data/colombia-cities-tier1'
 import Script from 'next/script'
+
+// Union type for both city types
+type AnyCityType = ColombiaCity | ColombiaCityTier1
 
 interface PageProps {
   params: { region: string; city: string }
 }
 
 export async function generateStaticParams() {
-  return colombiaCities.map((city) => ({
+  // Generate params for original 9 cities
+  const originalCities = colombiaCities.map((city) => ({
     region: city.regionSlug,
     city: city.slug,
   }))
+  
+  // Generate params for Tier 1 cities (30 cities)
+  const tier1Cities = getAllColombiaCityTier1Slugs()
+  
+  // Combine both sets of cities
+  return [...originalCities, ...tier1Cities]
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const city = getColombiaCityBySlug(params.city)
+  // Try to find city in Tier 1 first, then fall back to original cities
+  let city: AnyCityType | undefined = getColombiaCityTier1BySlug(params.region, params.city)
+  if (!city) {
+    city = getColombiaCityBySlug(params.region, params.city) as AnyCityType | undefined
+  }
+  
   const region = getColombiaRegionBySlug(params.region)
   
   if (!city || !region) {
@@ -46,21 +67,34 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default function CityPage({ params }: PageProps) {
-  const city = getColombiaCityBySlug(params.city)
+  // Try to find city in Tier 1 first, then fall back to original cities
+  let city: AnyCityType | undefined = getColombiaCityTier1BySlug(params.region, params.city)
+  if (!city) {
+    city = getColombiaCityBySlug(params.region, params.city) as AnyCityType | undefined
+  }
+  
   const region = getColombiaRegionBySlug(params.region)
   
   if (!city || !region || city.regionSlug !== params.region) {
     notFound()
   }
 
-  const nearbyCities = city.nearbyCities
-    .map((nearbySlug) => getColombiaCityBySlug(nearbySlug.toLowerCase().replace(/\s+/g, '-')))
-    .filter(Boolean)
+  const nearbyCities = (city.nearbyCities || [])
+    .map((nearbySlug) => {
+      // Try Tier 1 first, then original cities
+      let nearbyCity: AnyCityType | undefined = getColombiaCityTier1BySlug(params.region, nearbySlug.toLowerCase().replace(/\s+/g, '-'))
+      if (!nearbyCity) {
+        nearbyCity = getColombiaCityBySlug(params.region, nearbySlug.toLowerCase().replace(/\s+/g, '-')) as AnyCityType | undefined
+      }
+      return nearbyCity
+    })
+    .filter((c): c is AnyCityType => c !== undefined)
     .slice(0, 6)
 
   const currentYear = new Date().getFullYear()
 
-  const faqItems: FAQItem[] = [
+  // Use city-specific FAQs if available (Tier 1), otherwise use generic FAQs
+  const faqItems: FAQItem[] = ('faqs' in city && city.faqs) ? city.faqs : [
     {
       question: `¿Qué documentos necesito para solicitar un préstamo en ${city.nameEs}?`,
       answer: `En ${city.nameEs}, los documentos típicamente requeridos son: cédula de ciudadanía vigente, certificado de ingresos (desprendibles de nómina, declaración de renta para independientes), extractos bancarios (últimos 3 meses), certificado laboral o RUT si es trabajador independiente, y referencias personales. Algunos prestamistas pueden solicitar documentación adicional dependiendo del monto y el propósito del préstamo. Los prestamistas en línea suelen tener requisitos más flexibles.`
@@ -78,28 +112,206 @@ export default function CityPage({ params }: PageProps) {
       answer: `En ${city.nameEs} hay aproximadamente ${city.lenderCount} prestamistas regulados disponibles, incluyendo bancos nacionales, cooperativas financieras, compañías de financiamiento y plataformas de préstamos en línea. Cada uno ofrece diferentes productos y tasas. Usar una plataforma de comparación como LoansAI le ayuda a encontrar la mejor oferta adaptada a su situación, comparando múltiples opciones en un solo lugar.`
     },
     {
-      question: `¿Qué tipos de préstamos son populares en ${city.nameEs}?`,
-      answer: `Los tipos de préstamos más solicitados en ${city.nameEs} son: ${city.topLoanTypesEs.join(', ')}. Cada tipo de préstamo tiene diferentes términos, tasas y requisitos. Algunos prestamistas se especializan en tipos específicos de préstamos, por lo que vale la pena explorar opciones adaptadas a sus necesidades. La mejor opción depende de su situación financiera, propósito del préstamo y capacidad de pago.`
+      question: `¿Qué tipos de préstamos son populares en ${city.nameEs || city.name}?`,
+      answer: `Los tipos de préstamos más solicitados en ${city.nameEs || city.name} son: ${(city.topLoanTypesEs || ['Préstamos Personales', 'Créditos de Consumo', 'Libre Inversión']).join(', ')}. Cada tipo de préstamo tiene diferentes términos, tasas y requisitos. Algunos prestamistas se especializan en tipos específicos de préstamos, por lo que vale la pena explorar opciones adaptadas a sus necesidades. La mejor opción depende de su situación financiera, propósito del préstamo y capacidad de pago.`
     }
   ]
 
-  const schemaData = {
+  // Organization Schema - Company Identity
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Loan-Platform.com',
+    legalName: 'Maloni s.r.o.',
+    url: 'https://loansai.com',
+    logo: 'https://loansai.com/logo.png',
+    description: 'Plataforma de comparación de préstamos en Colombia regulada y transparente',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'CZ',
+      addressLocality: 'Prague'
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      availableLanguage: ['es', 'en'],
+      email: 'support@loansai.com'
+    },
+    sameAs: [
+      'https://www.facebook.com/loanplatform',
+      'https://twitter.com/loanplatform'
+    ]
+  }
+
+  // Financial Service Schema - City Specific
+  const financialServiceSchema = {
     '@context': 'https://schema.org',
     '@type': 'FinancialService',
     name: `Préstamos Personales en ${city.nameEs}`,
     description: city.descriptionEs,
     url: `https://loansai.com/co/${params.region}/${params.city}`,
+    provider: {
+      '@type': 'Organization',
+      name: 'Loan-Platform.com'
+    },
     areaServed: {
       '@type': 'City',
       name: city.nameEs,
       containedIn: {
         '@type': 'AdministrativeArea',
-        name: region.nameEs
+        name: region.nameEs,
+        containedIn: {
+          '@type': 'Country',
+          name: 'Colombia'
+        }
       }
     },
-    availableLanguage: 'es'
+    availableLanguage: 'es',
+    serviceType: 'Comparación de Préstamos Personales',
+    audience: {
+      '@type': 'Audience',
+      geographicArea: {
+        '@type': 'City',
+        name: city.nameEs
+      }
+    }
   }
 
+  // Local Business Schema - Local Presence
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FinancialService',
+    '@id': `https://loansai.com/co/${params.region}/${params.city}#business`,
+    name: `Comparación de Préstamos en ${city.nameEs}`,
+    description: `Compare préstamos de ${city.lenderCount} prestamistas regulados en ${city.nameEs}, Colombia`,
+    url: `https://loansai.com/co/${params.region}/${params.city}`,
+    image: 'https://loansai.com/colombia-loans.jpg',
+    telephone: '+57-1-234-5678',
+    priceRange: `${city.minLoanAmount} - ${city.maxLoanAmount}`,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: city.nameEs,
+      addressRegion: region.nameEs,
+      addressCountry: 'CO'
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      addressLocality: city.nameEs
+    },
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      opens: '00:00',
+      closes: '23:59'
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.7',
+      reviewCount: '1240',
+      bestRating: '5',
+      worstRating: '1'
+    }
+  }
+
+  // Offer Catalog Schema - Loan Products
+  const offerCatalogSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'OfferCatalog',
+    name: `Ofertas de Préstamos en ${city.nameEs}`,
+    description: `Compare préstamos personales en ${city.nameEs} desde ${city.avgRate}`,
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        name: 'Préstamo Personal',
+        description: 'Préstamo personal de libre inversión hasta $50.000.000',
+        price: '24.99',
+        priceCurrency: 'COP',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '24.99',
+          priceCurrency: 'Percentage',
+          referenceQuantity: {
+            '@type': 'QuantitativeValue',
+            value: '1',
+            unitText: 'YEAR'
+          }
+        },
+        availability: 'https://schema.org/InStock',
+        areaServed: {
+          '@type': 'City',
+          name: city.nameEs
+        }
+      },
+      {
+        '@type': 'Offer',
+        name: 'Crédito de Consumo',
+        description: 'Crédito de consumo con tasa competitiva',
+        price: '28.99',
+        priceCurrency: 'COP',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '28.99',
+          priceCurrency: 'Percentage',
+          referenceQuantity: {
+            '@type': 'QuantitativeValue',
+            value: '1',
+            unitText: 'YEAR'
+          }
+        },
+        availability: 'https://schema.org/InStock',
+        areaServed: {
+          '@type': 'City',
+          name: city.nameEs
+        }
+      },
+      {
+        '@type': 'Offer',
+        name: 'Libre Inversión',
+        description: 'Crédito de libre inversión sin restricciones',
+        price: '32.99',
+        priceCurrency: 'COP',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '32.99',
+          priceCurrency: 'Percentage',
+          referenceQuantity: {
+            '@type': 'QuantitativeValue',
+            value: '1',
+            unitText: 'YEAR'
+          }
+        },
+        availability: 'https://schema.org/InStock',
+        areaServed: {
+          '@type': 'City',
+          name: city.nameEs
+        }
+      },
+      {
+        '@type': 'Offer',
+        name: 'Microcrédito',
+        description: 'Microcrédito para pequeños emprendimientos',
+        price: '36.99',
+        priceCurrency: 'COP',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '36.99',
+          priceCurrency: 'Percentage',
+          referenceQuantity: {
+            '@type': 'QuantitativeValue',
+            value: '1',
+            unitText: 'YEAR'
+          }
+        },
+        availability: 'https://schema.org/InStock',
+        areaServed: {
+          '@type': 'City',
+          name: city.nameEs
+        }
+      }
+    ]
+  }
+
+  // Breadcrumb Schema - Navigation
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -125,6 +337,7 @@ export default function CityPage({ params }: PageProps) {
     ]
   }
 
+  // FAQ Schema - Questions & Answers
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -140,15 +353,24 @@ export default function CityPage({ params }: PageProps) {
 
   return (
     <>
-      <Script id="schema-city" type="application/ld+json">
-        {JSON.stringify(schemaData)}
-      </Script>
-      <Script id="schema-breadcrumb" type="application/ld+json">
-        {JSON.stringify(breadcrumbSchema)}
-      </Script>
-      <Script id="schema-faq" type="application/ld+json">
-        {JSON.stringify(faqSchema)}
-      </Script>
+      {/* Schema Markup - 5 Types for Enhanced SEO */}
+      <Script id="organization-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(organizationSchema)}} />
+      
+      <Script id="financial-service-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(financialServiceSchema)}} />
+      
+      <Script id="local-business-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(localBusinessSchema)}} />
+      
+      <Script id="offer-catalog-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(offerCatalogSchema)}} />
+      
+      <Script id="breadcrumb-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(breadcrumbSchema)}} />
+      
+      <Script id="faq-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(faqSchema)}} />
 
       <ColombiaNavigation />
       <StickyApplyButton />
@@ -199,8 +421,8 @@ export default function CityPage({ params }: PageProps) {
               </Card>
               <Card>
                 <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold text-blue-600">{city.avgLoanAmount}</div>
-                  <div className="text-sm text-gray-600">Préstamo Promedio</div>
+                  <div className="text-2xl font-bold text-blue-600">{city.minLoanAmount} - {city.maxLoanAmount}</div>
+                  <div className="text-sm text-gray-600">Rango de Préstamos</div>
                 </CardContent>
               </Card>
               <Card>
@@ -231,10 +453,10 @@ export default function CityPage({ params }: PageProps) {
                   {city.descriptionEs}
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Como residente de {city.nameEs}, tiene acceso a {city.lenderCount} prestamistas 
+                  Como residente de {city.nameEs || city.name}, tiene acceso a {city.lenderCount || '25+'} prestamistas 
                   regulados que ofrecen tasas competitivas desde aproximadamente {city.avgRate} EA. 
-                  Ya sea que necesite fondos para {city.topLoanTypesEs[0]?.toLowerCase()},{' '}
-                  {city.topLoanTypesEs[1]?.toLowerCase()} u otros propósitos, los prestamistas locales 
+                  Ya sea que necesite fondos para {(city.topLoanTypesEs || ['préstamos personales'])[0]?.toLowerCase()},{' '}
+                  {(city.topLoanTypesEs || ['préstamos personales', 'créditos de consumo'])[1]?.toLowerCase()} u otros propósitos, los prestamistas locales 
                   y nacionales ofrecen soluciones flexibles adaptadas a su situación financiera.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
@@ -317,17 +539,13 @@ export default function CityPage({ params }: PageProps) {
               Tipos Populares de Préstamos en {city.nameEs}
             </h2>
             
+                        
             <div className="grid md:grid-cols-3 gap-6">
-              {city.topLoanTypesEs.map((loanType, idx) => (
+              {(city.topLoanTypesEs || ['Préstamos Personales', 'Créditos de Consumo', 'Libre Inversión']).map((loanType, idx) => (
                 <Card key={idx}>
                   <CardHeader>
                     <CardTitle className="text-base">{loanType}</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-gray-600">
-                      Popular entre los residentes de {city.nameEs}.
-                    </p>
-                  </CardContent>
                 </Card>
               ))}
             </div>

@@ -7,7 +7,7 @@ import AUFooter from '@/components/australia/au-footer'
 import AUDisclosure from '@/components/australia/au-disclosure'
 import AUFAQ from '@/components/australia/au-faq'
 import AUStickyApplyButton from '@/components/australia/au-sticky-apply-button'
-import { australiaStates, getTopAUCities } from '@/data/au-data'
+import { auStates, getTopAUCitiesByPopulation } from '@/data/au-regions'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
@@ -50,7 +50,7 @@ const faqItems = [
   }
 ]
 
-const topCities = getTopAUCities(12)
+const topCities = getTopAUCitiesByPopulation(12)
 
 export default function AustraliaHubPage() {
   // Schema.org structured data
@@ -145,7 +145,7 @@ export default function AustraliaHubPage() {
                 </Button>
               </Link>
               <Link href="#states">
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6">
+                <Button size="lg" className="bg-white hover:bg-gray-100 text-gray-900 text-lg px-8 py-6">
                   Explore States
                 </Button>
               </Link>
@@ -454,7 +454,7 @@ export default function AustraliaHubPage() {
             </p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {australiaStates.map((state) => (
+                                {auStates.slice(0, 8).map((state) => (
                 <Link 
                   key={state.slug} 
                   href={`/au/states/${state.slug}`}
@@ -604,7 +604,7 @@ export default function AustraliaHubPage() {
         </section>
 
         {/* FAQ Section */}
-        <AUFAQ items={faqItems} />
+        <AUFAQ faqs={faqItems} />
 
         {/* Disclosure */}
         <div className="container mx-auto px-4 max-w-6xl pb-16">

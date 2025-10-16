@@ -7,6 +7,21 @@
 - Tailwind + shadcn-lite primitives (`src/components/ui`) drive styling; share utilities via `cn()` in `src/lib/utils`.
 
 ## Global Hub Architecture
+custom domain is : loan-platform.com
+- Each country hub has its own route folder under `src/app` (e.g., `/
+us`, `/cz`, `/ca`, `/es`).
+- Each hub contains:
+  - `page.tsx`: Main landing page for the country hub
+  - `regions/`: Subfolder for region/state pages (e.g., `/us/states`, `/cz/regions`)
+  - `cities/` or dynamic city routes (e.g., `/us/cities/[city]`, `/cz/regions/[region]/[city]`)
+
+  - `apply/`: Application/lead capture page (if applicable)
+  - `learn/` or `blog/`: Educational content and blog posts localized for the country
+  - `legal/`: Privacy policy, terms of service, disclosures specific to the country
+  - `sitemap.ts`: Sitemap generation for the country hub
+  - `robots.ts`: Robots.txt configuration for the country hub
+- Each hub uses a dedicated dataset in `src/data` (e.g., `us-states.ts`, `cz-regions.ts`, `countries.ts`) to drive static generation of region and city pages with localized content, metadata, and structured data.
+- Each hub has its own `sitemap.ts` and `robots.ts` to ensure proper SEO indexing and crawler directives.
 - **Root page** (`src/app/page.tsx`) renders the global directory with English-only content showcasing live country hubs (US, CZ), in-progress markets (Canada Q1 2025), and 11 coming-soon countries.
 - **No Lead Forms on Root**: Global directory is purely informational—no lead capture, just company overview and hub links to drive traffic to country-specific portals.
 - Data source: `src/data/countries.ts` exports `liveCountries`, `inProgressCountries`, `comingSoonCountries` arrays with each hub's `code`, `name`, `flag`, `description`, `population`, `coverage`, `languages`, `href`, and `status`.

@@ -10,8 +10,8 @@ import { FAQSchema } from '@/components/seo/faq-schema';
 
 export const metadata: Metadata = {
   title: 'Personal Loans in 14 Countries | Get Rates in 60 Seconds | LoansAI',
-  description: 'Compare personal loans across 14 countries: USA, Canada, Czech Republic, Poland, Spain, Australia, New Zealand, Philippines, South Africa, Mexico, Colombia, Kazakhstan, Vietnam, Romania. AI matches you with 500+ licensed lenders in 60 seconds.',
-  keywords: 'personal loans, compare loans, loan comparison, best loan rates, international loans, USA loans, Canada loans, European loans, Asia-Pacific loans',
+  description: 'Compare personal loans in the USA, Canada, Czech Republic, Romania, Australia, and Colombia (LIVE NOW). Expanding to Mexico, Poland, Spain, Kazakhstan, Vietnam, South Africa, New Zealand, Philippines. AI matches you with 500+ licensed lenders in 60 seconds.',
+  keywords: 'personal loans, compare loans, loan comparison, best loan rates, international loans, USA loans, Canada loans, Australia loans, Colombia loans, European loans, Asia-Pacific loans',
   openGraph: {
     title: 'Compare Personal Loans Across 14 Countries | LoansAI',
     description: 'AI-powered loan matching in 14 countries. Compare rates from 500+ licensed lenders in 60 seconds.',
@@ -135,7 +135,9 @@ export default function HomePage() {
             Compare Personal Loans in 14 Countries | AI-Powered Matching
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8">
-            Compare personal loans in the United States, Canada, Czech Republic, Poland, Spain, Australia, New Zealand, Philippines, South Africa, Mexico, Colombia, Kazakhstan, Vietnam, and Romania. Our AI matches you with 500+ licensed lenders in 60 seconds with transparent rates and local expertise.
+            <strong>NOW LIVE:</strong> Compare personal loans in the USA, Canada, Australia, Colombia, Czech Republic, and Romania. 
+            <strong> COMING SOON:</strong> Mexico, Poland, Spain, Kazakhstan, Vietnam, South Africa, New Zealand, Philippines. 
+            Our AI matches you with 500+ licensed lenders in 60 seconds with transparent rates and local expertise.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="bg-white rounded-lg shadow-md p-6 flex-1 max-w-xs">
@@ -205,30 +207,39 @@ export default function HomePage() {
       {inProgressCountries.length > 0 && (
         <section className="container mx-auto px-4 py-12 bg-blue-50/50">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Launching Soon
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+              🚧 Under Construction
             </h2>
-            <div className="grid md:grid-cols-1 gap-6 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 mb-8 text-center max-w-3xl mx-auto">
+              These markets are currently in development and will launch in Q4 2025 / Q1 2026. 
+              Join our waiting list to be notified when they go live!
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {inProgressCountries.map((country) => (
-                <Card key={country.code} className="bg-white">
+                <Card key={country.code} className="bg-white border-2 border-blue-200">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-4xl">{country.flag}</span>
-                      <div>
+                      <div className="flex-1">
                         <CardTitle className="text-2xl">{country.name}</CardTitle>
                         <CardDescription>
                           {country.population} people • {country.coverage || 'Nationwide'}
                         </CardDescription>
                       </div>
                       <div className="ml-auto">
-                        <span className="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">
-                          Q1 2025
+                        <span className="inline-block bg-orange-100 text-orange-700 text-xs font-semibold px-3 py-1 rounded-full">
+                          {country.launchDate}
                         </span>
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-600 mb-4">{country.description}</p>
+                    <div className="bg-orange-50 border border-orange-200 rounded-lg p-3 mb-3">
+                      <p className="text-sm text-orange-800 font-medium">
+                        🚧 Currently under construction. Check back soon!
+                      </p>
+                    </div>
                     {country.languages && country.languages.length > 0 && (
                       <div className="text-sm text-gray-500">
                         Will be available in: {country.languages.join(', ')}

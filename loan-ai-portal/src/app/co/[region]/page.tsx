@@ -212,8 +212,8 @@ export default function RegionPage({ params }: PageProps) {
                 <p className="text-gray-700 leading-relaxed">
                   Como residente de {region.nameEs}, tiene acceso a una amplia gama de productos 
                   de préstamo de instituciones financieras reguladas. Ya sea que necesite{' '}
-                  {region.topLoanTypesEs[0]?.toLowerCase()}, {region.topLoanTypesEs[1]?.toLowerCase()} o{' '}
-                  {region.topLoanTypesEs[2]?.toLowerCase()}, puede encontrar ofertas competitivas 
+                  {(region.topLoanTypesEs || ['préstamos personales', 'créditos de consumo', 'libre inversión'])[0]?.toLowerCase()}, {(region.topLoanTypesEs || ['préstamos personales', 'créditos de consumo', 'libre inversión'])[1]?.toLowerCase()} o{' '}
+                  {(region.topLoanTypesEs || ['préstamos personales', 'créditos de consumo', 'libre inversión'])[2]?.toLowerCase()}, puede encontrar ofertas competitivas 
                   adaptadas a sus necesidades. Todos los prestamistas están supervisados por la 
                   Superintendencia Financiera de Colombia y deben cumplir con las leyes de protección 
                   al consumidor.
@@ -241,7 +241,14 @@ export default function RegionPage({ params }: PageProps) {
                       Protección al Consumidor
                     </h3>
                     <ul className="space-y-2 text-sm text-gray-700">
-                      {region.regulationsEs.slice(0, 3).map((reg, idx) => (
+                      {(region.regulationsEs || [
+                        'Todos los prestamistas deben estar registrados con la Superintendencia Financiera de Colombia',
+                        'Las tasas de interés están reguladas y no pueden exceder los límites de usura establecidos',
+                        'Los prestamistas deben proporcionar información clara sobre tasas, tarifas y términos antes del desembolso',
+                        'Los consumidores tienen derecho a retractarse dentro de 5 días hábiles de la firma del contrato',
+                        'Los prestamistas no pueden cobrar penalidades excesivas por pagos anticipados',
+                        'Debe existir un proceso claro de quejas y recursos disponible'
+                      ]).slice(0, 3).map((reg: string, idx: number) => (
                         <li key={idx} className="flex items-start gap-2">
                           <span className="text-blue-600 mt-1">•</span>
                           <span>{reg}</span>
@@ -254,7 +261,14 @@ export default function RegionPage({ params }: PageProps) {
                       Requisitos Legales
                     </h3>
                     <ul className="space-y-2 text-sm text-gray-700">
-                      {region.regulationsEs.slice(3).map((reg, idx) => (
+                      {(region.regulationsEs || [
+                        'Todos los prestamistas deben estar registrados con la Superintendencia Financiera de Colombia',
+                        'Las tasas de interés están reguladas y no pueden exceder los límites de usura establecidos',
+                        'Los prestamistas deben proporcionar información clara sobre tasas, tarifas y términos antes del desembolso',
+                        'Los consumidores tienen derecho a retractarse dentro de 5 días hábiles de la firma del contrato',
+                        'Los prestamistas no pueden cobrar penalidades excesivas por pagos anticipados',
+                        'Debe existir un proceso claro de quejas y recursos disponible'
+                      ]).slice(3).map((reg: string, idx: number) => (
                         <li key={idx} className="flex items-start gap-2">
                           <span className="text-blue-600 mt-1">•</span>
                           <span>{reg}</span>
@@ -344,7 +358,7 @@ export default function RegionPage({ params }: PageProps) {
             </h2>
             
             <div className="grid md:grid-cols-3 gap-6">
-              {region.topLoanTypesEs.map((loanType, idx) => (
+              {(region.topLoanTypesEs || ['Préstamos Personales', 'Créditos de Consumo', 'Libre Inversión']).map((loanType: string, idx: number) => (
                 <Card key={idx}>
                   <CardHeader>
                     <CardTitle className="text-base">{loanType}</CardTitle>

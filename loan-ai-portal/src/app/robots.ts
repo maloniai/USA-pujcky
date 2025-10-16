@@ -118,11 +118,14 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/'],        // Block completely
       },
     ],
-    sitemap: 'https://loansai.com/sitemap.xml',
-    host: 'https://loansai.com',
+    sitemap: [
+      'https://loan-platform.com/sitemap-index.xml',  // Primary sitemap index
+      'https://loan-platform.com/sitemap.xml',        // Legacy unified sitemap
+    ],
+    host: 'https://loan-platform.com',
   }
   
   // Note: AI crawlers can discover additional machine-readable endpoints:
-  // - https://loansai.com/api/manifest.json (Service catalog)
-  // - https://loansai.com/api/services.json (OpenAPI-style documentation)
+  // - https://loan-platform.com/api/manifest.json (Service catalog)
+  // - https://loan-platform.com/api/services.json (OpenAPI-style documentation)
 }
