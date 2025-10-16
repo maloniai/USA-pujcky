@@ -5,8 +5,8 @@ A Next.js application for AI-powered loan services with multi-language support a
 ## Features
 
 - 🤖 AI-powered loan matching
-- 🌍 Multi-language support (English/Spanish)
-- 🏛️ State-specific loan information
+- 🌍 Multi-language support (English/Spanish/Czech)
+- 🏛️ State-specific and region-specific loan information
 - 📱 Responsive design
 - ⚡ Fast, modern UI with Tailwind CSS
 - 🔒 Secure and compliant
@@ -30,15 +30,25 @@ loan-ai-portal/
 │   │   ├── globals.css         # Global styles
 │   │   ├── states/
 │   │   │   └── page.tsx        # States listing
-│   │   └── es/                 # Spanish language routes
-│   │       ├── layout.tsx      # Spanish layout
-│   │       └── page.tsx        # Spanish homepage
+│   │   ├── es/                 # Spanish language routes
+│   │   │   ├── layout.tsx      # Spanish layout
+│   │   │   └── page.tsx        # Spanish homepage
+│   │   └── cz/                 # Czech language routes
+│   │       ├── layout.tsx      # Czech layout
+│   │       ├── page.tsx        # Czech homepage
+│   │       └── kraje/          # Czech regions
+│   │           ├── page.tsx    # Regions listing
+│   │           └── liberecky-kraj/  # Liberecký kraj region
+│   │               ├── page.tsx     # Region overview
+│   │               └── [city]/      # 26 city pages
 │   ├── components/
 │   │   └── ui/                 # Reusable UI components
 │   │       ├── button.tsx
 │   │       └── card.tsx
 │   └── lib/
-│       └── utils.ts            # Utility functions
+│       ├── utils.ts            # Utility functions
+│       └── data/               # Data files
+│           └── liberecky-kraj.ts  # City data
 ├── public/                     # Static assets
 ├── package.json               # Dependencies
 ├── next.config.js             # Next.js configuration
@@ -93,6 +103,10 @@ This application is configured for deployment to Azure Static Web Apps with:
 The application supports:
 - **English**: `/` (default)
 - **Spanish**: `/es/*`
+- **Czech**: `/cz/*`
+  - Czech Regional Pages: `/cz/kraje/*`
+  - Liberecký kraj: `/cz/kraje/liberecky-kraj/*`
+  - 26 city pages in Liberecký kraj with SEO-optimized content
 
 Additional languages can be added by creating new route folders under `src/app/`.
 
