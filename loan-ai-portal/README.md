@@ -5,8 +5,8 @@ A Next.js application for AI-powered loan services with multi-language support a
 ## Features
 
 - 🤖 AI-powered loan matching
-- 🌍 Multi-language support (English/Spanish)
-- 🏛️ State-specific loan information
+- 🌍 Multi-language support (English/Spanish/Czech)
+- 🏛️ State-specific and region-specific loan information
 - 📱 Responsive design
 - ⚡ Fast, modern UI with Tailwind CSS
 - 🔒 Secure and compliant
@@ -30,9 +30,17 @@ loan-ai-portal/
 │   │   ├── globals.css         # Global styles
 │   │   ├── states/
 │   │   │   └── page.tsx        # States listing
-│   │   └── es/                 # Spanish language routes
-│   │       ├── layout.tsx      # Spanish layout
-│   │       └── page.tsx        # Spanish homepage
+│   │   ├── es/                 # Spanish language routes
+│   │   │   ├── layout.tsx      # Spanish layout
+│   │   │   └── page.tsx        # Spanish homepage
+│   │   └── cz/                 # Czech language routes
+│   │       ├── layout.tsx      # Czech layout
+│   │       ├── page.tsx        # Czech homepage
+│   │       └── kraje/          # Czech regions
+│   │           ├── page.tsx    # Regions listing
+│   │           └── kraj-vysocina/  # Kraj Vysočina region
+│   │               ├── page.tsx    # Region overview
+│   │               └── [city]/     # 26 city pages
 │   ├── components/
 │   │   └── ui/                 # Reusable UI components
 │   │       ├── button.tsx
@@ -93,6 +101,16 @@ This application is configured for deployment to Azure Static Web Apps with:
 The application supports:
 - **English**: `/` (default)
 - **Spanish**: `/es/*`
+- **Czech**: `/cz/*`
+  - Czech hub includes comprehensive regional coverage
+  - Kraj Vysočina region with all 26 cities
+  - Each city page includes:
+    - SEO-optimized title and meta description
+    - Unique intro (80-120 words)
+    - Local regulations (8 key points)
+    - FAQ section (5 questions)
+    - Internal navigation to nearby cities
+    - Affiliate disclosure and representative example
 
 Additional languages can be added by creating new route folders under `src/app/`.
 
