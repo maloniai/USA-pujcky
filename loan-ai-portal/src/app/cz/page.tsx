@@ -1,6 +1,4 @@
 import Link from 'next/link'
-import Navigation from '@/components/navigation'
-import Footer from '@/components/footer'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import LeadGenDisclosure from '@/components/compliance/lead-gen-disclosure'
 import { VolsorLoanForm } from '@/components/cz/volsor-loan-form'
@@ -58,9 +56,7 @@ const publishedRegionSlugs = new Set(['praha', 'stredocesky', 'jihocesky'])
 
 export default function CzechRepublicHubPage() {
   return (
-    <>
-      <Navigation locale="cs" />
-      <main className="flex-1 bg-slate-50">
+    <main className="flex-1 bg-slate-50">
         <header className="border-b border-blue-100 bg-gradient-to-br from-blue-50 via-white to-blue-100">
           <div className="mx-auto max-w-6xl px-4 py-16">
             <p className="text-sm font-semibold uppercase tracking-wide text-blue-700">
@@ -270,7 +266,5 @@ export default function CzechRepublicHubPage() {
           </div>
         </section>
       </main>
-      <Footer locale="cs" />
-    </>
   )
 }
